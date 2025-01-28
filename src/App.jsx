@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
-import { Test } from "./pages/Test";
+import { NavigationMenuDemo } from "./pages/Test";
 import { LayoutTest } from "./components/layoutTest";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<LayoutTest />} />
-        <Route path="Test" element={<Test />} />
+        <Route path="Test" element={<NavigationMenuDemo />} />
       </Routes>
     </div>
   );
