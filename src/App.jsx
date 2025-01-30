@@ -1,16 +1,12 @@
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
-import { Test } from "./pages/Test";
-import { LayoutTest } from "./components/layoutTest";
+import { Button } from "./components/ui/button";
+import { pageContent } from "./text";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<LayoutTest />} />
-        <Route path="Test" element={<Test />} />
-      </Routes>
-    </div>
+    <>
+      <Button>hello world</Button>
+      <Text />
+    </>
   );
 }
 
