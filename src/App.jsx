@@ -1,10 +1,8 @@
-import { Button } from "./components/ui/button";
-import { pageContent } from "./text";
+import Text from "./text";
 
 function App() {
   return (
     <>
-      <Button>hello world</Button>
       <Text />
     </>
   );
