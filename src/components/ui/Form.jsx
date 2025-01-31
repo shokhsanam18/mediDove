@@ -127,7 +127,8 @@ function RequestInput({ value, onChange }) {
   );
 }
 
-const BASE_URL = "http://localhost:5000/api"; // Указываем проксированный URL
+const BASE_URL =
+  "https://crudcrud.com/api/8a474ffec9154065a4036b7b1d81c348/appointments"; 
 
 function Form() {
   const [department, setDepartment] = React.useState("");
