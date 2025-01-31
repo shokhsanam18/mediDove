@@ -15,7 +15,7 @@ import {
 
 const components = [
   {
-    title: "Tasischilar",
+    title: "Ta'sischilar",
     href: "/Tasischilar",
   },
   {
@@ -23,7 +23,7 @@ const components = [
     href: "/Ustav",
   },
   {
-    title: "Shfokorlar",
+    title: "Shifokorlar",
     href: "/Shifokorlar",
   },
 ];
@@ -31,9 +31,11 @@ const components = [
 const items = [
   {
     title: "Surgery",
+    href: "/SurgeryIndex",
   },
   {
     title: "Details",
+    href: "/Details",
   },
 ];
 
@@ -44,38 +46,6 @@ export function NavigationMenuDynamic() {
         <NavigationMenuItem>
           <img src={Logo} alt="" />
         </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <NavigationMenuTrigger>About</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="flex gap-3 p-4 md:w-[400px] lg:w-[500px] flex-col">
-              <li className="">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end  bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components built with Radix UI and
-                      Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem> */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -95,7 +65,11 @@ export function NavigationMenuDynamic() {
           <NavigationMenuContent>
             <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]">
               {items.map((item) => (
-                <ListItem key={item.title} title={item.title}></ListItem>
+                <ListItem
+                  key={item.title}
+                  title={item.title}
+                  href={item.href}
+                ></ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
@@ -107,6 +81,11 @@ export function NavigationMenuDynamic() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem> */}
+        <NavigationMenuItem>
+          <Link to="/Blog">
+            <button className={navigationMenuTriggerStyle()}>Blog</button>
+          </Link>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );
