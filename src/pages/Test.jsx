@@ -16,15 +16,15 @@ import {
 const components = [
   {
     title: "Tasischilar",
-    href: "/docs/primitives/alert-dialog",
+    href: "/Tasischilar",
   },
   {
     title: "Ustav",
-    href: "/docs/primitives/hover-card",
+    href: "/Ustav",
   },
   {
     title: "Shfokorlar",
-    href: "/docs/primitives/progress",
+    href: "/Shifokorlar",
   },
 ];
 
@@ -79,7 +79,7 @@ export function NavigationMenuDynamic() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] ">
+            <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
