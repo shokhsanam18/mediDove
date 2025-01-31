@@ -13,70 +13,68 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-// ---------------DEPARTMENT SELECTION-------------
 
-function SelectDemoDepartment() {
-  const [selectedValue, setSelectedValue] = React.useState("");
+// ---------------DEPARTMENT SELECTION-------------
+function SelectDemoDepartment({ value, onChange }) {
   return (
-    <Select onValueChange={setSelectedValue}>
+    <Select onValueChange={onChange} value={value}>
       <SelectTrigger className="max-w-lg w-full h-12 p-7 border-y-blue-150">
         <SelectValue placeholder="Department" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Department</SelectLabel>
-          <SelectItem value="banana">Surgery and Radiology</SelectItem>
-          <SelectItem value="blueberry">SPediatrics</SelectItem>
+          <SelectItem value="surgery">Surgery and Radiology</SelectItem>
+          <SelectItem value="pediatrics">Pediatrics</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   );
 }
 // ----------------------DOCTOR SELECTION-------------
-function SelectDemoDoctor() {
-  const [selectedValue, setSelectedValue] = React.useState("");
+function SelectDemoDoctor({ value, onChange }) {
   return (
-    <Select onValueChange={setSelectedValue}>
+    <Select onValueChange={onChange} value={value}>
       <SelectTrigger className="max-w-lg w-full h-12 p-7 border-y-blue-150">
         <SelectValue placeholder="Doctor" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Doctor</SelectLabel>
-          <SelectItem value="apple">Doctor Name </SelectItem>
-          <SelectItem value="banana">Doctor Name Two</SelectItem>
+          <SelectItem value="doctor1">Doctor One</SelectItem>
+          <SelectItem value="doctor2">Doctor Two</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   );
 }
 // ----------------NAME SELECTION----------------
-function SelectDemoYourName() {
-  const [selectedValue, setSelectedValue] = React.useState("");
-
+function SelectDemoYourName({ value, onChange }) {
   return (
-    <Select onValueChange={setSelectedValue}>
+    <Select onValueChange={onChange} value={value}>
       <SelectTrigger className="max-w-lg w-full h-12 p-7 border-y-blue-150">
-        <SelectValue placeholder={selectedValue || "Your Name"} />
+        <SelectValue placeholder="Your Name" />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Your Name</SelectLabel>
-          <SelectItem value="apple">Name One</SelectItem>
-          <SelectItem value="banana">Name Two</SelectItem>
+          <SelectItem value="name1">Name One</SelectItem>
+          <SelectItem value="name2">Name Two</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
   );
 }
 // ----------------PHONENUMBER -----------------------
-function PhoneInput() {
+function PhoneInput({ value, onChange }) {
   return (
     <div className="max-w-lg w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative">
       <Input
         type="tel"
         placeholder="Your Phone Number"
         className="w-full h-full p-4 pr-12 border-none focus:ring-2 focus:ring-blue-500"
+        value={value}
+        onChange={onChange}
       />
       <Phone className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
     </div>
@@ -84,71 +82,131 @@ function PhoneInput() {
 }
 
 // ----------------SPECIAL DATE---------------
-function DataInput() {
+function DataInput({ value, onChange }) {
   return (
     <div className="max-w-lg w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative">
       <Input
         type="text"
         placeholder="Select Date"
         className="w-full h-full p-4 pr-12 border-none focus:ring-2 focus:ring-blue-500"
+        value={value}
+        onChange={onChange}
       />
       <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
     </div>
   );
 }
-// --------------DATAINPUT------------
-function TimeInput() {
+// --------------TIME INPUT------------
+function TimeInput({ value, onChange }) {
   return (
     <div className="max-w-lg w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative">
       <Input
         placeholder="Add a time"
         type="text"
         className="w-full h-full p-4 pr-12 border-none focus:ring-2 focus:ring-blue-500"
+        value={value}
+        onChange={onChange}
       />
       <Timer className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
     </div>
   );
 }
-// -------------------SPECIALREQUEST-----------
-function RequestInput() {
+// -------------------SPECIAL REQUEST-----------
+function RequestInput({ value, onChange }) {
   return (
     <div className="w-full h-36 p-2 border border-blue-150 rounded-md flex items-center relative">
       <Input
         placeholder="Special request"
         type="text"
         className="w-full h-full p-4 pr-12 border-none focus:ring-2 focus:ring-blue-500"
+        value={value}
+        onChange={onChange}
       />
       <NotebookPen className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
     </div>
   );
 }
 
-const BASE_URL = "https://crudcrud.com/api/4c55bf192f2d4b83987fecc89e51cc0f";
+const BASE_URL = "http://localhost:5000/api"; // Указываем проксированный URL
 
 function Form() {
+  const [department, setDepartment] = React.useState("");
+  const [doctor, setDoctor] = React.useState("");
+  const [name, setName] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [date, setDate] = React.useState("");
+  const [time, setTime] = React.useState("");
+  const [request, setRequest] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = {
+      department,
+      doctor,
+      name,
+      phone,
+      date,
+      time,
+      request,
+    };
+
+    try {
+      const response = await fetch(BASE_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Appointment booked successfully!");
+      } else {
+        alert("Failed to book appointment.");
+      }
+    } catch (error) {
+      alert("Error: " + error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form action="#" className="w-2/4 border-lime-600 h-full bg-black">
+    <form
+      onSubmit={handleSubmit}
+      className="w-2/4 border-lime-600 h-full bg-black"
+    >
       <div>
         <h5 className="text-red-600 text-xl">Appointment</h5>
-        <h2 className=" text-white text-6xl">Book Appointment</h2>
+        <h2 className="text-white text-6xl">Book Appointment</h2>
       </div>
       <div className="flex gap-5 mt-5">
-        <SelectDemoDepartment />
-        <SelectDemoDepartment />
+        <SelectDemoDepartment value={department} onChange={setDepartment} />
+        <SelectDemoDoctor value={doctor} onChange={setDoctor} />
       </div>
       <div className="flex gap-5 mt-5">
-        <SelectDemoYourName />
-        <PhoneInput />
+        <SelectDemoYourName value={name} onChange={setName} />
+        <PhoneInput value={phone} onChange={(e) => setPhone(e.target.value)} />
       </div>
       <div className="flex gap-5 mt-5">
-        <DataInput />
-        <TimeInput />
+        <DataInput value={date} onChange={(e) => setDate(e.target.value)} />
+        <TimeInput value={time} onChange={(e) => setTime(e.target.value)} />
       </div>
       <div className="flex gap-5 mt-5">
-        <RequestInput />
+        <RequestInput
+          value={request}
+          onChange={(e) => setRequest(e.target.value)}
+        />
       </div>
-      <button typeof="submit" className="bg-red-600 text-white w-full h-14">
-        Submit Query
+      <button
+        type="submit"
+        className="bg-red-600 text-white w-full h-14"
+        disabled={loading}
+      >
+        {loading ? "Submitting..." : "Submit Query"}
       </button>
     </form>
   );
