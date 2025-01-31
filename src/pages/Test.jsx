@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import Logo from "../assets/logo.png";
 
 import {
   NavigationMenu,
@@ -14,47 +15,43 @@ import {
 
 const components = [
   {
-    title: "Alert Dialog",
+    title: "Tasischilar",
     href: "/docs/primitives/alert-dialog",
   },
   {
-    title: "Hover Card",
+    title: "Ustav",
     href: "/docs/primitives/hover-card",
   },
   {
-    title: "Progress",
+    title: "Shfokorlar",
     href: "/docs/primitives/progress",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-  },
-  {
-    title: "hello",
-    href: "/docs/primitives/tooltip",
   },
 ];
 
-export function NavigationMenuDemo() {
+const items = [
+  {
+    title: "Surgery",
+  },
+  {
+    title: "Details",
+  },
+];
+
+export function NavigationMenuDynamic() {
   return (
-    <NavigationMenu className="lg:max-w-full h-20 bg-slate-400">
+    <NavigationMenu className="lg:max-w-full flex h-24 bg-slate-400">
       <NavigationMenuList>
         <NavigationMenuItem>
+          <img src={Logo} alt="" />
+        </NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex gap-3 p-4 md:w-[400px] lg:w-[500px] flex-col">
-              <li className="row-span-3">
+              <li className="">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col justify-end  bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-medium">
@@ -78,30 +75,38 @@ export function NavigationMenuDemo() {
               </ListItem>
             </ul>
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
+          <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}
-                >
-                  {component.description}
-                </ListItem>
+                ></ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
+          <NavigationMenuTrigger>Surgery Types</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]">
+              {items.map((item) => (
+                <ListItem key={item.title} title={item.title}></ListItem>
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href="/docs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Documentation
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
       </NavigationMenuList>
     </NavigationMenu>
   );
@@ -115,7 +120,7 @@ const ListItem = React.forwardRef(
           <a
             ref={ref}
             className={cn(
-              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              "block select-none space-y-1  p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
               className
             )}
             {...props}
