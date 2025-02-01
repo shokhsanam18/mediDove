@@ -15,35 +15,39 @@ import { cn } from "@/lib/utils";
 
 
 
-const Carding = React.forwardRef(({ className, cards, ...props }, ref) => {
+export const Cards_Services = 
+  React.forwardRef(({ className, cards, cards_styles, card_styles, ...props }, ref) => {
+
+  // const card_styles = {
+
+  // }
 
   return (
     <Cards ref={ref}
-    {...props}>
+    {...props} style={cards_styles}>
 
      
       {cards.map((card) => (
         <Card key={card.id} ref={ref}
-        className={cn("px-8 py-4", className)}
+        className={cn(className)} 
+        style = {card_styles}
         {...props}>
             <CardImage>
               <CardImg src={card.src}></CardImg>
             </CardImage>
-            <CardHeader>
+            {/* <CardHeader> */}
               <CardTitle>{card.title}</CardTitle>
               <CardDescription>{card.description}</CardDescription>
-            </CardHeader>
+            {/* </CardHeader> */}
             <CardContent>
-              <p>{card.content}</p>
+              <a href='#'>{card.content}</a>
             </CardContent>
-            <CardFooter>
+            {/* <CardFooter>
               <p>{card.footer}</p>
-            </CardFooter>
+            </CardFooter> */}
         </Card>
       ))}
 
       </Cards>
   )
 })
-
-export default Carding
