@@ -42,17 +42,26 @@ export const Test = () => {
      // justifyContent: 'space-around',
      columnGap: '1.25rem',
      rowGap: '0.75rem',
-    //  padding: '10px 15%',
+     padding: '10px 15%',
    },
    card_styles: {
      backgroundColor: 'white',
      color: 'black',
      padding: '1rem 3rem',
-     gap: '0.75rem',
+     gap: '1rem',
      // border: '1px solid',
      textAlign: 'center',
      alignItems: 'center',
+     justifyContent: 'center',
+     shadowColor: '#AAC',
    },
+   img_styles: {
+    width: '75%',
+    // border: '2px solid',
+   },
+  //  title_styles: {
+
+  //  }
     
   }
   return (
@@ -60,6 +69,8 @@ export const Test = () => {
       <Cards_Services cards={cardsInfo} 
               cards_styles = {styles.cards_styles}
               card_styles = {styles.card_styles}
+              img_styles = {styles.img_styles}
+              shadowColor = {styles.card_styles.shadowColor}
       ></Cards_Services>
     </>
   );

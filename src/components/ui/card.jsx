@@ -17,7 +17,7 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "flex flex-col gap-2 bg-card text-card-foreground transition-all hover:shadow-lg ",
+      `flex flex-col gap-2 bg-card text-card-foreground transition-all hover:shadow-lg`,
       className
     )}
     {...props}
@@ -28,7 +28,7 @@ Card.displayName = "Card";
 const CardImage = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("w-full-width text-center", className)}
+    className={cn("w-full text-center mx-auto", className)}
     {...props}
   />
 ));
@@ -36,7 +36,7 @@ CardImage.displayName = "CardImage";
 
 const CardImg = React.forwardRef(({ className, src, ...props }, ref) => (
   <img
-    className={cn("w-full-width text-center", className)}
+    className={cn("text-center mx-auto", className)}
     {...props}
     src={src} alt=""
   />
@@ -59,7 +59,7 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "text-xl font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
