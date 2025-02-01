@@ -13,20 +13,21 @@ export const Test = () => {
     },
     {
       id: 1,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
+      title: 'Dental Care',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
       footer: 'Card Footer',
       src: './img/service2.png'
     },
     {
       id: 2,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
+      title: 'Dental Care',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
       footer: 'Card Footer',
       src: './img/service2.png'
     },
+    
     {
       id: 3,
       title: 'Card Title',
@@ -49,7 +50,6 @@ export const Test = () => {
      color: 'black',
      padding: '1rem 3rem',
      gap: '1rem',
-     // border: '1px solid',
      textAlign: 'center',
      alignItems: 'center',
      justifyContent: 'center',
@@ -57,11 +57,17 @@ export const Test = () => {
    },
    img_styles: {
     width: '75%',
-    // border: '2px solid',
    },
-  //  title_styles: {
-
-  //  }
+   title_styles: {
+    fontSize: '1.28rem',
+    color: '#171717',
+    colorHoverTitle: '#73bb1d',
+   },
+   content_styles: {
+    fontWeight: '700',
+    color: '#808e96',
+    colorHoverContent: '#73bb1d',
+   },
     
   }
   return (
@@ -71,6 +77,10 @@ export const Test = () => {
               card_styles = {styles.card_styles}
               img_styles = {styles.img_styles}
               shadowColor = {styles.card_styles.shadowColor}
+              title_styles = {styles.title_styles}
+              colorHoverTitle = {styles.title_styles.colorHoverTitle}
+              content_styles = {styles.content_styles}
+              colorHoverContent = {styles.content_styles.colorHoverContent}
       ></Cards_Services>
     </>
   );
