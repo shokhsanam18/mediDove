@@ -1,29 +1,16 @@
-import Carding from "./components/ui/carding";
-
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { Test } from "./pages/Test";
+import { LayoutTest } from "./components/layoutTest";
 
 function App() {
-  const cardsInfo = [
-    {
-      id: 0,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
-      footer: 'Card Footer',
-      src: './img/service2.png'
-    },
-    {
-      id: 1,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
-      footer: 'Card Footer',
-      src: './img/service2.png'
-    },
-  ]
   return (
-    <>
-      <Carding cards ={cardsInfo}></Carding>
-    </>
+    <div>
+      <Routes>
+        <Route path="/" element={<LayoutTest />} />
+        <Route path="Test" element={<Test />} />
+      </Routes>
+    </div>
   );
 }
 
