@@ -15,25 +15,8 @@ import { cn } from "@/lib/utils";
 
 
 
-const Carding = React.forwardRef(({ className, ...props }, ref) => {
-  const cards = [
-    {
-      id: 0,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
-      footer: 'Card Footer',
-      src: './img/service2.png'
-    },
-    {
-      id: 1,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
-      footer: 'Card Footer',
-      src: './img/service2.png'
-    },
-  ]
+const Carding = React.forwardRef(({ className, cards, ...props }, ref) => {
+
   return (
     <Cards ref={ref}
     {...props}>
