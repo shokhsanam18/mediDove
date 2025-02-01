@@ -1,7 +1,78 @@
 import React from "react";
-import {Cards_Services, Cards_News} from "../components/ui/Cards";
+import {Cards_Services, Cards_News, Cards_Team} from "../components/ui/Cards";
 
 export const Test = () => {
+
+  const cardsInfoServices = [
+    {
+      id: 0,
+      title: 'Dental Care',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
+      footer: 'Card Footer',
+      src: './img/service2.png'
+    },
+    {
+      id: 1,
+      title: 'Dental Care',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
+      footer: 'Card Footer',
+      src: './img/service2.png'
+    },
+    {
+      id: 2,
+      title: 'Dental Care',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
+      footer: 'Card Footer',
+      src: './img/service2.png'
+    },
+    
+    {
+      id: 3,
+      title: 'Card Title',
+      description: 'Card Description',
+      content: 'Card Content',
+      footer: 'Card Footer',
+      src: './img/service2.png'
+    },
+  ]
+  const stylesServices = {
+    cards_styles: {
+     backgroundColor: 'white',
+     // justifyContent: 'space-around',
+     columnGap: '1.25rem',
+     rowGap: '0.75rem',
+    //  padding: '10px 15%',
+   },
+   card_styles: {
+     backgroundColor: 'white',
+     color: 'black',
+     padding: '1rem 3rem',
+     gap: '1rem',
+     textAlign: 'center',
+     alignItems: 'center',
+     justifyContent: 'center',
+     shadowColor: '#AAC',
+   },
+   img_styles: {
+    width: '55%',
+   },
+   title_styles: {
+    fontSize: '1.28rem',
+    color: '#171717',
+    colorHoverTitle: '#73bb1d',
+   },
+   content_styles: {
+    fontWeight: '700',
+    color: '#808e96',
+    colorHoverContent: '#73bb1d',
+   },
+    
+  }
+
+
   const cardsInfoNews = [
     {
       id: 0,
@@ -80,30 +151,30 @@ export const Test = () => {
   }
 
 
-  const cardsInfoServices = [
+  const cardsInfoTeam = [
     {
       id: 0,
-      title: 'Dental Care',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-      content: 'Read More',
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/member1.png'
     },
     {
       id: 1,
-      title: 'Dental Care',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-      content: 'Read More',
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/member1.png'
     },
     {
       id: 2,
-      title: 'Dental Care',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
-      content: 'Read More',
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/member1.png'
     },
     
     {
@@ -112,10 +183,10 @@ export const Test = () => {
       description: 'Card Description',
       content: 'Card Content',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/member1.png'
     },
   ]
-  const stylesServices = {
+  const stylesTeam = {
     cards_styles: {
      backgroundColor: 'white',
      // justifyContent: 'space-around',
@@ -126,30 +197,61 @@ export const Test = () => {
    card_styles: {
      backgroundColor: 'white',
      color: 'black',
-     padding: '1rem 3rem',
-     gap: '1rem',
+     padding: '0',
+     gap: '1.75rem',
      textAlign: 'center',
      alignItems: 'center',
      justifyContent: 'center',
-     shadowColor: '#AAC',
+    //  shadowColor: '#AAC',
    },
    img_styles: {
-    width: '75%',
+    width: '70%',
    },
    title_styles: {
     fontSize: '1.28rem',
     color: '#171717',
-    colorHoverTitle: '#73bb1d',
+    // colorHoverTitle: '#e1236b',
    },
    content_styles: {
-    fontWeight: '700',
-    color: '#808e96',
-    colorHoverContent: '#73bb1d',
+    textTransform: 'uppercase',
+    fontWeight: '500',
+    color: '#e1236b',
+    colorHoverFooter: '#73bb1d',
    },
+   absolute_styles: {
+    position: 'absolute',
+    right: '15%',
+    bottom: '10%',
+    fontWeight: '900',
+    boxShadow: '',
+    fontSize: '20px',
+    color: 'white',
+    backgroundColor: '#349030',
+    backgroundcolorHoverabsolute: '#e1236b',
+    width: '40px',
+    height: '40px',
+    display: 'flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '50%',
+    boxShadow: '0 5px 10px #a9cba8'
+   }
     
   }
   return (
     <>
+      <Cards_Services cards={cardsInfoServices} 
+                    cards_styles = {stylesServices.cards_styles}
+                    card_styles = {stylesServices.card_styles}
+                    img_styles = {stylesServices.img_styles}
+                    shadowColor = {stylesServices.card_styles.shadowColor}
+                    title_styles = {stylesServices.title_styles}
+                    colorHoverTitle = {stylesServices.title_styles.colorHoverTitle}
+                    content_styles = {stylesServices.content_styles}
+                    colorHoverContent = {stylesServices.content_styles.colorHoverContent}
+      ></Cards_Services>
+
       <Cards_News cards={cardsInfoNews} 
               cards_styles = {stylesNews.cards_styles}
               card_styles = {stylesNews.card_styles}
@@ -162,16 +264,19 @@ export const Test = () => {
               footer_styles = {stylesNews.footer_styles}
               colorHoverFooter = {stylesNews.footer_styles.colorHoverFooter}
       ></Cards_News>
-      <Cards_Services cards={cardsInfoServices} 
-                    cards_styles = {stylesServices.cards_styles}
-                    card_styles = {stylesServices.card_styles}
-                    img_styles = {stylesServices.img_styles}
-                    shadowColor = {stylesServices.card_styles.shadowColor}
-                    title_styles = {stylesServices.title_styles}
-                    colorHoverTitle = {stylesServices.title_styles.colorHoverTitle}
-                    content_styles = {stylesServices.content_styles}
-                    colorHoverContent = {stylesServices.content_styles.colorHoverContent}
-      ></Cards_Services>
+
+      <Cards_Team cards={cardsInfoTeam} 
+                    cards_styles = {stylesTeam.cards_styles}
+                    card_styles = {stylesTeam.card_styles}
+                    img_styles = {stylesTeam.img_styles}
+                    shadowColor = {stylesTeam.card_styles.shadowColor}
+                    title_styles = {stylesTeam.title_styles}
+                    colorHoverTitle = {stylesTeam.title_styles.colorHoverTitle}
+                    content_styles = {stylesTeam.content_styles}
+                    colorHoverContent = {stylesTeam.content_styles.colorHoverContent}
+                    absolute_styles = {stylesTeam.absolute_styles}
+                    backgroundcolorHoverabsolute = {stylesTeam.absolute_styles.backgroundcolorHoverabsolute}
+      ></Cards_Team>
     </>
   );
 };

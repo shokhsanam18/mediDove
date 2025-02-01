@@ -39,7 +39,7 @@ export const Cards_Services =
         onMouseEnter={(e) => {e.currentTarget.style.boxShadow = `0 5px 10px ${shadowColor}`}}
         onMouseLeave={(e) => {e.currentTarget.style.boxShadow = 'none'}}
         {...props}>
-            <CardImage style = {img_styles}>
+            <CardImage>
               <CardImg src={card.src} style = {img_styles}></CardImg>
             </CardImage>
             {/* <CardHeader> */}
@@ -62,6 +62,56 @@ export const Cards_Services =
             {/* <CardFooter>
               <p>{card.footer}</p>
             </CardFooter> */}
+        </Card>
+      ))}
+
+      </Cards>
+  )
+})
+
+export const Cards_Team = 
+  React.forwardRef(({ className, cards, 
+    cards_styles, card_styles,
+    img_styles, shadowColor, 
+    title_styles, colorHoverTitle,
+    content_styles, colorHoverContent,
+    absolute_styles, backgroundcolorHoverabsolute, ...props }, ref) => {
+
+
+  return (
+    <Cards ref={ref}
+    {...props} style={cards_styles}>
+
+     
+      {cards.map((card) => (
+        <Card key={card.id} ref={ref}
+        className={cn(className)}  
+        style={card_styles}
+        onMouseEnter={(e) => {e.currentTarget.style.boxShadow = `0 5px 10px ${shadowColor}`}}
+        onMouseLeave={(e) => {e.currentTarget.style.boxShadow = 'none'}}
+        {...props}>
+            <CardImage className = {'relative'}>
+              <CardImg src={card.src} style = {img_styles}></CardImg>
+              <div style={absolute_styles}
+              className='transition-all duration-300'
+              onMouseEnter={(e) => {e.currentTarget.style.backgroundColor = backgroundcolorHoverabsolute}}
+              onMouseLeave={(e) => {e.currentTarget.style.backgroundColor = absolute_styles.backgroundColor}}
+              >+</div>
+            </CardImage>
+            <CardHeader className = {'flex flex-col gap-2'}>
+            <Link>
+              <CardTitle style = {title_styles}
+              onMouseEnter={(e) => {e.currentTarget.style.color = colorHoverTitle}}
+              onMouseLeave={(e) => {e.currentTarget.style.color = title_styles.color}}
+              >{card.title}</CardTitle>
+            </Link>
+            <CardContent style = {content_styles} 
+            >
+              <p>  
+              {card.content}
+              </p>  
+            </CardContent>
+            </CardHeader>
         </Card>
       ))}
 
@@ -95,7 +145,7 @@ export const Cards_News =
         onMouseEnter={(e) => {e.currentTarget.style.boxShadow = `0 5px 10px ${shadowColor}`}}
         onMouseLeave={(e) => {e.currentTarget.style.boxShadow = 'none'}}
         {...props}>
-            <CardImage style = {img_styles}>
+            <CardImage>
               <CardImg src={card.src} style = {img_styles}></CardImg>
             </CardImage>
             {/* <CardHeader> */}
@@ -193,7 +243,7 @@ export const Cards_Services_Use = () => {
      shadowColor: '#AAC',
    },
    img_styles: {
-    width: '75%',
+    width: '55%',
    },
    title_styles: {
     fontSize: '1.28rem',
@@ -266,7 +316,7 @@ export const Cards_News_Use = () => {
      // justifyContent: 'space-around',
      columnGap: '1.25rem',
      rowGap: '0.75rem',
-     padding: '10px 15%',
+    //  padding: '10px 15%',
    },
    card_styles: {
      backgroundColor: 'white',
@@ -314,5 +364,115 @@ export const Cards_News_Use = () => {
               footer_styles = {stylesNews.footer_styles}
               colorHoverFooter = {stylesNews.footer_styles.colorHoverFooter}
       ></Cards_News>
+  );
+};
+
+// it is use case. don't call cards_news_use anywhere
+// it is shown how it is going to be used
+export const Cards_Team_Use = () => {
+
+  const cardsInfoTeam = [
+    {
+      id: 0,
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
+      footer: 'Card Footer',
+      src: './img/member1.png'
+    },
+    {
+      id: 1,
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
+      footer: 'Card Footer',
+      src: './img/member1.png'
+    },
+    {
+      id: 2,
+      title: 'Rosalina D. Williamson',
+      description: 'Card Description',
+      content: 'Founder',
+      footer: 'Card Footer',
+      src: './img/member1.png'
+    },
+    
+    {
+      id: 3,
+      title: 'Card Title',
+      description: 'Card Description',
+      content: 'Card Content',
+      footer: 'Card Footer',
+      src: './img/member1.png'
+    },
+  ]
+  const stylesTeam = {
+    cards_styles: {
+     backgroundColor: 'white',
+     // justifyContent: 'space-around',
+     columnGap: '1.25rem',
+     rowGap: '0.75rem',
+    //  padding: '10px 15%',
+   },
+   card_styles: {
+     backgroundColor: 'white',
+     color: 'black',
+     padding: '0',
+     gap: '1.75rem',
+     textAlign: 'center',
+     alignItems: 'center',
+     justifyContent: 'center',
+    //  shadowColor: '#AAC',
+   },
+   img_styles: {
+    width: '70%',
+   },
+   title_styles: {
+    fontSize: '1.28rem',
+    color: '#171717',
+    // colorHoverTitle: '#e1236b',
+   },
+   content_styles: {
+    textTransform: 'uppercase',
+    fontWeight: '500',
+    color: '#e1236b',
+    colorHoverFooter: '#73bb1d',
+   },
+   absolute_styles: {
+    position: 'absolute',
+    right: '15%',
+    bottom: '10%',
+    fontWeight: '900',
+    boxShadow: '',
+    fontSize: '20px',
+    color: 'white',
+    backgroundColor: '#349030',
+    backgroundcolorHoverabsolute: '#e1236b',
+    width: '40px',
+    height: '40px',
+    display: 'flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '50%',
+    boxShadow: '0 5px 10px #a9cba8'
+   }
+    
+  }
+  return (
+    <>
+      <Cards_Team cards={cardsInfoTeam} 
+                    cards_styles = {stylesTeam.cards_styles}
+                    card_styles = {stylesTeam.card_styles}
+                    img_styles = {stylesTeam.img_styles}
+                    shadowColor = {stylesTeam.card_styles.shadowColor}
+                    title_styles = {stylesTeam.title_styles}
+                    colorHoverTitle = {stylesTeam.title_styles.colorHoverTitle}
+                    content_styles = {stylesTeam.content_styles}
+                    colorHoverContent = {stylesTeam.content_styles.colorHoverContent}
+                    absolute_styles = {stylesTeam.absolute_styles}
+                    backgroundcolorHoverabsolute = {stylesTeam.absolute_styles.backgroundcolorHoverabsolute}
+      ></Cards_Team>
+    </>
   );
 };
