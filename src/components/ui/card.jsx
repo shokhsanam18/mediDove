@@ -17,7 +17,7 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
     className={cn(
-      `flex flex-col gap-2 bg-card text-card-foreground transition-all hover:shadow-lg`,
+      `flex flex-col gap-2 bg-card text-card-foreground transition-all`,
       className
     )}
     {...props}
@@ -84,7 +84,7 @@ CardContent.displayName = "CardContent";
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn(className)}
+    className={cn("text-xs transition-all duration-300", className)}
     {...props}
   />
 ));
