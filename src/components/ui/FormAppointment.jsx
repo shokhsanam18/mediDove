@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/inputFormAppointment";
 import { Phone } from "lucide-react";
 import { Calendar } from "lucide-react";
 import { Timer } from "lucide-react";
@@ -12,7 +12,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/selectformAppointment";
 
 // ---------------DEPARTMENT SELECTION-------------
 function SelectDemoDepartment({ value, onChange }) {
@@ -128,8 +128,7 @@ function RequestInput({ value, onChange }) {
 }
 
 const BASE_URL =
-  "https://crudcrud.com/api/8a474ffec9154065a4036b7b1d81c348/appointments"; 
-
+  "https://crudcrud.com/api/e33d2e0f579444f4ab296a3656068a26/appointments"; 
 function Form() {
   const [department, setDepartment] = React.useState("");
   const [doctor, setDoctor] = React.useState("");
@@ -178,7 +177,7 @@ function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-2/4 border-lime-600 h-full bg-black"
+      className="w-1/3 border-lime-600 h-full bg-black"
     >
       <div>
         <h5 className="text-red-600 text-xl">Appointment</h5>
