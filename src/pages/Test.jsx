@@ -43,9 +43,12 @@ export function NavigationMenuDynamic() {
   return (
     <NavigationMenu className="lg:max-w-full flex h-24 w-full bg-slate-400">
       <NavigationMenuList className="flex justify-between items-center">
-        <NavigationMenuItem>
-          <img src={Logo} alt="" />
-        </NavigationMenuItem>
+        <div>
+          <NavigationMenuItem>
+            <img src={Logo} alt="" />
+          </NavigationMenuItem>
+        </div>
+
         <NavigationMenuItem>
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -74,13 +77,7 @@ export function NavigationMenuDynamic() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        {/* <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem> */}
+
         <NavigationMenuItem>
           <Link to="/News">
             <button className={navigationMenuTriggerStyle()}>News</button>
