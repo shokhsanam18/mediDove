@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@/components/ui/button";
 import { Cards_Services, Cards_News, Cards_Team } from "../components/ui/Cards";
 
 export const Test = () => {
@@ -243,6 +244,7 @@ export const Test = () => {
   return (
     <>
       <div>Test</div>
+      <Button>Dynamic button</Button>
       <Cards_Services
         cards={cardsInfoServices}
         cards_styles={stylesServices.cards_styles}
