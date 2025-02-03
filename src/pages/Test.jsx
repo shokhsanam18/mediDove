@@ -41,8 +41,8 @@ const items = [
 
 export function NavigationMenuDynamic() {
   return (
-    <NavigationMenu className="lg:max-w-full flex h-24 bg-slate-400">
-      <NavigationMenuList>
+    <NavigationMenu className="lg:max-w-full flex h-24 w-full bg-slate-400">
+      <NavigationMenuList className="flex justify-between items-center">
         <NavigationMenuItem>
           <img src={Logo} alt="" />
         </NavigationMenuItem>
@@ -81,6 +81,18 @@ export function NavigationMenuDynamic() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem> */}
+        <NavigationMenuItem>
+          <Link to="/News">
+            <button className={navigationMenuTriggerStyle()}>News</button>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link to="/BecomeMember">
+            <button className={navigationMenuTriggerStyle()}>
+              Become a member
+            </button>
+          </Link>
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <Link to="/Blog">
             <button className={navigationMenuTriggerStyle()}>Blog</button>

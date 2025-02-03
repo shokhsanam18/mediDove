@@ -5,6 +5,8 @@ import { LayoutTest } from "./components/layoutTest";
 import { Tasischilar } from "./pages/About/Tasischilar";
 import { Details } from "./pages/Surgery-types/Details";
 import { Blog } from "./pages/Blog";
+import { News } from "./pages/News";
+import { BecomeMember } from "./pages/BecomeMember";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="Tasischilar" element={<Tasischilar />} />
         <Route path="Details" element={<Details />} />
         <Route path="Blog" element={<Blog />} />
+        <Route path="News" element={<News />} />
+        <Route path="BecomeMember" element={<BecomeMember />} />
       </Routes>
     </div>
   );
