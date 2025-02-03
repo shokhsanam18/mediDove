@@ -2,7 +2,7 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Test } from "./pages/Test";
 import { LayoutTest } from "./components/layoutTest";
-import { Button } from "src/components/ui/button.jsx";
+import { Button } from "./components/ui/button";
 
 function App() {
   return (
