@@ -41,7 +41,7 @@ const items = [
 
 export function NavigationMenuDynamic() {
   return (
-    <NavigationMenu className="lg:max-w-full flex h-24 w-full bg-slate-400">
+    <NavigationMenu className="lg:max-w-full flex h-24 w-full bg-white">
       <NavigationMenuList className="flex justify-between items-center">
         <div>
           <NavigationMenuItem>
