@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import { Index } from "./pages/Index";
@@ -30,6 +31,15 @@ function App() {
         </Route>
         <Route path="*" element={<div>404 Not found</div>} />
       </Routes>
+=======
+import React from "react";
+import FormComponent from "./components/ui/FormComponent"; // ✅ Correct import
+
+function App() {
+  return (
+    <div className="flex justify-center items-center h-screen bg-[#F4F9FC]">
+      <FormComponent />
+>>>>>>> 114ddd7f2f1756cb038a72962e185bdfe9108a19
     </div>
   );
 }
