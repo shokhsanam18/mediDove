@@ -62,7 +62,9 @@ export function Navbar() {
         <div className="flex flex-row">
           <NavigationMenuList className="flex justify-between items-center">
             <NavigationMenuItem>
-              <NavigationMenuTrigger>About</NavigationMenuTrigger>
+              <NavigationMenuTrigger>
+                <Link to="/About">About</Link>
+              </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]  shadow-lg ">
                   {components.map((component) => (
@@ -77,7 +79,9 @@ export function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Surgery Types</NavigationMenuTrigger>
+              <NavigationMenuTrigger>
+                <Link to="/Surgery">Surgery types</Link>
+              </NavigationMenuTrigger>
               <NavigationMenuContent className="">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]">
                   {items.map((item) => (
