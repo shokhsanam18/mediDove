@@ -1,10 +1,11 @@
-import { Button } from "./components/ui/button";
+import React from "react";
+import FormComponent from "./components/ui/FormComponent"; // ✅ Correct import
 
 function App() {
   return (
-    <>
-      <Button>hello world</Button>
-    </>
+    <div className="flex justify-center items-center h-screen bg-[#F4F9FC]">
+      <FormComponent />
+    </div>
   );
 }
 
