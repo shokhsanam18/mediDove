@@ -1,5 +1,5 @@
 import React from "react";
 
-export const SurgeryIndex = () => {
+export const Surgery = () => {
   return <div>SurgeryIndex</div>;
 };
