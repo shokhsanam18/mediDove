@@ -111,7 +111,6 @@ export function Navbar() {
                 <Link to="/Blog">Blog</Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Facebook />
