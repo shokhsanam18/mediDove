@@ -86,84 +86,96 @@ function FormAppointment() {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="w-1/2 border-2 border-red-200 h-[40rem] bg-white p-5"
+    <div
+      className="flex justify-center h-[100vh] p-16"
+      style={{
+        backgroundImage: "url('/img/bgzlyuka.jpg')",
+      }}
     >
-      <Typography variant="p" className="text-red-500">
-        Appointment
-      </Typography>
-      <Typography variant="h2">Book Appointment</Typography>
-
-      <div className="flex flex-col md:flex-row gap-5 mt-5">
-        <SelectDemo
-          value={formData.department}
-          onChange={handleChange("department")}
-          placeholder="Department"
-          items={[
-            { value: "surgery", label: "Surgery and Radiology" },
-            { value: "pediatrics", label: "Pediatrics" },
-          ]}
-        />
-        <SelectDemo
-          value={formData.doctor}
-          onChange={handleChange("doctor")}
-          placeholder="Doctor"
-          items={[
-            { value: "doctor1", label: "Doctor One" },
-            { value: "doctor2", label: "Doctor Two" },
-          ]}
-        />
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-5 mt-5">
-        <TextInput
-          value={formData.name}
-          onChange={handleChange("name")}
-          placeholder="Your Name"
-          icon={NotebookPen}
-        />
-        <TextInput
-          value={formData.phone}
-          onChange={handleChange("phone")}
-          placeholder="Your Phone Number"
-          icon={Phone}
-        />
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-5 mt-5">
-        <TextInput
-          value={formData.date}
-          onChange={handleChange("date")}
-          placeholder="Select Date"
-          icon={Calendar}
-        />
-        <TextInput
-          value={formData.time}
-          onChange={handleChange("time")}
-          placeholder="Add a time"
-          icon={Timer}
-        />
-      </div>
-
-      <div className="w-full  mt-5">
-        <TextInput
-          className="h-[100em]"
-          value={formData.request}
-          onChange={handleChange("request")}
-          placeholder="Special Request"
-          icon={NotebookPen}
-        />
-      </div>
-
-      <button
-        type="submit"
-        className="bg-red-600 text-white w-full h-14 mt-5"
-        disabled={loading}
+      <form
+        onSubmit={handleSubmit}
+        className="border-2 border-red-200 w-1/2 bg-white p-5 "
+        style={{
+          height: "calc(100vh - 80px)",
+        }}
       >
-        {loading ? "Submitting..." : "Submit Query"}
-      </button>
-    </form>
+        <Typography variant="p" className="text-red-500 mt-5 text-2xl">
+          Appointment
+        </Typography>
+        <Typography variant="h2" className="py-10 text-3xl">
+          Book Appointment
+        </Typography>
+
+        <div className="flex flex-col md:flex-row gap-5 mt-5">
+          <SelectDemo
+            value={formData.department}
+            onChange={handleChange("department")}
+            placeholder="Department"
+            items={[
+              { value: "surgery", label: "Surgery and Radiology" },
+              { value: "pediatrics", label: "Pediatrics" },
+            ]}
+          />
+          <SelectDemo
+            value={formData.doctor}
+            onChange={handleChange("doctor")}
+            placeholder="Doctor"
+            items={[
+              { value: "doctor1", label: "Doctor One" },
+              { value: "doctor2", label: "Doctor Two" },
+            ]}
+          />
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-5 mt-5">
+          <TextInput
+            value={formData.name}
+            onChange={handleChange("name")}
+            placeholder="Your Name"
+            icon={NotebookPen}
+          />
+          <TextInput
+            value={formData.phone}
+            onChange={handleChange("phone")}
+            placeholder="Your Phone Number"
+            icon={Phone}
+          />
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-5 mt-5">
+          <TextInput
+            value={formData.date}
+            onChange={handleChange("date")}
+            placeholder="Select Date"
+            icon={Calendar}
+          />
+          <TextInput
+            value={formData.time}
+            onChange={handleChange("time")}
+            placeholder="Add a time"
+            icon={Timer}
+          />
+        </div>
+
+        <div className="w-full  mt-5">
+          <TextInput
+            className="h-[400px]"
+            value={formData.request}
+            onChange={handleChange("request")}
+            placeholder="Special Request"
+            icon={NotebookPen}
+          />
+        </div>
+
+        <button
+          type="submit"
+          className="bg-red-600 text-white w-full h-14 mt-5"
+          disabled={loading}
+        >
+          {loading ? "Submitting..." : " SUBMIT QUERY"}
+        </button>
+      </form>
+    </div>
   );
 }
 

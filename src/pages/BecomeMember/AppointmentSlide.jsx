@@ -1,13 +1,17 @@
 import React from "react";
 import Typography from "@/components/ui/Typography";
 import { Link } from "react-router-dom";
+
 const AppointmentPage = () => {
   return (
     <div
-      className="flex items-center h-screen w-full"
-      style={{ height: "calc(100vh - 150px)" }}
+      className="flex items-center h-screen w-full "
+      style={{
+        backgroundImage: "url('/img/bgbook.jpg')",
+        height: "calc(100vh - 150px)",
+      }}
     >
-      <div className="bg-white/70 flex flex-col md:flex-row items-center text-center sm:text-start sm:items-start w-full p-8">
+      <div className="flex flex-col md:flex-row items-center text-center sm:text-start sm:items-start w-full p-8">
         <div className="flex flex-col items-center sm:items-start w-full">
           <Typography variant="h4">We are here for your care.</Typography>
           <Typography variant="h2">Appointment</Typography>
