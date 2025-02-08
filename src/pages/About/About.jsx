@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@/components/ui/Typography";
 import { Card, CardImg } from "@/components/ui/Card";
+import { Button } from "@/components/ui/button";
 import aboutImg from "@/assets/about-img.jpg";
 import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 
 export const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="w-full py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
-        <Card className="w-full lg:w-1/2">
-          <CardImg
-            src={aboutImg}
-            className="w-full h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
-          />
-        </Card>
+        <div className="relative w-full lg:w-1/2">
+          <Card>
+            <CardImg
+              src={aboutImg}
+              className="w-full h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
+            />
+          </Card>
+          <Button
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+             bg-white hover:bg-red-500 w-24 h-24 rounded-full shadow-md flex items-center justify-center"
+            onClick={() => setIsModalOpen(true)}
+          >
+            <i className="fa-solid fa-play text-black text-2xl"></i>
+          </Button>
+        </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
           <Typography variant="h4" className="text-[#6A7B8F]">
@@ -78,6 +90,25 @@ export const About = () => {
           </div>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
+          <div className="relative bg-white p-4 rounded-lg w-[90%] max-w-2xl">
+            <button
+              className="absolute top-2 right-2 text-xl font-bold"
+              onClick={() => setIsModalOpen(false)}
+            >
+              ✖
+            </button>
+            <iframe
+              className="w-full h-64 sm:h-96"
+              src="https://www.youtube.com/embed/I3u3lFA9GX4?si=4aSF7MrT3hLsnI0f"
+              title="YouTube video"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
