@@ -6,7 +6,7 @@ import { Tasischilar } from "./pages/About/Tasischilar";
 import { Details } from "./pages/Surgery-types/Details";
 import { Blog } from "./pages/Blog";
 import { News } from "./pages/News";
-import { BecomeMember } from "./pages/BecomeMember";
+import { BecomeMember } from "./pages/BecomeMember/BecomeMember";
 import { Layout } from "./components/Layout";
 import { Shifokorlar } from "./pages/About/Shifokorlar";
 import { Ustav } from "./pages/About/Ustav";
