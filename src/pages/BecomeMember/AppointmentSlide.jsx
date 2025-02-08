@@ -14,7 +14,7 @@ const AppointmentPage = () => {
       <div className="flex flex-col md:flex-row items-center text-center sm:text-start sm:items-start w-full p-8">
         <div className="flex flex-col items-center sm:items-start w-full">
           <Typography variant="h4">We are here for your care.</Typography>
-          <Typography variant="h2">Appointment</Typography>
+          <Typography variant="h1">Appointment</Typography>
         </div>
 
         <div className="flex flex-row justify-end sm:justify-start mt-4">
