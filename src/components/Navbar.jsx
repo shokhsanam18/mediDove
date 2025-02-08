@@ -59,7 +59,7 @@ export function Navbar() {
         <div className="flex justify-center items-center">
           <img src={Logo} alt="" />
         </div>
-        <div className="flex flex-row">
+        <div className="lg:flex flex-row hidden ">
           <NavigationMenuList className="flex justify-between items-center">
             <NavigationMenuItem>
               <NavigationMenuTrigger>
