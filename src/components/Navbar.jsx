@@ -54,26 +54,28 @@ const languages = [
 
 export function Navbar() {
   return (
-    <div className="hidden lg:flex">
-      <NavigationMenu className="lg:max-w-full flex h-28 w-full bg-white shadow-md">
+    <div className="lg:block  lg:sticky lg:top-0 lg:z-10">
+      <NavigationMenu className="flex justify-between h-28 w-full bg-white shadow-md ">
         <div className="flex justify-center items-center">
-          <img src={Logo} alt="" />
+          <Link to="/">
+            <img src={Logo} alt="Logo" />
+          </Link>
         </div>
-        <div className="lg:flex flex-row hidden ">
-          <NavigationMenuList className="flex justify-between items-center">
+        <div className="lg:flex flex-row hidden w-full justify-between">
+          <NavigationMenuList className="flex items-center">
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Link to="/About">About</Link>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]  shadow-lg ">
+                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
                   {components.map((component) => (
                     <ListItem
                       className="hover:text-red-500 font-semibold hover:bg-white"
                       key={component.title}
                       title={component.title}
                       href={component.href}
-                    ></ListItem>
+                    />
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -86,16 +88,15 @@ export function Navbar() {
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]">
                   {items.map((item) => (
                     <ListItem
-                      className="hover:text-red-500  font-semibold hover:bg-white"
+                      className="hover:text-red-500 font-semibold hover:bg-white"
                       key={item.title}
                       title={item.title}
                       href={item.href}
-                    ></ListItem>
+                    />
                   ))}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
-
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Link to="/News">News</Link>
@@ -135,20 +136,20 @@ export function Navbar() {
               <NavigationMenuTrigger>
                 <img
                   src={Lang}
-                  alt=""
+                  alt="Language"
                   width="50px"
                   height="50px"
                   className=""
                 />
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]  shadow-lg ">
+                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
                   {languages.map((language) => (
                     <ListItem
                       className="hover:text-red-500 font-semibold bg-white"
                       key={language.lang}
                       title={language.lang}
-                    ></ListItem>
+                    />
                   ))}
                 </ul>
               </NavigationMenuContent>
