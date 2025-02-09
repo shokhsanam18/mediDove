@@ -54,12 +54,12 @@ const languages = [
 
 export function Navbar() {
   return (
-    <div className="hidden lg:flex">
+    <div className="hidden sticky top-0 lg:flex transition-all">
       <NavigationMenu className="lg:max-w-full flex h-28 w-full bg-white shadow-md">
         <div className="flex justify-center items-center">
           <img src={Logo} alt="" />
         </div>
-        <div className="flex flex-row">
+        <div className="lg:flex sm:hidden flex-row">
           <NavigationMenuList className="flex justify-between items-center">
             <NavigationMenuItem>
               <NavigationMenuTrigger>
