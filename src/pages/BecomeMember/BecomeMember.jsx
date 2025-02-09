@@ -6,8 +6,7 @@ import NewsAppointment from "./NewsAppointment";
 export const BecomeMember = () => {
   return (
     <div className="overflow-x-hidden">
-      <AppointmentPage />;
-      <About />
+      <AppointmentPage />;{/* <About /> */}
       <FormAppointment />
       <NewsAppointment />
     </div>
