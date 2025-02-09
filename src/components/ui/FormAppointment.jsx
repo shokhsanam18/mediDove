@@ -48,7 +48,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon }) {
 }
 
 const BASE_URL =
-  "https://crudcrud.com/api/ea978423b30546738243ec60fa8feaba/appointments";
+  "https://crudcrud.com/api/25d79de5389d4238851da19031bd0a1b/appointments";
 
 function FormAppointment() {
   const [formData, setFormData] = React.useState({
@@ -87,26 +87,23 @@ function FormAppointment() {
 
   return (
     <div
-      className="flex justify-center h-[100vh] p-16"
+      className="md:flex md:justify-center h-[115vh] "
       style={{
         backgroundImage: "url('/img/bgzlyuka.jpg')",
       }}
     >
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-red-200 w-1/2 bg-white p-5 "
-        style={{
-          height: "calc(100vh - 80px)",
-        }}
+        className="border-2 border-red-200 md:p-20 m-5 p-4 bg-white md:m-14 md:w-1/2"
       >
         <Typography variant="p" className="text-red-500 mt-5 text-2xl">
           Appointment
         </Typography>
-        <Typography variant="h2" className="py-10 text-3xl">
+        <Typography variant="h2" className=" text-3xl md:py-10 py-3">
           Book Appointment
         </Typography>
 
-        <div className="flex flex-col md:flex-row gap-5 mt-5">
+        <div className="flex flex-col md:flex-row gap-5 md:mt-5">
           <SelectDemo
             value={formData.department}
             onChange={handleChange("department")}

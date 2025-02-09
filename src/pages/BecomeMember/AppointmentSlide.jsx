@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const AppointmentPage = () => {
   return (
     <div
-      className="flex items-center h-screen w-full "
+      className="flex items-center h-[100vh] w-full bg-no-repeat bg-cover"
       style={{
         backgroundImage: "url('/img/bgbook.jpg')",
         height: "calc(100vh - 150px)",
       }}
     >
-      <div className="flex flex-col md:flex-row items-center text-center sm:text-start sm:items-start w-full p-8">
+      <div className="flex flex-col md:flex-row items-center text-center sm:text-start sm:items-start w-full md:p-48">
         <div className="flex flex-col items-center sm:items-start w-full">
           <Typography variant="h4">We are here for your care.</Typography>
           <Typography variant="h1">Appointment</Typography>
