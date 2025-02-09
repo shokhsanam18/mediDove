@@ -54,12 +54,14 @@ const languages = [
 
 export function Navbar() {
   return (
-    <div className="hidden sticky top-0 lg:flex transition-all">
+    <div className=" sticky top-0 lg:flex transition-all">
       <NavigationMenu className="lg:max-w-full flex h-28 w-full bg-white shadow-md">
         <div className="flex justify-center items-center">
-          <img src={Logo} alt="" />
+          <Link to="/">
+            <img src={Logo} alt="" />
+          </Link>
         </div>
-        <div className="lg:flex sm:hidden flex-row">
+        <div className="lg:flex hidden flex-row">
           <NavigationMenuList className="flex justify-between items-center">
             <NavigationMenuItem>
               <NavigationMenuTrigger>
