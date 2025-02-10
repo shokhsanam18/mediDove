@@ -7,44 +7,11 @@ import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
 
-export const About = () => {
+export const AboutAppointment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="w-full">
-      <div
-        className="relative w-full h-[400px] sm:h-[500px] flex items-center"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between w-full">
-          <div className="flex flex-col">
-            <Typography
-              variant="p"
-              className="text-[#6A7B8F] text-sm sm:text-base mb-2"
-            >
-              We are here for your care.
-            </Typography>
-            <Typography variant="h1" className="text-black font-bold">
-              About Us
-            </Typography>
-          </div>
-
-          <div className="flex items-center">
-            <Typography variant="p" className="text-gray-600">
-              Home <span className="mx-2">|</span>
-            </Typography>
-            <Typography variant="p" className="text-red-600 font-semibold">
-              About
-            </Typography>
-          </div>
-        </div>
-      </div>
-
       <div className="w-full py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
           <div className="relative w-full lg:w-1/2">
