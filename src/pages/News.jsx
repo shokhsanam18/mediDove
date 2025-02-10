@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import{ Cards_Team} from "../components/ui/Cards"
+import { Cards_Team } from "../components/ui/Cards";
 import { Cards_News } from "../components/ui/Cards";
 import Typography from "../components/ui/Typography";
 import { Link } from "react-router-dom";
