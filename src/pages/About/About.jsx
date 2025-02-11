@@ -48,13 +48,16 @@ export const About = () => {
       <div className="w-full py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
           <div className="relative w-full lg:w-1/2">
-            <Card>
-              <CardImg
+            {/* <Card> */}
+            {/* <CardImg
                 src={aboutImg}
-                className="w-full relative h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
-              />
-            </Card>
-
+                className="w-full  h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
+              /> */}
+            <img
+              src={aboutImg}
+              alt=""
+              className="w-full  h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
+            />
             <Button
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
               bg-white hover:bg-red-500 w-20 h-20 rounded-full shadow-md flex items-center justify-center"
@@ -62,6 +65,15 @@ export const About = () => {
             >
               <i className="fa-solid fa-play text-black text-xl"></i>
             </Button>
+            {/* </Card> */}
+
+            {/* <Button
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+              bg-white hover:bg-red-500 w-20 h-20 rounded-full shadow-md flex items-center justify-center"
+              onClick={() => setIsModalOpen(true)}
+            >
+              <i className="fa-solid fa-play text-black text-xl"></i>
+            </Button> */}
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
