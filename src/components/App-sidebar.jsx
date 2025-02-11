@@ -36,7 +36,7 @@ const items = [
 export function AppSidebar() {
   return (
     <Sidebar>
-      <SidebarContent style={{ background: "grey" }}>
+      <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
