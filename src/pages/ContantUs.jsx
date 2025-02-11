@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Cards_Team } from "../components/ui/Cards";
 import { Cards_News } from "../components/ui/Cards";
@@ -7,10 +7,40 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faComment } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import FormComponent from "../components/ui/FormComponent";
 
 const items = [" "];
 
 export const Contact = () => {
+  const mapContainerRef = useRef(null); // Reference to the map container
+  const mapInstanceRef = useRef(null); // Reference to store the map instance
+
+  useEffect(() => {
+    if (!window.ymaps) {
+      console.error("Yandex Maps API is not loaded.");
+      return;
+    }
+
+    window.ymaps.ready(() => {
+      if (!mapInstanceRef.current && mapContainerRef.current) {
+        // ✅ Create the map inside the referenced container
+        mapInstanceRef.current = new window.ymaps.Map(mapContainerRef.current, {
+          center: [55.751244, 37.618423], // Moscow
+          zoom: 10,
+        });
+
+        const placemark = new window.ymaps.Placemark([55.751244, 37.618423]);
+        mapInstanceRef.current.geoObjects.add(placemark);
+      }
+    });
+
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.destroy(); // ✅ Cleanup when component unmounts
+        mapInstanceRef.current = null;
+      }
+    };
+  }, []);
   return (
     <>
       <div
@@ -42,7 +72,14 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="flex"></div>
+      <div className="flex">
+        <FormComponent />
+      </div>
+      <div
+        ref={mapContainerRef}
+        className="relative mt-10" 
+        style={{ width: "100%", height: "40em"}}
+      ></div>
     </>
   );
 };

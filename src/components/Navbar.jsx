@@ -54,8 +54,8 @@ const languages = [
 
 export function Navbar() {
   return (
-    <div className=" sticky top-0 lg:flex transition-all">
-      <NavigationMenu className="lg:max-w-full flex h-28 w-full bg-white shadow-md">
+    <div className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
+      <NavigationMenu className=" lg:max-w-full flex h-28 w-full bg-white shadow-md">
         <div className="flex justify-center items-center">
           <Link to="/">
             <img src={Logo} alt="" />
