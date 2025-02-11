@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import Logo from "../assets/logo.png";
 import Lang from "../assets/lang.png";
-import { Facebook, Youtube, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Youtube, Twitter } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -122,11 +122,6 @@ export function Navbar() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Youtube />
-              </NavigationMenuTrigger>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <Linkedin />
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
