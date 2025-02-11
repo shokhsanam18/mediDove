@@ -113,7 +113,11 @@ export function Navbar() {
                 <Link to="/Blog">Blog</Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
-
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                <Link to="/ContactUs">Contact us</Link>
+              </NavigationMenuTrigger>
+            </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Facebook />
