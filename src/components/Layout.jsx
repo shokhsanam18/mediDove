@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
     <>
       <div
-        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh"}}
       >
         <Navbar />
         <Outlet />
