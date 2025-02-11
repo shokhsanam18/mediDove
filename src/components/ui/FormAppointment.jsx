@@ -15,7 +15,7 @@ import {
 function SelectDemo({ value, onChange, placeholder, items }) {
   return (
     <Select onValueChange={onChange} value={value}>
-      <SelectTrigger className="w-full h-12 p-7 border-y-blue-150">
+      <SelectTrigger className="w-full h-12 p-4 border-y-blue-150">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
@@ -32,9 +32,11 @@ function SelectDemo({ value, onChange, placeholder, items }) {
   );
 }
 
-function TextInput({ value, onChange, placeholder, icon: Icon }) {
+function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   return (
-    <div className="w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative">
+    <div
+      className={`w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative ${className}`}
+    >
       <Input
         type="text"
         placeholder={placeholder}
@@ -42,7 +44,9 @@ function TextInput({ value, onChange, placeholder, icon: Icon }) {
         value={value}
         onChange={onChange}
       />
-      <Icon className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
+      {Icon && (
+        <Icon className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
+      )}
     </div>
   );
 }
@@ -87,23 +91,23 @@ function FormAppointment() {
 
   return (
     <div
-      className="md:flex md:justify-center h-[115vh] "
+      className="flex justify-center items-center  min-h-screen bg-cover p-10 bg-center px-4"
       style={{
         backgroundImage: "url('/img/bgzlyuka.jpg')",
       }}
     >
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-red-200 md:p-20 m-5 p-4 bg-white md:m-14 md:w-1/2"
+        className="border-2 border-red-200 p-6 md:p-10 bg-white shadow-lg rounded-lg w-full md:max-w-lg overflow-auto"
       >
-        <Typography variant="p" className="text-red-500 mt-5 text-2xl">
+        <Typography variant="p" className="text-red-500 text-2xl">
           Appointment
         </Typography>
-        <Typography variant="h2" className=" text-3xl md:py-10 py-3">
+        <Typography variant="h2" className="text-3xl md:py-6 py-3">
           Book Appointment
         </Typography>
 
-        <div className="flex flex-col md:flex-row gap-5 md:mt-5">
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
           <SelectDemo
             value={formData.department}
             onChange={handleChange("department")}
@@ -124,7 +128,7 @@ function FormAppointment() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 mt-5">
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
           <TextInput
             value={formData.name}
             onChange={handleChange("name")}
@@ -139,7 +143,7 @@ function FormAppointment() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 mt-5">
+        <div className="flex flex-col md:flex-row gap-4 mt-4">
           <TextInput
             value={formData.date}
             onChange={handleChange("date")}
@@ -154,9 +158,9 @@ function FormAppointment() {
           />
         </div>
 
-        <div className="w-full  mt-5">
+        <div className="w-full mt-4">
           <TextInput
-            className="h-[400px]"
+            className="h-32"
             value={formData.request}
             onChange={handleChange("request")}
             placeholder="Special Request"
@@ -166,7 +170,7 @@ function FormAppointment() {
 
         <button
           type="submit"
-          className="bg-red-600 text-white w-full h-14 mt-5"
+          className="bg-red-600 text-white w-full h-12 mt-5 rounded-md transition hover:bg-red-700 disabled:opacity-50"
           disabled={loading}
         >
           {loading ? "Submitting..." : " SUBMIT QUERY"}
