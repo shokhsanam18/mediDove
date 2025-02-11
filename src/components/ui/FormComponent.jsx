@@ -3,7 +3,9 @@ import axios from "axios";
 import { Input } from "./input";
 import { Label } from "./label";
 import { Textarea } from "./textarea";
-
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 function InputWithName({ value, onChange }) {
   return (
@@ -134,13 +136,26 @@ function FormComponent() {
     setLoading(false);
   };
   return (
-    <form onSubmit={handleSubmit} className="w-4/5 mx-auto  p-6 bg-[#F4F9FC]">
-      <p className="text-[#647589] text-[14px] font-normal">
-        Anything On your Mind
-      </p>
-      <h1 className="text-[#223645] text-[60px] font-semibold ">
-        Estimate Your Idea
-      </h1>
+    <form
+      onSubmit={handleSubmit}
+      className="w-full mx-auto pt-[100px] pb-[100px] pl-[10%] pr-[10%] bg-[#F4F9FC]"
+    >
+      <div>
+        <div className="flex">
+          <p className="text-[#647589] text-[14px] font-normal">
+            Anything On your Mind
+          </p>
+          <h1 className="text-[#223645] text-[60px] font-semibold ">
+            Estimate Your Idea
+          </h1>
+        </div>
+        <Button className="flex h-16 w-60 gap-7 text-center rounded-full bg-green-600   text-white font-semibold shadow-lg hover:bg-red-600 transition relative">
+          <span className="w-14 h-16 flex items-center justify-center bg-white text-black rounded-full border-2 shadow-md ">
+            <Plus size={15} />
+          </span>
+          <Link to="/BecomeMember">MAKE APPOINTMENT</Link>
+        </Button>
+      </div>
       <div className="flex justify-between w-full">
         <InputWithName className="w-full" value={name} onChange={setName} />
         <InputWithEmail value={email} onChange={setEmail} />
