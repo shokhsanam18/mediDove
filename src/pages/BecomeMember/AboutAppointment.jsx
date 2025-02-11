@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Typography from "@/components/ui/Typography";
 import { Card, CardImg } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
-import aboutImg from "@/assets/about-img.jpg";
+import appoinmentpagephoto from "@/assets/appoinmentpagephoto.png";
 import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
@@ -14,21 +14,18 @@ export const AboutAppointment = () => {
     <div className="w-full">
       <div className="w-full py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-20 flex flex-col lg:flex-row items-center gap-12">
-          <div className="relative w-full lg:w-1/2">
-            <Card>
-              <CardImg
-                src={aboutImg}
-                className="w-full h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
-              />
-            </Card>
-
-            <Button
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-              bg-white hover:bg-red-500 w-20 h-20 rounded-full shadow-md flex items-center justify-center"
-              onClick={() => setIsModalOpen(true)}
+          <div className="w-full lg:w-1/2 h-[550px]">
+            <Card
+              className="h-full lg:h-full flex flex-col justify-center items-center bg-cover bg-center"
+              style={{ backgroundImage: `url(${appoinmentpagephoto})` }}
             >
-              <i className="fa-solid fa-play text-black text-xl"></i>
-            </Button>
+              <Button
+                className="bg-white hover:bg-red-500 w-20 h-20 rounded-full shadow-md flex items-center justify-center"
+                onClick={() => setIsModalOpen(true)}
+              >
+                <i className="fa-solid fa-play text-black text-xl"></i>
+              </Button>
+            </Card>
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
@@ -96,7 +93,7 @@ export const AboutAppointment = () => {
       </div>
 
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/70 z-5">
           <div className="relative bg-white p-4 rounded-lg w-[90%] max-w-2xl">
             <button
               className="absolute top-2 right-2 text-xl font-bold"
