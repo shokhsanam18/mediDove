@@ -67,7 +67,7 @@ export function Navbar() {
               <NavigationMenuTrigger>
                 <Link to="/About">About</Link>
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="relative">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px]  shadow-lg ">
                   {components.map((component) => (
                     <ListItem
