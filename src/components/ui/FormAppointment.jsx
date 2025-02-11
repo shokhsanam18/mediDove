@@ -91,7 +91,7 @@ function FormAppointment() {
 
   return (
     <div
-      className="flex justify-center items-center  min-h-screen bg-cover p-10 bg-center px-4"
+      className="flex justify-center items-center w- min-h-screen bg-cover p-10 bg-center px-4"
       style={{
         backgroundImage: "url('/img/bgzlyuka.jpg')",
       }}
