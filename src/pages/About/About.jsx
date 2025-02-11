@@ -13,7 +13,7 @@ export const About = () => {
   return (
     <div className="w-full">
       <div
-        className="relative w-full h-[400px] sm:h-[500px] flex items-center"
+        className=" w-full h-[400px] sm:h-[500px] flex items-center"
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
@@ -51,7 +51,7 @@ export const About = () => {
             <Card>
               <CardImg
                 src={aboutImg}
-                className="w-full h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
+                className="w-full relative h-auto sm:h-[400px] md:h-[500px] lg:h-full object-cover"
               />
             </Card>
 

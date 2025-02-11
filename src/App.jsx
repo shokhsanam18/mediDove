@@ -11,6 +11,7 @@ import { Layout } from "./components/Layout";
 import { Shifokorlar } from "./pages/About/Shifokorlar";
 import { Ustav } from "./pages/About/Ustav";
 import { Surgery } from "./pages/Surgery-types/Surgery";
+import { Contact } from "./pages/ContantUs";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/BecomeMember" element={<BecomeMember />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/News" element={<News />} />
+          <Route path="/ContactUs" element={<Contact />} />
         </Route>
         <Route path="*" element={<div>404 Not found</div>} />
       </Routes>

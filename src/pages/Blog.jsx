@@ -216,22 +216,25 @@ export const Blog = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
-          <div className="flex flex-col items-center sm:items-start w-full">
-            <Typography variant="h4" className="mb-10  ">
+       <div className="max-w-7xl mx-auto px-6 lg:px-20 flex justify-between w-full">
+          <div className="flex flex-col">
+            <Typography
+              variant="p"
+              className="text-[#6A7B8F] text-sm sm:text-base mb-2"
+            >
               We are here for your care.
             </Typography>
-            <Typography variant="h2">Blog</Typography>
+            <Typography variant="h1" className="text-black font-bold">
+            Blog 3 coloum
+            </Typography>
           </div>
 
-          <div className="flex flex-row justify-end sm:justify-start mt-1">
-            <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">Home</Link>
+          <div className="flex items-center">
+            <Typography variant="p" className="text-gray-600">
+              Home <span className="mx-2">|</span>
             </Typography>
-
-            <span className="mx-1">|</span>
-            <Typography variant="p" className="text-red-500">
-              Blog
+            <Typography variant="p" className="text-red-600 font-semibold">
+              About
             </Typography>
           </div>
         </div>

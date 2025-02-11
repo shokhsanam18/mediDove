@@ -239,7 +239,7 @@ export const Cards_News = React.forwardRef(
                 {card.title}
               </CardTitle>
             </Link>
-            <CardDescription>{card.description}</CardDescription>
+            <CardDescription className="">{card.description}</CardDescription>
             {/* </CardHeader> */}
             <CardFooter
               style={footer_styles}
