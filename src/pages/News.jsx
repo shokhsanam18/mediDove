@@ -203,7 +203,7 @@ export const News = () => {
     card_styles: {
       backgroundColor: "#FAF9FF",
       color: "black",
-      padding: "0",
+      padding: "0 0 50px 0",
       gap: "1.5rem",
 
       //  textAlign: 'center',
@@ -213,14 +213,19 @@ export const News = () => {
     },
     img_styles: {
       width: "100%",
+     
     },
     title_styles: {
       fontSize: "1.28rem",
       color: "#223645",
       colorHoverTitle: "#e1236b",
+      padding: "0 50px 0 50px",
+
     },
 
     content_styles: {
+      padding: "0 50px 0 50px",
+
       fontWeight: "500",
       color: "#808e96",
       colorHoverContent: "#e1236b",
@@ -229,6 +234,8 @@ export const News = () => {
     },
 
     footer_styles: {
+      padding: "0 50px 0 50px",
+
       textTransform: "uppercase",
       fontWeight: "500",
       color: "#e1236b",
