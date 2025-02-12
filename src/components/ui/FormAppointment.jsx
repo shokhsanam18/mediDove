@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { forwardRef } from "react";
+
 import { useMutation } from "@tanstack/react-query"; // Import useMutation
 import Typography from "./Typography";
 import { Input } from "@/components/ui/inputFormAppointment";
@@ -60,7 +61,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
 const BASE_URL =
   "https://crudcrud.com/api/25d79de5389d4238851da19031bd0a1b/appointments";
 
-function FormAppointment() {
+function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
     department: "",
     doctor: "",
@@ -75,7 +76,7 @@ function FormAppointment() {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  // UseMutation for submitting the form data
+
   const mutation = useMutation({
     mutationFn: async (data) => {
       const response = await fetch(BASE_URL, {
@@ -103,6 +104,7 @@ function FormAppointment() {
 
   return (
     <div
+      ref={ref}
       className="flex justify-center items-center w-full min-h-screen bg-cover p-10 bg-center px-4"
       style={{
         backgroundImage: "url('/img/bgzlyuka.jpg')",
@@ -195,4 +197,4 @@ function FormAppointment() {
   );
 }
 
-export default FormAppointment;
+export default forwardRef(FormAppointment);

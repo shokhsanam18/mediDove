@@ -138,10 +138,10 @@ function FormComponent() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full mx-auto pt-[100px] pb-[100px] pl-[10%] pr-[10%] bg-[#F4F9FC]"
+      className="w-full  pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
     >
-      <div>
-        <div className="flex">
+      <div className="flex justify-between w-full">
+        <div>
           <p className="text-[#647589] text-[14px] font-normal">
             Anything On your Mind
           </p>
@@ -149,23 +149,30 @@ function FormComponent() {
             Estimate Your Idea
           </h1>
         </div>
-        <Button className="flex h-16 w-60 gap-7 text-center rounded-full bg-green-600   text-white font-semibold shadow-lg hover:bg-red-600 transition relative">
-          <span className="w-14 h-16 flex items-center justify-center bg-white text-black rounded-full border-2 shadow-md ">
-            <Plus size={15} />
-          </span>
-          <Link to="/BecomeMember">MAKE APPOINTMENT</Link>
-        </Button>
+        <Link to="/BecomeMember" state={{ scrollTo: "FormAppointment" }}>
+          <button
+            type="button"
+            className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition"
+          >
+            <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+              <Plus size={16} />
+            </span>
+            <span className="ml-4 text-sm tracking-wide">MAKE APPOINTMENT</span>
+          </button>
+        </Link>
       </div>
-      <div className="flex justify-between w-full">
-        <InputWithName className="w-full" value={name} onChange={setName} />
-        <InputWithEmail value={email} onChange={setEmail} />
-      </div>
-      <div className="flex justify-between">
-        <InputWithPhone value={phone} onChange={setPhone} />
-        <InputWithSubject value={subject} onChange={setSubject} />
-      </div>
-      <div className="bg-white">
-        <InputWithMessage value={message} onChange={setMessage} />
+      <div className="w-full">
+        <div className="flex justify-between w-full">
+          <InputWithName className="w-full" value={name} onChange={setName} />
+          <InputWithEmail value={email} onChange={setEmail} />
+        </div>
+        <div className="flex justify-between">
+          <InputWithPhone value={phone} onChange={setPhone} />
+          <InputWithSubject value={subject} onChange={setSubject} />
+        </div>
+        <div className="bg-white">
+          <InputWithMessage value={message} onChange={setMessage} />
+        </div>
       </div>
       {success && (
         <p
@@ -178,10 +185,19 @@ function FormComponent() {
       )}
       <button
         type="submit"
-        className="bg-red-600 text-white w-140/9 h-14"
+        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition "
         disabled={loading}
       >
-        {loading ? "Submitting..." : "GET ACTION"}
+        <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+          <Plus size={16} />
+        </span>
+        <span
+          className={`ml-4 text-sm tracking-wide ${
+            loading ? "opacity-50" : "opacity-100"
+          }`}
+        >
+          {loading ? "Submitting..." : "GET ACTION"}
+        </span>
       </button>
     </form>
   );
