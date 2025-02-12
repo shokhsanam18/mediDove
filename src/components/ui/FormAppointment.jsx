@@ -1,4 +1,6 @@
-import * as React from "react";
+import React, { forwardRef } from "react";
+
+import { useMutation } from "@tanstack/react-query"; // Import useMutation
 import Typography from "./Typography";
 import { Input } from "@/components/ui/inputFormAppointment";
 import { Phone, Calendar, Timer, NotebookPen } from "lucide-react";
@@ -15,7 +17,7 @@ import {
 function SelectDemo({ value, onChange, placeholder, items }) {
   return (
     <Select onValueChange={onChange} value={value}>
-      <SelectTrigger className="w-full h-12 p-4 border-y-blue-150">
+      <SelectTrigger className="w-full h-14 p-4 border border-blue-100 rounded-md text-gray-400 focus:ring-0 focus:border-blue-150">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
@@ -35,18 +37,23 @@ function SelectDemo({ value, onChange, placeholder, items }) {
 function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   return (
     <div
-      className={`w-full h-14 p-2 border border-blue-150 rounded-md flex items-center relative ${className}`}
+      className={`w-full h-14 p-2 border border-blue-100 rounded-md flex items-center gap-2 ${className}`}
     >
       <Input
         type="text"
         placeholder={placeholder}
-        className="w-full h-full p-4 pr-12 border-none focus:ring-2 focus:ring-blue-500"
+        className="w-full h-full p-4 border-none outline-none"
         value={value}
         onChange={onChange}
+        onFocus={(e) => (e.target.style.boxShadow = "none")}
+        onBlur={(e) => (e.target.style.boxShadow = "none")}
+        style={{
+          border: "none",
+          outline: "none",
+        }}
       />
-      {Icon && (
-        <Icon className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400" />
-      )}
+
+      {Icon && <Icon className="text-gray-400" />}
     </div>
   );
 }
@@ -54,7 +61,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
 const BASE_URL =
   "https://crudcrud.com/api/25d79de5389d4238851da19031bd0a1b/appointments";
 
-function FormAppointment() {
+function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
     department: "",
     doctor: "",
@@ -64,41 +71,48 @@ function FormAppointment() {
     time: "",
     request: "",
   });
-  const [loading, setLoading] = React.useState(false);
 
   const handleChange = (key) => (value) => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
 
-    try {
+  const mutation = useMutation({
+    mutationFn: async (data) => {
       const response = await fetch(BASE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
-      if (response.ok) alert("Appointment booked successfully!");
-      else alert("Failed to book appointment.");
-    } catch (error) {
+      if (!response.ok) {
+        throw new Error("Failed to book appointment.");
+      }
+      return response.json();
+    },
+    onSuccess: () => {
+      alert("Appointment booked successfully!");
+    },
+    onError: (error) => {
       alert("Error: " + error.message);
-    } finally {
-      setLoading(false);
-    }
+    },
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutation.mutate(formData);
   };
 
   return (
     <div
-      className="flex justify-center items-center w- min-h-screen bg-cover p-10 bg-center px-4"
+      ref={ref}
+      className="flex justify-center items-center w-full min-h-screen bg-cover p-10 bg-center px-4"
       style={{
         backgroundImage: "url('/img/bgzlyuka.jpg')",
       }}
     >
       <form
         onSubmit={handleSubmit}
-        className="border-2 border-red-200 p-6 md:p-10 bg-white shadow-lg rounded-lg w-full md:max-w-lg overflow-auto"
+        className="border-2 border-red-200 p-6 md:p-10 bg-white shadow-lg rounded-lg w-full md:max-w-xl overflow-auto"
       >
         <Typography variant="p" className="text-red-500 text-2xl">
           Appointment
@@ -129,11 +143,14 @@ function FormAppointment() {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 mt-4">
-          <TextInput
+          <SelectDemo
             value={formData.name}
             onChange={handleChange("name")}
             placeholder="Your Name"
-            icon={NotebookPen}
+            items={[
+              { value: "Name1", label: "Name One" },
+              { value: "Name2", label: "Name Two" },
+            ]}
           />
           <TextInput
             value={formData.phone}
@@ -170,14 +187,14 @@ function FormAppointment() {
 
         <button
           type="submit"
-          className="bg-red-600 text-white w-full h-12 mt-5 rounded-md transition hover:bg-red-700 disabled:opacity-50"
-          disabled={loading}
+          className="bg-red-600 text-white w-full h-12 mt-5 rounded-md hover:bg-green-500 transition-colors duration-300"
+          disabled={mutation.isLoading}
         >
-          {loading ? "Submitting..." : " SUBMIT QUERY"}
+          {mutation.isLoading ? "Submitting..." : "SUBMIT QUERY"}
         </button>
       </form>
     </div>
   );
 }
 
-export default FormAppointment;
+export default forwardRef(FormAppointment);
