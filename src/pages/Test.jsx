@@ -10,13 +10,13 @@
 
 // export default Test;
 
-import { Sidebar } from "@/components/Sidebar";
-import React from "react";
+// import { Sidebar } from "@/components/Sidebar";
+// import React from "react";
 
-export const Test = () => {
-  return (
-    <div>
-      <Sidebar />
-    </div>
-  );
-};
+// export const Test = () => {
+//   return (
+//     <div>
+//       <Sidebar />
+//     </div>
+//   );
+// };
