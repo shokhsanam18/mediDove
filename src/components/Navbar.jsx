@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import Logo from "../assets/logo.png";
 import Lang from "../assets/lang.png";
-import { Facebook, Youtube, Twitter } from "lucide-react";
+import { Facebook, Youtube, Twitter, AlignJustify } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -60,6 +60,11 @@ export function Navbar() {
           <Link to="/">
             <img src={Logo} alt="" />
           </Link>
+        </div>
+        <div className="lg:hidden">
+          <button className="hover:text-slate-600">
+            <AlignJustify />
+          </button>
         </div>
         <div className="lg:flex hidden flex-row">
           <NavigationMenuList className="flex justify-between items-center">
