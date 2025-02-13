@@ -56,7 +56,7 @@ const languages = [
 export function Navbar() {
   const toggleSidebar = useSidebarStore((state) => state.toggleSidebar);
   return (
-    <div className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
+    <div className="sticky top-0 left-0 w-full bg-white shadow-md z-30">
       <NavigationMenu className=" lg:max-w-full flex h-28 w-full bg-white shadow-md">
         <div className="flex justify-center items-center">
           <Link to="/">

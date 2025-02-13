@@ -65,7 +65,7 @@ export const Sidebar = () => {
         aria-hidden={!isOpen}
       >
         <div
-          className={`sidebar bg-white w-64 h-full p-4 shadow-lg relative transition-transform duration-300 transform ${
+          className={`sidebar z-50 bg-white w-64 h-full p-4 shadow-lg relative transition-transform duration-300 transform ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           role="navigation"
