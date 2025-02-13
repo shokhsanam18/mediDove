@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import Logo from "../assets/logo.png";
 import Lang from "../assets/lang.png";
-import { Facebook, Youtube, Twitter, AlignJustify } from "lucide-react";
+import { Facebook, Youtube, Twitter, Menu } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useSidebarStore } from "@/Store";
 
 const components = [
   {
@@ -53,6 +54,7 @@ const languages = [
 ];
 
 export function Navbar() {
+  const toggleSidebar = useSidebarStore((state) => state.toggleSidebar);
   return (
     <div className="sticky top-0 left-0 w-full bg-white shadow-md z-50">
       <NavigationMenu className=" lg:max-w-full flex h-28 w-full bg-white shadow-md">
@@ -62,8 +64,8 @@ export function Navbar() {
           </Link>
         </div>
         <div className="lg:hidden">
-          <button className="hover:text-slate-600">
-            <AlignJustify />
+          <button className="hover:text-slate-600" onClick={toggleSidebar}>
+            <Menu />
           </button>
         </div>
         <div className="lg:flex hidden flex-row">

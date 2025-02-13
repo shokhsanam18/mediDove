@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useSidebarStore } from "@/Store";
 
 const pages = [
   {
@@ -54,33 +55,12 @@ const pages = [
 ];
 
 export const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeSidebar = (e) => {
-    if (e.target.className.includes("sidebar-overlay")) {
-      setIsOpen(false);
-    }
-  };
+  const { isOpen, toggleSidebar, closeSidebar } = useSidebarStore();
 
   return (
     <>
-      {!isOpen && (
-        <button
-          onClick={toggleSidebar}
-          className="fixed top-4 right-4 z-50 p-2 text-black rounded"
-          aria-label="Open sidebar"
-        >
-          <Menu />
-        </button>
-      )}
       <div
-        className={`sidebar-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-end transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className="sidebar-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-end transition-opacity duration-300 "
         onClick={closeSidebar}
         aria-hidden={!isOpen}
       >
@@ -101,16 +81,22 @@ export const Sidebar = () => {
           <ul className="mt-12 text-lg">
             {pages.map((page) => (
               <li key={page.title} className="mb-2 relative group">
-                <button className="hover:text-red-500 font-semibold">
-                  <Link to={page.href}>{page.title}</Link>
-                </button>
+                <Link
+                  to={page.href}
+                  className="hover:text-red-500 font-semibold"
+                >
+                  {page.title}
+                </Link>
                 {page.subMenu && (
                   <ul className="bg-white p-2 text-sm">
                     {page.subMenu.map((subPage) => (
                       <li key={subPage.title} className="mb-2">
-                        <button className="hover:text-red-500 font-semibold">
-                          <Link to={subPage.href}>{subPage.title}</Link>
-                        </button>
+                        <Link
+                          to={subPage.href}
+                          className="hover:text-red-500 font-semibold"
+                        >
+                          {subPage.title}
+                        </Link>
                       </li>
                     ))}
                   </ul>
