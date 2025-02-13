@@ -130,7 +130,7 @@ const CombinedPage = () => {
           <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
             <Phone size={16} />
           </span>
-          <span className="ml-4 text-sm tracking-wide">MAKE CALL</span>
+          <span className="ml-4 text-sm tracking-wide"></span>
         </button>
       </div>
     </>

@@ -75,7 +75,7 @@ function FormAppointment() {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
 
-  // UseMutation for submitting the form data
+
   const mutation = useMutation({
     mutationFn: async (data) => {
       const response = await fetch(BASE_URL, {
