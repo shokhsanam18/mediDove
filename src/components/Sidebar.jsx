@@ -79,7 +79,7 @@ export const Sidebar = () => {
       >
         <button
           onClick={toggleSidebar}
-          className="absolute top-4 left-4 p-2 text-black rounded"
+          className="absolute top-4 left-4 p-2 text-black rounded hover:text-slate-600"
           aria-label="Close sidebar"
         >
           <X />
