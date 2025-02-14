@@ -7,77 +7,15 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faComment } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
-const items = [" "];
+import { NewsCardSix } from "@/components/ui/NewsCard";
+import { NewsCardOne } from "@/components/ui/NewsCard";
+import { NewsCardTwo } from "@/components/ui/NewsCard";
+import { NewsCardThree } from "@/components/ui/NewsCard";
+import { NewsCardFour } from "@/components/ui/NewsCard";
+import { NewsCardFive } from "@/components/ui/NewsCard";
+import { NewsCardSeven } from "@/components/ui/NewsCard";
 
 export const News = () => {
-  const [query, setQuery] = useState("");
-
-  const filteredItems = items.filter((item) =>
-    item.toLowerCase().includes(query.toLowerCase())
-  );
-  const cardsInfoTeam = [
-    {
-      id: 0,
-      title: "Rosalina D. Williamson",
-      description: "Card Description",
-      content: "Founder",
-      footer: "Card Footer",
-      src: "./img/member1.png",
-    },
-  ];
-  const stylesTeam = {
-    cards_styles: {
-      backgroundColor: "white",
-      // justifyContent: 'space-around',
-      columnGap: "1.25rem",
-      rowGap: "0.75rem",
-      //  padding: '10px 15%',
-    },
-    card_styles: {
-      backgroundColor: "white",
-      color: "black",
-      padding: "0",
-      gap: "1.75rem",
-      textAlign: "center",
-      alignItems: "center",
-      justifyContent: "center",
-      //  shadowColor: '#AAC',
-    },
-    img_styles: {
-      width: "70%",
-    },
-    title_styles: {
-      fontSize: "1.28rem",
-      color: "#171717",
-      // colorHoverTitle: '#e1236b',
-    },
-    content_styles: {
-      textTransform: "uppercase",
-      fontWeight: "500",
-      color: "#e1236b",
-      colorHoverFooter: "#73bb1d",
-    },
-    absolute_styles: {
-      position: "absolute",
-      right: "15%",
-      bottom: "10%",
-      fontWeight: "900",
-      fontSize: "20px",
-      color: "white",
-      backgroundColor: "#349030",
-      backgroundcolorHoverabsolute: "#e1236b",
-      width: "40px",
-      height: "40px",
-      display: "flex",
-      textAlign: "center",
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: "50%",
-      boxShadow: "0 5px 10px #a9cba8",
-    },
-  };
-
   const cardsInfoNews = [
     {
       id: 0,
@@ -213,14 +151,12 @@ export const News = () => {
     },
     img_styles: {
       width: "100%",
-     
     },
     title_styles: {
       fontSize: "1.28rem",
       color: "#223645",
       colorHoverTitle: "#e1236b",
       padding: "0 50px 0 50px",
-
     },
 
     content_styles: {
@@ -273,8 +209,8 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <div className="flex">
-        <div className="w-2/3">
+      <div className="flex flex-col sm:flex-row">
+        <div className="sm:w-2/3 w-full">
           <Cards_News
             cards={cardsInfoNews}
             cards_styles={stylesNews.cards_styles}
@@ -317,38 +253,14 @@ export const News = () => {
             </button>
           </div>
         </div>
-        <div className="w-1/3 p-24 pl-0">
-          <div className="w-full">
-            <input
-              type="text"
-              placeholder="Search..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="p-2 border rounded-md w-full"
-            />
-            <ul className="mt-2">
-              {filteredItems.length > 0 ? (
-                filteredItems.map((item, index) => <li key={index}>{item}</li>)
-              ) : (
-                <li>No results found</li>
-              )}
-            </ul>
-          </div>
-          <Cards_Team
-            cards={cardsInfoTeam}
-            cards_styles={stylesTeam.cards_styles}
-            card_styles={stylesTeam.card_styles}
-            img_styles={stylesTeam.img_styles}
-            shadowColor={stylesTeam.card_styles.shadowColor}
-            title_styles={stylesTeam.title_styles}
-            colorHoverTitle={stylesTeam.title_styles.colorHoverTitle}
-            content_styles={stylesTeam.content_styles}
-            colorHoverContent={stylesTeam.content_styles.colorHoverContent}
-            absolute_styles={stylesTeam.absolute_styles}
-            backgroundcolorHoverabsolute={
-              stylesTeam.absolute_styles.backgroundcolorHoverabsolute
-            }
-          ></Cards_Team>
+        <div className="sm:w-1/3 w-full p-24 pl-0 flex flex-col items-center gap-y-10">
+          <NewsCardOne />
+          <NewsCardTwo />
+          <NewsCardThree />
+          <NewsCardFour />
+          <NewsCardFive />
+          <NewsCardSix />
+          <NewsCardSeven />
         </div>
       </div>
     </>

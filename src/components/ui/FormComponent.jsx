@@ -140,13 +140,13 @@ function FormComponent() {
       onSubmit={handleSubmit}
       className="w-full  pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
     >
-      <div className="flex justify-between w-full">
+      <div className="sm:flex-row flex-col flex justify-between w-full">
         <div>
           <p className="text-[#647589] text-[14px] font-normal">
             Anything On your Mind
           </p>
-          <h1 className="text-[#223645] text-[60px] font-semibold ">
-            Estimate Your Idea
+          <h1 className="text-[#223645] text-[60px]  font-semibold ">
+            Estimate <br className="sm:hidden"/>Your Idea
           </h1>
         </div>
         <Link to="/BecomeMember" state={{ scrollTo: "FormAppointment" }}>
