@@ -58,8 +58,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   );
 }
 
-const BASE_URL =
-  "https://crudcrud.com/api/25d79de5389d4238851da19031bd0a1b/appointments";
+const BASE_URL = "https://9e25-89-236-218-41.ngrok-free.app/api";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
@@ -75,7 +74,6 @@ function FormAppointment(props, ref) {
   const handleChange = (key) => (value) => {
     setFormData((prev) => ({ ...prev, [key]: value }));
   };
-
 
   const mutation = useMutation({
     mutationFn: async (data) => {

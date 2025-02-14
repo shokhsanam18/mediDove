@@ -59,53 +59,62 @@ export const Sidebar = () => {
 
   return (
     <>
-      <div
-        className="sidebar-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-end transition-opacity duration-300 "
-        onClick={closeSidebar}
-        aria-hidden={!isOpen}
+      {/* <button
+        onClick={toggleSidebar}
+        className="fixed top-4 right-4 z-50 p-2 text-black rounded lg:hidden"
+        aria-label="Open sidebar"
       >
+        <Menu />
+      </button> */}
+      {isOpen && (
         <div
-          className={`sidebar z-50 bg-white w-64 h-full p-4 shadow-lg relative transition-transform duration-300 transform ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-          role="navigation"
-          aria-label="Sidebar"
+          className="sidebar-overlay lg:hidden fixed inset-0 bg-black bg-opacity-50 flex justify-end transition-opacity duration-300 z-40"
+          onClick={closeSidebar}
+          aria-hidden={!isOpen}
         >
-          <button
-            onClick={toggleSidebar}
-            className="absolute top-4 left-4 p-2 text-black rounded"
-            aria-label="Close sidebar"
+          <div
+            className={`sidebar bg-white w-64 h-full p-4 shadow-lg relative transition-transform duration-300 transform ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+            role="navigation"
+            aria-label="Sidebar"
           >
-            <X />
-          </button>
-          <ul className="mt-12 text-lg">
-            {pages.map((page) => (
-              <li key={page.title} className="mb-2 relative group">
-                <Link
-                  to={page.href}
-                  className="hover:text-red-500 font-semibold"
-                >
-                  {page.title}
-                </Link>
-                {page.subMenu && (
-                  <ul className="bg-white p-2 text-sm">
-                    {page.subMenu.map((subPage) => (
-                      <li key={subPage.title} className="mb-2">
-                        <Link
-                          to={subPage.href}
-                          className="hover:text-red-500 font-semibold"
-                        >
-                          {subPage.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
+            <button
+              onClick={toggleSidebar}
+              className="absolute top-4 left-4 p-2 text-black rounded"
+              aria-label="Close sidebar"
+            >
+              <X />
+            </button>
+            <ul className="mt-12 text-lg">
+              {pages.map((page) => (
+                <li key={page.title} className="mb-2 relative group">
+                  <Link
+                    to={page.href}
+                    className="hover:text-red-500 font-semibold"
+                  >
+                    {page.title}
+                  </Link>
+                  {page.subMenu && (
+                    <ul className="bg-white p-2 text-sm">
+                      {page.subMenu.map((subPage) => (
+                        <li key={subPage.title} className="mb-2">
+                          <Link
+                            to={subPage.href}
+                            className="hover:text-red-500 font-semibold"
+                          >
+                            {subPage.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
