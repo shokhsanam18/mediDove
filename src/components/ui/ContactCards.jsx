@@ -6,7 +6,7 @@ export const ContactCardOne = () => {
   return (
     <div
       className="flex flex-col justify-center gap-6
-items-center border border-[#EAEDFF] w-[30%] h-[22em]"
+items-center border border-[#EAEDFF] sm:w-[30%] w-[100%] h-[22em]"
     >
       <div className="bg-[#8FB569] w-32 h-32 rounded-full flex items-center justify-center border-white border-8 shadow-[0_20px_30px_rgba(0,0,0,0.2)] dark:bg-slate-800">
         <Mail className="w-11 h-11 text-white" />
@@ -43,7 +43,7 @@ export const ContactCardTwo = () => {
   return (
     <div
       className="flex flex-col justify-center gap-6
-  items-center border border-[#EAEDFF] w-[30%] h-[22em]"
+  items-center border border-[#EAEDFF] sm:w-[30%] w-[100%] h-[22em]"
     >
       <div className="bg-[#8FB569] w-32 h-32 rounded-full flex items-center justify-center border-white border-8 shadow-[0_20px_30px_rgba(0,0,0,0.2)] dark:bg-slate-800">
         <Phone className="w-11 h-11 text-white" />

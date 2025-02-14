@@ -80,13 +80,13 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="flex pt-24 pb-24 pl-[10%] pr-[10%] justify-between w-full bg-[#FFFFFF] ">
+      <div className="sm:flex-row flex flex-col pt-24 pb-24 pl-[10%] pr-[10%] justify-between w-full bg-[#FFFFFF] ">
         <ContactCardOne />
 
         <button
           onClick={scrollToMap}
           className="flex flex-col justify-center gap-6
-  items-center border border-[#EAEDFF] w-[30%] h-[22em]"
+  items-center border border-[#EAEDFF] sm:w-[30%] w-[100%] h-[22em]"
         >
           <div className="bg-[#8FB569] w-32 h-32 rounded-full flex items-center justify-center border-white border-8 shadow-[0_20px_30px_rgba(0,0,0,0.2)] dark:bg-slate-800">
             <MapPin className="w-11 h-11 text-white" />
@@ -123,7 +123,7 @@ export const Contact = () => {
       </div>
       <div
         ref={mapContainerRef}
-        className="relative mt-10 w-full"
+        className="relative mt-10 w-full "
         style={{ height: "40em" }}
       ></div>
     </>
