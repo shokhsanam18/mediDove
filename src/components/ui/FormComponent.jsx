@@ -115,14 +115,14 @@ function FormComponent() {
       return;
     }
 
-    const formData = {
+    const formContact = {
       name,
       email,
       subject,
       message,
       phone,
     };
-    const response = await submitMessage(formData);
+    const response = await submitMessage(formContact);
 
     if (response) {
       setSuccess("Message submitted successfully!");
@@ -146,7 +146,8 @@ function FormComponent() {
             Anything On your Mind
           </p>
           <h1 className="text-[#223645] text-[60px]  font-semibold ">
-            Estimate <br className="sm:hidden"/>Your Idea
+            Estimate <br className="sm:hidden" />
+            Your Idea
           </h1>
         </div>
         <Link to="/BecomeMember" state={{ scrollTo: "FormAppointment" }}>
