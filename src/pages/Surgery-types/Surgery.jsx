@@ -128,21 +128,26 @@ export const Surgery = () => {
                 </div>
             </div>
 
-
-
             <div className="flex flex-col sm:flex-row gap-7 w-11/12 mx-auto justify-center mb-24">
+  {/* Left Section with Image and Heading */}
   <div className="relative flex flex-col w-full sm:w-1/2 lg:w-2/5 text-end justify-center p-4">
-    <div className="flex justify-end mb-4 sm:mb-6 lg:mb-8">
-      <img className="w-24 sm:w-36 lg:w-48" src='./img/section-back-icon.png' alt="back" />
-    </div>
-    <div className="relative">
-      <p className="text-lg sm:text-xl mt-4 sm:mt-6 font-bold text-[#e12454]">Health care facility</p>
-      <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold mt-2 text-[#223545] leading-snug">
-        Would you rather stay <br /> at home than go into a health care facility?
-      </h2>
-    </div>
+    {/* <div className="flex justify-end mb-4 sm:mb-6 lg:mb-8">
+      <img 
+        src="/img/section-back-icon.png" 
+        alt="Health Care Illustration" 
+        className="w-24 sm:w-36 lg:w-48 self-end ml-auto"
+      />
+    </div> */}
+
+    <p className="text-lg sm:text-xl mt-4 sm:mt-6 font-bold text-[#e12454]">
+      Health care facility
+    </p>
+    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold mt-2 text-[#223545] leading-snug">
+      Would you rather stay <br /> at home than go into a health care facility?
+    </h2>
   </div>
 
+  {/* Right Section with Text */}
   <div className="w-full sm:w-1/2 lg:w-2/5 mt-12 sm:mt-16 md:mt-20 flex justify-center p-4">
     <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-600">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -169,7 +174,7 @@ export const Surgery = () => {
 
 
   <div
-      className="relative inset-0 w-full bg-cover bg-no-repeat md:flex justify-between xl:px-32 lg:px-20 sm:px-2 items-center py-[120px] bg-center h-full mb-[30px]"
+      className=" relative inset-0 w-full bg-cover bg-no-repeat md:flex justify-between xl:px-32 lg:px-20 sm:px-2 items-center py-[120px] bg-center h-full mb-[30px] my-8"
       style={{ backgroundImage: "url('./img/calculate-bg.png')" }}
     >
       <div className="absolute inset-0 bg-[#344755] opacity-90"></div>
@@ -187,16 +192,12 @@ export const Surgery = () => {
             </button>
           </a>
         </div>
-        <div className="flex bg-white text-black w-[90%] max-w-[450px] h-[500px] rounded mx-auto my-auto sm:w-[90%] sm:h-[480px] sm:flex sm:justify-center md:w-[450px] md:h-[575px] lg:w-[450px] lg:h-[575px]">
-
-          //Form
-          <form className="mt-6 flex flex-col gap-5 justify-end mx-auto w-full sm:w-auto">
-            <input className="flex h-16 w-full text-[#647489] items-center mx-auto justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-8 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring" type="tel" placeholder="Your Phone number" />
-            <button className="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-white shadow-[0px_2px_8px_#e12454] hover:shadow-[0px_2px_8px_#8fb569] transition-all duration-300 ease-in-out h-[60px] w-full bg-[#e12454] hover:bg-[#8fb569] rounded-none flex mx-auto" type="submit">
-              SUBMIT QUERY
-            </button>
-          </form>
-        </div>
+        
+          
+          <QueryClientProvider client={queryClient}>
+        <FormDepartment />
+      </QueryClientProvider>
+  
       </div>
     </div>
 
