@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Navbar } from "./Navbar";
+import { Sidebar } from "./Sidebar";
 
 export const Layout = () => {
   return (
@@ -8,7 +9,7 @@ export const Layout = () => {
       <div
         style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
-        <Navbar />
+        <Navbar /> <Sidebar />
         <Outlet />
         {/* <Footer /> */}
       </div>

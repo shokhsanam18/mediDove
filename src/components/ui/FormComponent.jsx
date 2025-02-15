@@ -3,7 +3,9 @@ import axios from "axios";
 import { Input } from "./input";
 import { Label } from "./label";
 import { Textarea } from "./textarea";
-
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 function InputWithName({ value, onChange }) {
   return (
@@ -113,14 +115,14 @@ function FormComponent() {
       return;
     }
 
-    const formData = {
+    const formContact = {
       name,
       email,
       subject,
       message,
       phone,
     };
-    const response = await submitMessage(formData);
+    const response = await submitMessage(formContact);
 
     if (response) {
       setSuccess("Message submitted successfully!");
@@ -134,23 +136,44 @@ function FormComponent() {
     setLoading(false);
   };
   return (
-    <form onSubmit={handleSubmit} className="w-4/5 mx-auto  p-6 bg-[#F4F9FC]">
-      <p className="text-[#647589] text-[14px] font-normal">
-        Anything On your Mind
-      </p>
-      <h1 className="text-[#223645] text-[60px] font-semibold ">
-        Estimate Your Idea
-      </h1>
-      <div className="flex justify-between w-full">
-        <InputWithName className="w-full" value={name} onChange={setName} />
-        <InputWithEmail value={email} onChange={setEmail} />
+    <form
+      onSubmit={handleSubmit}
+      className="w-full  pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
+    >
+      <div className="sm:flex-row flex-col flex justify-between w-full">
+        <div>
+          <p className="text-[#647589] text-[14px] font-normal">
+            Anything On your Mind
+          </p>
+          <h1 className="text-[#223645] text-[60px]  font-semibold ">
+            Estimate <br className="sm:hidden" />
+            Your Idea
+          </h1>
+        </div>
+        <Link to="/BecomeMember" state={{ scrollTo: "FormAppointment" }}>
+          <button
+            type="button"
+            className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition"
+          >
+            <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+              <Plus size={16} />
+            </span>
+            <span className="ml-4 text-sm tracking-wide">MAKE APPOINTMENT</span>
+          </button>
+        </Link>
       </div>
-      <div className="flex justify-between">
-        <InputWithPhone value={phone} onChange={setPhone} />
-        <InputWithSubject value={subject} onChange={setSubject} />
-      </div>
-      <div className="bg-white">
-        <InputWithMessage value={message} onChange={setMessage} />
+      <div className="w-full">
+        <div className="flex justify-between w-full">
+          <InputWithName className="w-full" value={name} onChange={setName} />
+          <InputWithEmail value={email} onChange={setEmail} />
+        </div>
+        <div className="flex justify-between">
+          <InputWithPhone value={phone} onChange={setPhone} />
+          <InputWithSubject value={subject} onChange={setSubject} />
+        </div>
+        <div className="bg-white">
+          <InputWithMessage value={message} onChange={setMessage} />
+        </div>
       </div>
       {success && (
         <p
@@ -163,10 +186,19 @@ function FormComponent() {
       )}
       <button
         type="submit"
-        className="bg-red-600 text-white w-140/9 h-14"
+        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition "
         disabled={loading}
       >
-        {loading ? "Submitting..." : "GET ACTION"}
+        <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+          <Plus size={16} />
+        </span>
+        <span
+          className={`ml-4 text-sm tracking-wide ${
+            loading ? "opacity-50" : "opacity-100"
+          }`}
+        >
+          {loading ? "Submitting..." : "GET ACTION"}
+        </span>
       </button>
     </form>
   );

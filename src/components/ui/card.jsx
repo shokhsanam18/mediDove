@@ -38,22 +38,16 @@ const CardImg = React.forwardRef(({ className, src, ...props }, ref) => (
   <img
     className={cn("text-center mx-auto", className)}
     {...props}
-    src={src} alt=""
+    src={src}
+    alt=""
   />
 ));
 CardImg.displayName = "CardImg";
 
-
-
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(className)}
-    {...props}
-  />
+  <div ref={ref} className={cn(className)} {...props} />
 ));
 CardHeader.displayName = "CardHeader";
-
 
 const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
   <div
@@ -77,7 +71,11 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
 CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("text-xs transition-all duration-300", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn("text-xs transition-all duration-300", className)}
+    {...props}
+  />
 ));
 CardContent.displayName = "CardContent";
 
@@ -90,4 +88,14 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardFooter.displayName = "CardFooter";
 
-export {Cards, Card, CardImage, CardImg, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export {
+  Cards,
+  Card,
+  CardImage,
+  CardImg,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+};
