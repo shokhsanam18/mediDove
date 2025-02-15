@@ -1,4 +1,7 @@
 import React from "react";
+import FormDepartment from "./FormDepartment";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
 import Typography from "@/components/ui/Typography";
 import { Cards_Services } from "@/components/ui/Cards";
 import { Button } from "@/components/ui/button";
