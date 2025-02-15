@@ -1,6 +1,9 @@
 import React from "react";
 import Typography from "@/components/ui/Typography";
 import { Cards_Services } from "@/components/ui/Cards";
+import { Button } from "@/components/ui/button";
+import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
+
 
 
 export const Surgery = () => {
@@ -121,11 +124,13 @@ export const Surgery = () => {
                     </div>
                 </div>
             </div>
-    
+
+
+
             <div className="flex flex-col sm:flex-row gap-7 w-11/12 mx-auto justify-center mb-24">
   <div className="relative flex flex-col w-full sm:w-1/2 lg:w-2/5 text-end justify-center p-4">
     <div className="flex justify-end mb-4 sm:mb-6 lg:mb-8">
-      <img className="w-24 sm:w-36 lg:w-48" src="/assets/back_icon-XmwR2K38.png" alt="back" />
+      <img className="w-24 sm:w-36 lg:w-48" src='./img/section-back-icon.png' alt="back" />
     </div>
     <div className="relative">
       <p className="text-lg sm:text-xl mt-4 sm:mt-6 font-bold text-[#e12454]">Health care facility</p>
@@ -156,6 +161,90 @@ export const Surgery = () => {
           ></Cards_Services>
   </section>
 
+
+
+
+
+  <div
+      className="relative inset-0 w-full bg-cover bg-no-repeat md:flex justify-between xl:px-32 lg:px-20 sm:px-2 items-center py-[120px] bg-center h-full mb-[30px]"
+      style={{ backgroundImage: "url('./img/calculate-bg.png')" }}
+    >
+      <div className="absolute inset-0 bg-[#344755] opacity-90"></div>
+      <div className="relative inset-0 flex flex-col lg:flex-row justify-center text-start text-white md:justify-evenly sm:justify-center mx-auto gap-[150px]">
+        <div className="flex justify-center flex-col">
+          <p className="text-lg font-semibold text-[#b4c7d6]">MAKE A CALL</p>
+          <p className="text-4xl sm:text-5xl lg:text-7xl font-semibold mt-2">Quote Calculator</p>
+          <p className="text-base sm:text-2xl lg:text-3xl mt-4 text-[#b4c7d6] mb-10">
+            If you require services on a public holiday, <br /> overnight services or live-in services, please <br /> call (+00)888.666.88 so we can discuss <br /> prices with you.
+          </p>
+          <a href="/appointment" data-discover="true">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[285px] hover:bg-[#e12454] shadow-[0px_2px_8px_#8fb569] hover:shadow-[0px_2px_8px_#e12454] transition-all duration-300 ease-in-out">
+              <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">+</span>
+              MAKE APPOINTMENT
+            </button>
+          </a>
+        </div>
+        <div className="flex bg-white text-black w-[90%] max-w-[450px] h-[500px] rounded mx-auto my-auto sm:w-[90%] sm:h-[480px] sm:flex sm:justify-center md:w-[450px] md:h-[575px] lg:w-[450px] lg:h-[575px]">
+
+          //Form
+          <form className="mt-6 flex flex-col gap-5 justify-end mx-auto w-full sm:w-auto">
+            <input className="flex h-16 w-full text-[#647489] items-center mx-auto justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-8 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring" type="tel" placeholder="Your Phone number" />
+            <button className="items-center justify-center gap-2 whitespace-nowrap text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring text-white shadow-[0px_2px_8px_#e12454] hover:shadow-[0px_2px_8px_#8fb569] transition-all duration-300 ease-in-out h-[60px] w-full bg-[#e12454] hover:bg-[#8fb569] rounded-none flex mx-auto" type="submit">
+              SUBMIT QUERY
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  <div className="flex flex-col lg:flex-row justify-between gap-10 bg-white w-[80%] mx-auto shadow-lg mt-20 p-6">
+      <div className="flex justify-center">
+        <img
+          src='./img/hire1.jpg'
+          alt="Doctor"
+          className="w-[600px] h-[500px] object-cover"
+        />
+      </div>
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:w-[530px] my-auto flex flex-col lg:mr-10">
+        <h2 className="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#223545]">
+          For Employers
+        </h2>
+        <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-gray-500 my-7">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="/contact">
+          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[230px] hover:bg-[#e12454] shadow-md hover:shadow-lg transition-all duration-300 ease-in-out mb-10">
+            <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
+              +
+            </span>
+            CONTACT US
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div className="flex flex-col lg:flex-row justify-between bg-white w-[80%] mx-auto shadow-lg mb-[120px] p-6">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:w-[530px] my-auto flex flex-col lg:ml-10">
+        <h2 className="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#223545] mt-10">
+          For Employers
+        </h2>
+        <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-gray-500 my-7">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a href="/contact">
+          <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white shadow-md hover:shadow-lg transition-all duration-300 ease-in-out bg-[#e12454] hover:bg-[#8fb569] h-[62px] w-[230px] mb-10">
+            <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
+              +
+            </span>
+            APPLY TODAY
+          </button>
+        </a>
+      </div>
+      <div className="flex justify-center">
+        <img src='./img/hire2.jpg' alt="Doctor" className="object-cover" />
+      </div>
+    </div>
         </>
     );
 };
