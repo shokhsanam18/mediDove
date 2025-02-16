@@ -59,13 +59,13 @@ export const Departments = () => {
      backgroundColor: '#F4F9FC',
      // justifyContent: 'space-around',
      columnGap: '1.25rem',
-     rowGap: '0.75rem',
+     rowGap: '1rem',
     //  padding: '10px 15%',
    },
    card_styles: {
      backgroundColor: 'white',
      color: '#223645',
-     padding: '1rem 3rem',
+     padding: '2rem 3rem',
      gap: '1rem',
      textAlign: 'center',
      alignItems: 'center',
@@ -88,17 +88,18 @@ export const Departments = () => {
     
   }
   return <>
-  <section className="px-[15%] pt-7 pb-16 flex gap-4 flex-col text-center bg-[#F4F9FC]">
+  <section className="sm:px-[5%] px-[2%] pt-7 pb-16 flex gap-12 flex-col text-center bg-[#F4F9FC]">
       <div className="flex items-center justify-center md:flex-row flex-col gap-3">
         <div
           className="bg-center bg-no-repeat sm:w-full"
           style={{ backgroundImage: "url('/img/bgnurse.png')" }}
         >
-          <Typography variant="p" className="py-10">
+          <Typography variant="p" className={`font-semibold`}>
             Departments
           </Typography>
           <Typography
             variant="h2"
+            className={`w-full md:w-1/2 m-auto`}
           >
             Managed Your Heathcare Services
           </Typography>

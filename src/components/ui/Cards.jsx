@@ -79,7 +79,7 @@ export const Cards_Services = React.forwardRef(
                 e.currentTarget.style.color = content_styles.color;
               }}
             >
-              <Link>{card.content}</Link>
+              <Link to={'/Surgery'}>{card.content}</Link>
             </CardContent>
             {/* <CardFooter>
               <p>{card.footer}</p>
