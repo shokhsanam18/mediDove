@@ -128,7 +128,7 @@ export const Cards_Team = React.forwardRef(
           >
             <CardImage className={"relative"}>
               <CardImg src={card.src} style={img_styles}></CardImg>
-              <div
+              <Link to='/Shifokorlar'
                 style={absolute_styles}
                 className="transition-all duration-300"
                 onMouseEnter={(e) => {
@@ -141,7 +141,7 @@ export const Cards_Team = React.forwardRef(
                 }}
               >
                 +
-              </div>
+              </Link>
             </CardImage>
             <CardHeader className={"flex flex-col gap-2"}>
               <Link>
