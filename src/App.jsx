@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
-import { Index } from "./pages/Index";
+import { Index } from "./pages/Index/Index";
 import { About } from "./pages/About/About";
 import { Tasischilar } from "./pages/About/Tasischilar";
 import { Details } from "./pages/Surgery-types/Details";
