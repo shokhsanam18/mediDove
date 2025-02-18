@@ -140,7 +140,7 @@ export function Navbar() {
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem className="relative group">
-              <NavigationMenuTrigger>
+              <NavigationMenuTrigger className="">
                 <img
                   src={Lang}
                   alt=""
@@ -150,7 +150,7 @@ export function Navbar() {
                 />
               </NavigationMenuTrigger>
               <div className="absolute top-full left-0 bg-white border-2 border-t-red-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
+                <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[80px] shadow-lg">
                   {languages.map((language) => (
                     <ListItem
                       className="hover:text-red-500 font-semibold bg-white"
