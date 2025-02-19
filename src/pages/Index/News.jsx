@@ -119,7 +119,7 @@ const BlogCards = () => {
 
 const CombinedPage = () => {
   return (
-    <section className="flex flex-col sm:px-[5%] px-[2%] pt-11 pb-16 gap-12 bg-[#FFF]">
+    <section className="flex flex-col w-full sm:px-[5%] px-[2%] pt-11 pb-16 gap-12 bg-[#FFF]">
       <NewsAppointment />
       <div className="flex flex-col lg:flex-row gap-10">
         <MedicalCardsAppointment />

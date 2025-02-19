@@ -110,7 +110,7 @@ const OurTeam = () => {
         },
       };
   return (
-    <section className="flex flex-col sm:px-[5%] px-[2%] pt-11 pb-16 gap-14 bg-[#FFF]">
+    <section className="flex w-full flex-col sm:px-[5%] px-[2%] pt-11 pb-16 gap-14 bg-[#FFF]">
       
         <div>
         <div className="flex items-center justify-between md:flex-row flex-col">

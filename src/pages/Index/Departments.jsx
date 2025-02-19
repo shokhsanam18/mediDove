@@ -88,7 +88,7 @@ export const Departments = () => {
     
   }
   return <>
-  <section className="sm:px-[5%] px-[2%] pt-7 pb-16 flex gap-12 flex-col text-center bg-[#F4F9FC]">
+  <section className="sm:px-[5%] px-[2%] pt-7 pb-16 w-full flex gap-12 flex-col text-center bg-[#F4F9FC]">
       <div className="flex items-center justify-center md:flex-row flex-col gap-3">
         <div
           className="bg-center bg-no-repeat sm:w-full"
