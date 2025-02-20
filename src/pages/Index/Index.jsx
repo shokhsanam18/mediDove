@@ -12,12 +12,12 @@ export const Index = () => {
 
   return <>
   <Showcase/>
-  {/* <AboutUs/> */}
-  {/* <Departments/> */}
-  {/* <OurTeam/> */}
-  {/* <Statistics/> */}
-  {/* <Pricing/> */}
-  {/* <GetConsultant/> */}
-  {/* <CombinedPage/> */}
+  <AboutUs/>
+  <Departments/>
+  <OurTeam/>
+  <Statistics/>
+  <Pricing/>
+  <GetConsultant/>
+  <CombinedPage/>
   </>;
 };
