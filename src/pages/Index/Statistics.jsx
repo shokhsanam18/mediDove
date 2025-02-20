@@ -1,11 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Plus, ThumbsUp, UserRound } from 'lucide-react';
-import FormDepartment from '../Surgery-types/FormDepartment';
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Typography from '@/components/ui/Typography';
-const queryClient = new QueryClient();
-import visionIcon from "@/assets/destination-icon-2.png";
 
 const Statistics = () => {
   return (

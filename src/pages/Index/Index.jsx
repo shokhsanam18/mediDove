@@ -4,14 +4,16 @@ import CombinedPage from "./News";
 import OurTeam from "./OurTeam";
 import GetConsultant from "./GetConsultant";
 import Statistics from "./Statistics";
+import Pricing from "./Pricing";
 
 export const Index = () => {
 
   return <>
-  <Departments></Departments>
+  <Departments/>
   <OurTeam/>
   <Statistics/>
+  <Pricing/>
   <GetConsultant/>
-  <CombinedPage></CombinedPage>
+  <CombinedPage/>
   </>;
 };
