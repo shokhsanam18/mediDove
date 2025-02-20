@@ -5,15 +5,17 @@ import OurTeam from "./OurTeam";
 import GetConsultant from "./GetConsultant";
 import Statistics from "./Statistics";
 import Pricing from "./Pricing";
+import AboutUs from "./AboutUs";
 
 export const Index = () => {
 
   return <>
-  <Departments/>
-  <OurTeam/>
-  <Statistics/>
-  <Pricing/>
-  <GetConsultant/>
-  <CombinedPage/>
+  <AboutUs/>
+  {/* <Departments/> */}
+  {/* <OurTeam/> */}
+  {/* <Statistics/> */}
+  {/* <Pricing/> */}
+  {/* <GetConsultant/> */}
+  {/* <CombinedPage/> */}
   </>;
 };
