@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 
 import { cn } from "@/lib/utils";
+import { Plus } from "lucide-react";
 
 export const Cards_Services = React.forwardRef(
   (
@@ -26,6 +27,7 @@ export const Cards_Services = React.forwardRef(
       title_styles,
       colorHoverTitle,
       content_styles,
+      description_styles,
       colorHoverContent,
       ...props
     },
@@ -68,7 +70,7 @@ export const Cards_Services = React.forwardRef(
                 {card.title}
               </CardTitle>
             </Link>
-            <CardDescription>{card.description}</CardDescription>
+            <CardDescription style={description_styles}>{card.description}</CardDescription>
             {/* </CardHeader> */}
             <CardContent
               style={content_styles}
@@ -80,6 +82,84 @@ export const Cards_Services = React.forwardRef(
               }}
             >
               <Link to={'/Surgery'}>{card.content}</Link>
+            </CardContent>
+            {/* <CardFooter>
+              <p>{card.footer}</p>
+            </CardFooter> */}
+          </Card>
+        ))}
+      </Cards>
+    );
+  }
+);
+export const Cards_Plans = React.forwardRef(
+  (
+    {
+      className,
+      cards,
+      cards_styles,
+      card_styles,
+      img_styles,
+      shadowColor,
+      title_styles,
+      colorHoverTitle,
+      content_styles,
+      colorHoverContent,
+      description_styles,
+      ...props
+    },
+    ref
+  ) => {
+    // const card_styles = {
+
+    // }
+
+    return (
+      <Cards ref={ref} {...props} style={cards_styles}>
+        {cards.map((card) => (
+          <Card
+            key={card.id}
+            ref={ref}
+            className={cn(className)}
+            style={card_styles}
+            {...props}
+          >
+            <CardImage className='text-left'>
+              <CardImg src={card.src} style={img_styles}></CardImg>
+            </CardImage>
+            {/* <CardHeader> */}
+            <Link>
+              <CardTitle
+                style={title_styles}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = colorHoverTitle;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = title_styles.color;
+                }}
+              >
+                {card.title}
+              </CardTitle>
+            </Link>
+            <CardDescription style={description_styles}>{card.description}</CardDescription>
+            {/* </CardHeader> */}
+            <CardContent
+              style={content_styles}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = colorHoverContent;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = content_styles.color;
+              }}
+            >
+              <Link to='/ContactUs'>
+                <button className="flex items-center h-16 w-60 rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#8fb569] text-white bg-[#e12454] shadow-[2px_2px_3px_#e1245397] hover:shadow-[0px_0px_3px_#8fb569] transition-all duration-300 ease-in-out font-semibold">
+                    <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+                    <Plus size={20}/>
+                    </span>
+                    <span className="ml-5 text-base font-semibold tracking-wide">{card.content}</span>
+                </button>
+            </Link>
             </CardContent>
             {/* <CardFooter>
               <p>{card.footer}</p>

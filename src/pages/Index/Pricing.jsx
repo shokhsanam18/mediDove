@@ -1,116 +1,77 @@
 import Typography from "@/components/ui/Typography";
 import { Plus} from "lucide-react";
 import { Link } from "react-router-dom";
-import { Cards_Team } from "@/components/ui/Cards";
+import { Cards_Plans, Cards_Team } from "@/components/ui/Cards";
+import { Cards_Services } from "@/components/ui/Cards";
 
 
 const Pricing = () => {
-    const cardsInfoTeam = [
+
+    const cardsInfoServices = [
         {
           id: 0,
-          title: "Rosalina D. Williamson",
-          description: "Card Description",
-          content: "Founder",
-          footer: "Card Footer",
-          src: "./img/member1.png",
+          title: 'Professional',
+          description: 'Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+          content: 'Price: $425.00',
+          footer: 'Card Footer',
+          src: './img/pricing-thumb-1.png'
         },
         {
           id: 1,
-          title: "Diconda PIran Will",
-          description: "Card Description",
-          content: "dentist",
-          footer: "Card Footer",
-          src: "./img/member2.png",
+          title: 'Advanced',
+          description: 'Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+          content: 'Price: $425.00',
+          footer: 'Card Footer',
+          src: './img/pricing-thumb-2.png'
         },
         {
           id: 2,
-          title: "Hulk M. Kenbon",
-          description: "Card Description",
-          content: "neurologist",
-          footer: "Card Footer",
-          src: "./img/member3.png",
+          title: 'Advantage',
+          description: 'Ut enim ad minim veniam, quis istomw nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+          content: 'Price: $425.00',
+          footer: 'Card Footer',
+          src: './img/pricing-thumb-3.png'
         },
-        {
-          id: 3,
-          title: "Haliam Z. Dicolaz",
-          description: "Card Description",
-          content: "Consultant",
-          footer: "Card Footer",
-          src: "./img/member4.png",
-        },
-        {
-          id: 4,
-          title: "Nicolas D. Case",
-          description: "Card Description",
-          content: "dentist",
-          footer: "Card Footer",
-          src: "./img/member5.png",
-        },
-        {
-          id: 5,
-          title: "Phumdon H. Norman",
-          description: "Card Description",
-          content: "Neurologist",
-          footer: "Card Footer",
-          src: "./img/member6.png",
-        },
-
-      ];
-    const stylesTeam = {
+    ]
+    const stylesServices = {
         cards_styles: {
-          backgroundColor: "white",
-          // justifyContent: 'space-around',
-          columnGap: "1.25rem",
-          rowGap: "2rem",
-          //  padding: '10px 15%',
-        },
-        card_styles: {
-          backgroundColor: "white",
-          color: "#223645",
-          padding: "0",
-          gap: "1.75rem",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          //  shadowColor: '#AAC',
-        },
-        img_styles: {
-          width: "70%",
-        },
-        title_styles: {
-          fontSize: "1.75rem",
-          color: "#223645",
-          marginBottom: '0.75rem'
-          // colorHoverTitle: '#e1236b',
-        },
-        content_styles: {
-          textTransform: "uppercase",
-          fontWeight: "500",
-          color: "#e1236b",
-          colorHoverFooter: "#73bb1d",
-          fontWeight: 'bold',
-        },
-        absolute_styles: {
-          position: "absolute",
-          right: "10%",
-          bottom: "10%",
-          fontWeight: "900",
-          fontSize: "30px",
-          color: "white",
-          backgroundColor: "#8FB569",
-          backgroundcolorHoverabsolute: "#e1236b",
-          width: "65px",
-          height: "65px",
-          display: "flex",
-          textAlign: "center",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "50%",
-          boxShadow: "0 5px 10px #a9cba8",
-        },
-    };
+         backgroundColor: '#F4F9FC',
+         // justifyContent: 'space-around',
+         columnGap: '1.25rem',
+         rowGap: '1rem',
+        //  padding: '10px 15%',
+       },
+       card_styles: {
+         backgroundColor: 'white',
+         color: '#223645',
+         padding: '2rem 3rem',
+         gap: '1rem',
+         textAlign: 'left',
+         alignItems: 'start',
+         justifyContent: 'center',
+       },
+       img_styles: {
+        // width: '100%',
+        textAlign: 'left',
+        margin: '0'
+       },
+       title_styles: {
+        fontSize: '3rem',
+        color: '#223645',
+       },
+       content_styles: {
+        fontWeight: '700',
+        fontSize: '3rem',
+        color: '#808e96',
+        colorHoverContent: '#73bb1d',
+       },
+       description_styles: {
+        fontSize: '1rem'
+       }
+        
+    }
   return (
-    <section className="flex w-full flex-col sm:px-[5%] px-[2%] pt-11 pb-16 gap-14 bg-[#FFF]">
+    <section className="flex w-full flex-col sm:px-[5%] px-[2%] pt-11 pb-16 gap-14 bg-[#F4F9FC]">
       
         <div>
         <div className="flex items-center justify-between md:flex-row flex-col">
@@ -139,21 +100,17 @@ const Pricing = () => {
             </Link>
         </div>
         </div>
-              <Cards_Team
-                cards={cardsInfoTeam}
-                cards_styles={stylesTeam.cards_styles}
-                card_styles={stylesTeam.card_styles}
-                img_styles={stylesTeam.img_styles}
-                shadowColor={stylesTeam.card_styles.shadowColor}
-                title_styles={stylesTeam.title_styles}
-                colorHoverTitle={stylesTeam.title_styles.colorHoverTitle}
-                content_styles={stylesTeam.content_styles}
-                colorHoverContent={stylesTeam.content_styles.colorHoverContent}
-                absolute_styles={stylesTeam.absolute_styles}
-                backgroundcolorHoverabsolute={
-                  stylesTeam.absolute_styles.backgroundcolorHoverabsolute
-                }
-              ></Cards_Team>
+        <Cards_Plans cards={cardsInfoServices} 
+                                    cards_styles = {stylesServices.cards_styles}
+                                    card_styles = {stylesServices.card_styles}
+                                    img_styles = {stylesServices.img_styles}
+                                    shadowColor = {stylesServices.card_styles.shadowColor}
+                                    title_styles = {stylesServices.title_styles}
+                                    colorHoverTitle = {stylesServices.title_styles.colorHoverTitle}
+                                    content_styles = {stylesServices.content_styles}
+                                    colorHoverContent = {stylesServices.content_styles.colorHoverContent}
+                                    description_styles = {stylesServices.content_styles.description_styles}
+        ></Cards_Plans>
 
     </section>
   );

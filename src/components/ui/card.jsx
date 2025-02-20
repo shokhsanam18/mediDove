@@ -64,7 +64,7 @@ CardTitle.displayName = "CardTitle";
 const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-xs text-muted-foreground", className)}
+    className={cn("text-muted-foreground", className)}
     {...props}
   />
 ));
@@ -73,7 +73,7 @@ CardDescription.displayName = "CardDescription";
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-xs transition-all duration-300", className)}
+    className={cn("text-sm transition-all duration-300", className)}
     {...props}
   />
 ));

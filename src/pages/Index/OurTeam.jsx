@@ -130,7 +130,7 @@ const OurTeam = () => {
             <div className="w-32 my-5 h-1 bg-[linear-gradient(to_right,red_50%,transparent_50%)] bg-[length:15px_100%]"></div>
             </div>
             <Link to='/Blog' className="hidden md:block">
-            <button className="flex items-center h-16 w-64 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition">
+             <button className="flex items-center h-16 w-72 rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#8fb569] text-white bg-[#e12454] shadow-[0px_0px_5px_#e12454] hover:shadow-[0px_0px_3px_#8fb569] transition-all duration-300 ease-in-out font-semibold ">
                 <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
                 <Plus size={20}/>
                 </span>

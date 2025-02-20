@@ -85,6 +85,10 @@ export const Departments = () => {
     color: '#808e96',
     colorHoverContent: '#73bb1d',
    },
+   description_styles: {
+    fontSize: '5rem',
+    lineHeight: '1.25rem',
+   }
     
   }
   return <>
@@ -115,6 +119,7 @@ export const Departments = () => {
                         colorHoverTitle = {stylesServices.title_styles.colorHoverTitle}
                         content_styles = {stylesServices.content_styles}
                         colorHoverContent = {stylesServices.content_styles.colorHoverContent}
+                        description_styles = {stylesServices.content_styles.description_styles}
           ></Cards_Services>
   </section>
   </>;
