@@ -16,7 +16,10 @@ const useCarousel = () => {
 };
 
 const Carousel = forwardRef(({ orientation = "horizontal", opts, setApi, plugins, className, children, ...props }, ref) => {
-  const [carouselRef, api] = useEmblaCarousel({ ...opts, axis: orientation === "horizontal" ? "x" : "y" }, plugins);
+    const [carouselRef, api] = useEmblaCarousel(
+        { ...opts, axis: orientation === "horizontal" ? "x" : "y", loop: true },
+        plugins
+      );
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
 
@@ -83,9 +86,8 @@ CarouselItem.displayName = "CarouselItem";
 const CarouselPrevious = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
   return (
-    <Button ref={ref} variant={variant} size={size} className={cn("absolute h-8 w-8 rounded-full", orientation === "horizontal" ? "-left-12 top-1/2 -translate-y-1/2" : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)} disabled={!canScrollPrev} onClick={scrollPrev} {...props}>
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
+    <Button ref={ref} variant={variant} size={size} className={cn("flex items-center justify-center  absolute text-base uppercase tracking-wide h-20 w-20 font-bold text-center hover:bg-[#E51E50] hover:text-white hover:shadow-[2px_2px_3px_#e1245397] text-[#223645] border-none outline-none bg-white transition-all rounded-full", orientation === "horizontal" ? "-left-12 top-1/2 -translate-y-1/2" : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)} disabled={!canScrollPrev} onClick={scrollPrev} {...props}>
+      <ArrowLeft className="h-4 w-4 mx-auto" />
     </Button>
   );
 });
@@ -94,9 +96,8 @@ CarouselPrevious.displayName = "CarouselPrevious";
 const CarouselNext = forwardRef(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
   return (
-    <Button ref={ref} variant={variant} size={size} className={cn("absolute h-8 w-8 rounded-full", orientation === "horizontal" ? "-right-12 top-1/2 -translate-y-1/2" : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)} disabled={!canScrollNext} onClick={scrollNext} {...props}>
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
+    <Button ref={ref} variant={variant} size={size} className={cn("flex items-center justify-center  absolute text-base uppercase tracking-wide h-20 w-20 font-bold text-center hover:bg-[#E51E50] hover:text-white hover:shadow-[2px_2px_3px_#e1245397] text-[#223645] border-none outline-none bg-white transition-all rounded-full", orientation === "horizontal" ? "-right-12 top-1/2 -translate-y-1/2" : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)} disabled={!canScrollNext} onClick={scrollNext} {...props}>
+      <ArrowRight className="h-8 w-8 font-bold mx-auto" />
     </Button>
   );
 });
