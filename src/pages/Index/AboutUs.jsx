@@ -5,7 +5,7 @@ const AboutUs = () => {
     <section className="w-full max-w-7xl mx-auto lg:px-20  sm:px-[5%] px-[2%] pt-11 pb-16 gap-12 flex flex-col lg:flex-row items-center  bg-white">
       <div className="w-full lg:w-1/2 relative shadow-xl">
         <img src="/img/about-img.jpg" alt="" className="w-full" />
-        <img src="/img/medical-brand.png" alt="" className="lg:absolute hidden lg:-right-24 lg:top-1/3" />
+        <img src="/img/medical-brand.png" alt="" className="hidden lg:block lg:absolute lg:-right-24 lg:top-1/3" />
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center gap-7">
