@@ -1,16 +1,17 @@
 import { Cards_Services } from "@/components/ui/Cards";
+import Typography from "@/components/ui/Typography";
 import React from "react";
 
-export const Index = () => {
+export const Departments = () => {
 
   const cardsInfoServices = [
     {
       id: 0,
-      title: 'Dental Care',
+      title: 'Body Surgery',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
       content: 'Read More',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/service1.png'
     },
     {
       id: 1,
@@ -22,46 +23,61 @@ export const Index = () => {
     },
     {
       id: 2,
-      title: 'Dental Care',
+      title: 'service-content',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
       content: 'Read More',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/service3.png'
     },
-    
     {
       id: 3,
-      title: 'Card Title',
-      description: 'Card Description',
-      content: 'Card Content',
+      title: 'Blood Cancer',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
       footer: 'Card Footer',
-      src: './img/service2.png'
+      src: './img/service4.png'
+    },
+    {
+      id: 4,
+      title: 'Neurology Sargery',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
+      footer: 'Card Footer',
+      src: './img/service5.png'
+    },
+    {
+      id: 5,
+      title: 'Allergic Issue',
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.',
+      content: 'Read More',
+      footer: 'Card Footer',
+      src: './img/service6.png'
     },
   ]
   const stylesServices = {
     cards_styles: {
-     backgroundColor: 'white',
+     backgroundColor: '#F4F9FC',
      // justifyContent: 'space-around',
      columnGap: '1.25rem',
-     rowGap: '0.75rem',
+     rowGap: '1rem',
     //  padding: '10px 15%',
    },
    card_styles: {
      backgroundColor: 'white',
-     color: 'black',
-     padding: '1rem 3rem',
+     color: '#223645',
+     padding: '2rem 3rem',
      gap: '1rem',
      textAlign: 'center',
      alignItems: 'center',
      justifyContent: 'center',
-     shadowColor: '#AAC',
+     shadowColor: '#AACA',
    },
    img_styles: {
     width: '55%',
    },
    title_styles: {
     fontSize: '1.28rem',
-    color: '#171717',
+    color: '#223645',
     colorHoverTitle: '#73bb1d',
    },
    content_styles: {
@@ -69,10 +85,31 @@ export const Index = () => {
     color: '#808e96',
     colorHoverContent: '#73bb1d',
    },
+   description_styles: {
+    fontSize: '5rem',
+    lineHeight: '1.25rem',
+   }
     
   }
   return <>
-  <section className="px-[15%]">
+  <section className="sm:px-[5%] px-[2%] pt-7 pb-16 w-full flex gap-12 flex-col text-center bg-[#F4F9FC]">
+      <div className="flex items-center justify-center md:flex-row flex-col gap-3">
+        <div
+          className="bg-center bg-no-repeat sm:w-full"
+          style={{ backgroundImage: "url('/img/bgnurse.png')" }}
+        >
+          <Typography variant="p" className={`font-semibold`}>
+            Departments
+          </Typography>
+          <Typography
+            variant="h2"
+            className={`w-full md:w-1/2 m-auto`}
+          >
+            Managed Your Heathcare Services
+          </Typography>
+          <div className="w-32 m-auto my-5 h-1 bg-[linear-gradient(to_right,red_50%,transparent_50%)] bg-[length:15px_100%]"></div>
+        </div>
+      </div>
           <Cards_Services cards={cardsInfoServices} 
                         cards_styles = {stylesServices.cards_styles}
                         card_styles = {stylesServices.card_styles}
@@ -82,6 +119,7 @@ export const Index = () => {
                         colorHoverTitle = {stylesServices.title_styles.colorHoverTitle}
                         content_styles = {stylesServices.content_styles}
                         colorHoverContent = {stylesServices.content_styles.colorHoverContent}
+                        description_styles = {stylesServices.content_styles.description_styles}
           ></Cards_Services>
   </section>
   </>;

@@ -224,7 +224,7 @@ export const Blog = () => {
             >
               We are here for your care.
             </Typography>
-            <Typography variant="h1" className="text-black font-bold">
+            <Typography variant="h1" >
             Blog 3 coloum
             </Typography>
           </div>
@@ -234,7 +234,7 @@ export const Blog = () => {
               Home <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              About
+              Blog
             </Typography>
           </div>
         </div>
