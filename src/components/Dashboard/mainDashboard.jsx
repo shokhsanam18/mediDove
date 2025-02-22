@@ -5,7 +5,10 @@ import cors from "cors";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
-import { UNSAFE_createClientRoutes } from "react-router-dom";
+import clientRoutes from "./routes/client.jsx";
+import generalRoutes from "./routes/client.jsx";
+import managementRoutes from "./routes/client.jsx";
+import salesRoutes from "./routes/client.jsx";
 
 // Configuration
 dotenv.config();
@@ -20,6 +23,6 @@ app.use(cors());
 
 // ROUTES
 app.use("/client", clientRoutes);
-app.use("/general", generalRotes);
+app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("./sales", salesRoutes);
