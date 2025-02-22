@@ -36,7 +36,7 @@ const Showcase = () => {
             </Typography>
             <div className='flex md:justify-start justify-center items-center gap-6'>
 
-                <Link to='/ContactUs'>
+                <Link to='/BecomeMember'>
                     <button className="flex items-center h-16 uppercase w-72 rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#8fb569] text-white bg-[#e12454] shadow-[2px_2px_3px_#e1245397] hover:shadow-[0px_0px_3px_#8fb569] transition-all duration-300 ease-in-out font-semibold">
                         <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
                         <Plus size={20}/>
@@ -77,7 +77,7 @@ const Showcase = () => {
             </Typography>
             <div className='flex md:justify-start justify-center items-center gap-6'>
 
-                <Link to='/ContactUs'>
+                <Link to='/BecomeMember'>
                     <button className="flex items-center h-16 uppercase w-72 rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#8fb569] text-white bg-[#e12454] shadow-[2px_2px_3px_#e1245397] hover:shadow-[0px_0px_3px_#8fb569] transition-all duration-300 ease-in-out font-semibold">
                         <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
                         <Plus size={20}/>
