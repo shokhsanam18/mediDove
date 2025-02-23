@@ -11,9 +11,33 @@ import FormComponent from "../components/ui/FormComponent";
 import { ContactCardOne } from "../components/ui/ContactCards";
 import { ContactCardTwo } from "../components/ui/ContactCards";
 import { MapPin } from "lucide-react";
+
+import { useLocation } from "react-router-dom";
+
 const items = [" "];
 
 export const Contact = () => {
+  const location = useLocation();
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    if (location.state?.scrollTo === "FormComponent") {
+      setTimeout(() => {
+        if (formRef.current) {
+          const yOffset = -30;
+          const y =
+            formRef.current.getBoundingClientRect().top +
+            window.scrollY +
+            yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 300);
+    }
+  }, [location]);
+
   const [isMounted, setIsMounted] = useState(false);
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
@@ -118,7 +142,7 @@ export const Contact = () => {
         </button>
         <ContactCardTwo />
       </div>
-      <div className="flex">
+      <div ref={formRef}>
         <FormComponent />
       </div>
       <div

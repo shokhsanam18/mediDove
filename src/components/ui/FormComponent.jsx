@@ -1,11 +1,10 @@
-import React from "react";
 import axios from "axios";
 import { Input } from "./input";
 import { Label } from "./label";
 import { Textarea } from "./textarea";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import React, { forwardRef } from "react";
 
 function InputWithName({ value, onChange }) {
   return (
@@ -95,12 +94,14 @@ export const getMessages = async () => {
   }
 };
 
-function FormComponent() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [subject, setSubject] = React.useState("");
-  const [message, setMessage] = React.useState("");
+function FormComponent(props, ref) {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
   const [loading, setLoading] = React.useState(false);
   const [success, setSuccess] = React.useState(null);
 
@@ -109,28 +110,23 @@ function FormComponent() {
     setLoading(true);
     setSuccess(null);
 
-    if (!name || !email || !phone || !subject || !message) {
+    if (Object.values(formData).some((value) => !value.trim())) {
       setSuccess("Fill the form");
       setLoading(false);
       return;
     }
 
-    const formData = {
-      name,
-      email,
-      subject,
-      message,
-      phone,
-    };
     const response = await submitMessage(formData);
 
     if (response) {
       setSuccess("Message submitted successfully!");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
-      setSubject("");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
     }
 
     setLoading(false);
@@ -146,7 +142,8 @@ function FormComponent() {
             Anything On your Mind
           </p>
           <h1 className="text-[#223645] text-[60px]  font-semibold ">
-            Estimate <br className="sm:hidden"/>Your Idea
+            Estimate <br className="sm:hidden" />
+            Your Idea
           </h1>
         </div>
         <Link to="/BecomeMember" state={{ scrollTo: "FormAppointment" }}>
@@ -203,4 +200,4 @@ function FormComponent() {
   );
 }
 
-export default FormComponent;
+export default forwardRef(FormComponent);
