@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import Typography from "@/components/ui/Typography";
+import { useTranslation } from "react-i18next";
 const AboutUs = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full max-w-7xl mx-auto lg:px-20  sm:px-[5%] px-[2%] pt-11 pb-16 gap-12 flex flex-col lg:flex-row items-center  bg-white">
       <div className="w-full lg:w-1/2 relative shadow-xl">
         <img src="/img/about-img.jpg" alt="" className="w-full" />
-        <img src="/img/medical-brand.png" alt="" className="hidden lg:block lg:absolute lg:-right-24 lg:top-1/3" />
+        <img
+          src="/img/medical-brand.png"
+          alt=""
+          className="hidden lg:block lg:absolute lg:-right-24 lg:top-1/3"
+        />
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center gap-7">
         <Typography variant="h4" className="text-[#6A7B8F]">
-          About Us
+          {t("index.aboutus.showcase")}
+          {/* About Us */}
         </Typography>
 
-        <Typography variant="h2">Short Story About MediDove Clinic.</Typography>
+        <Typography variant="h2">
+          {t("index.aboutus.title")}
+          {/* Short Story About MediDove Clinic. */}
+        </Typography>
 
         <Typography
           variant="p"
@@ -40,17 +50,19 @@ const AboutUs = () => {
         </Typography>
 
         <div className="flex items-center gap-6">
-            <div>
-                <img src="/img/author-ava.png" alt="" />
-            </div>
-            <div className="flex flex-col gap-2">
-                <Typography variant="h4" className="text-[#223645]">
-                Rosalina D. Williamson
-                </Typography>
-                <h5 className="text-[#e1236b] text-xs font-bold tracking-tight sm:text-sm uppercase">
-                    founder
-                </h5>
-            </div>
+          <div>
+            <img src="/img/author-ava.png" alt="" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <Typography variant="h4" className="text-[#223645]">
+              {t("index.aboutus.author")}
+              {/* Rosalina D. Williamson */}
+            </Typography>
+            <h5 className="text-[#e1236b] text-xs font-bold tracking-tight sm:text-sm uppercase">
+              {t("index.aboutus.founder")}
+              {/* founder */}
+            </h5>
+          </div>
         </div>
       </div>
     </section>
