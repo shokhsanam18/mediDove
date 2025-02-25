@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Cards_Team } from "../components/ui/Cards";
 import { Cards_News } from "../components/ui/Cards";
@@ -14,6 +13,7 @@ import { NewsCardThree } from "@/components/ui/NewsCard";
 import { NewsCardFour } from "@/components/ui/NewsCard";
 import { NewsCardFive } from "@/components/ui/NewsCard";
 import { NewsCardSeven } from "@/components/ui/NewsCard";
+import React, { forwardRef } from "react";
 
 export const News = () => {
   const cardsInfoNews = [
@@ -93,6 +93,24 @@ export const News = () => {
       src: "./img/b3.jpg",
     },
   ];
+  const stylesNews = {
+    cards_styles: {
+      display: "flex",
+      flexDirection: "column",
+      backgroundColor: "white",
+      justifyContent: "space-around",
+      columnGap: "1.25rem",
+      rowGap: "3rem",
+
+      wordSpacing: "0.75rem",
+    },
+    card_styles: {
+      backgroundColor: "#FAF9FF",
+      color: "black",
+      padding: "0 0 50px 0",
+      gap: "1.5rem",
+    },
+  };
 
   return (
     <>

@@ -128,7 +128,7 @@ const Showcase = () => {
             </button>
             <iframe
               className="w-full h-64 sm:h-96"
-              src="https://www.youtube.com/embed/oU_GUAWz52w?si=GQPIHAoWg11DmrPv;start=2"
+              src="https://www.youtube.com/embed/oU_GUAWz52w?start=2"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

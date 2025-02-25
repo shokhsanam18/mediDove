@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import { Button } from "@/components/ui/button";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "@/assets/appointment.ff3ad7059211248ce482.jpg";
 import Typography from "@/components/ui/Typography";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
@@ -76,14 +78,16 @@ export const Tasischilar = () => {
           </ul>
 
           <div className="mt-6 w-full">
-            <Button
-              variant="destructive"
-              size="lg"
-              className="w-full hover:bg-green-500 hover:rounded-none"
-              onClick={() => navigate("/ContactUs")}
-            >
-              Make Appointment
-            </Button>
+            <Link to="/ContactUs" state={{ scrollTo: "FormComponent" }}>
+              <Button
+                variant="destructive"
+                size="lg"
+                className="w-full hover:bg-green-500 hover:rounded-none"
+                onClick={() => navigate("/ContactUs")}
+              >
+                Make Appointment
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

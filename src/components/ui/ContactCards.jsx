@@ -2,7 +2,10 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Mail, Phone } from "lucide-react";
 
+
+
 export const ContactCardOne = () => {
+  
   return (
     <div
       className="flex flex-col justify-center gap-6
