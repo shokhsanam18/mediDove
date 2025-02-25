@@ -5,7 +5,7 @@ import { About } from "./pages/About/About";
 import { Tasischilar } from "./pages/About/Tasischilar";
 import { Details } from "./pages/Surgery-types/Details";
 import { Blog } from "./pages/Blog";
-import { News } from "./pages/News";
+import { News } from "./pages/NewsPage";
 import { BecomeMember } from "./pages/BecomeMember/BecomeMember";
 import { Layout } from "./components/Layout";
 import { Shifokorlar } from "./pages/About/Shifokorlar";

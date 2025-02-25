@@ -93,6 +93,7 @@ export const News = () => {
       footer: "read more ->",
       src: "./img/b3.jpg",
     },
+
     {
       id: 3,
       title:
@@ -200,6 +201,7 @@ export const News = () => {
             <Typography variant="p" className="cursor-pointer">
               <Link to="/About">Home</Link>
             </Typography>
+
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
               News
