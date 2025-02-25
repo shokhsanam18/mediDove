@@ -56,7 +56,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   );
 }
 
-const BASE_URL = "https://a359-89-236-218-41.ngrok-free.app/api/formData";
+const BASE_URL = "https://9e25-89-236-218-41.ngrok-free.app/api";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
@@ -139,29 +139,15 @@ function FormAppointment(props, ref) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 mt-4">
-          <TextInput
-            value={formData.name}
+          <SelectDemo
+            value={formData.department}
             onChange={handleChange("name")}
-            placeholder="Your Name"
+            placeholder="Name"
+            items={[
+              { value: "name1", label: "Name One" },
+              { value: "name2", label: "Name Two" },
+            ]}
           />
-
-          {/* <div className="flex flex-col md:flex-row gap-4 mt-4">
-            <SelectDemo
-              value={formData.doctor}
-              onChange={handleChange("Your Name")}
-              placeholder="Your Name"
-              items={[
-                { value: "Name1", label: "Name One" },
-                { value: "Name2", label: "Name Two" },
-              ]}
-            />
-            <TextInput
-              value={formData.phone}
-              onChange={handleChange("phone")}
-              placeholder="Your Phone Number"
-              icon={Phone}
-            />
-          </div> */}
           <TextInput
             value={formData.phone}
             onChange={handleChange("phone")}

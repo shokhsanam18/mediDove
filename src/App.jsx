@@ -12,7 +12,6 @@ import { Shifokorlar } from "./pages/About/Shifokorlar";
 import { Ustav } from "./pages/About/Ustav";
 import { Surgery } from "./pages/Surgery-types/Surgery";
 import { Contact } from "./pages/ContantUs";
-// import { Test } from "./pages/Test";
 
 function App() {
   return (
