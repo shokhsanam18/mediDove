@@ -22,7 +22,7 @@ function InputWithName({ value, onChange }) {
 
 function InputWithEmail({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5">
+    <div className="grid w-full items-center gap-1.5">
       <Label htmlFor="email"></Label>
       <Input
         type="email"
@@ -37,7 +37,7 @@ function InputWithEmail({ value, onChange }) {
 
 function InputWithPhone({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5 ">
+    <div className="grid w-full items-center gap-1.5">
       <Label htmlFor="phone"></Label>
       <Input
         type="tel"
@@ -52,7 +52,7 @@ function InputWithPhone({ value, onChange }) {
 
 function InputWithSubject({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5">
+    <div className="grid w-full items-center gap-1.5">
       <Input
         type="text"
         id="subject"
@@ -73,8 +73,8 @@ function InputWithMessage({ value, onChange }) {
     />
   );
 }
-const BASE_URL =
-  "https://crudcrud.com/api/08f751552a294a91b3c2daca67ddeac4/ideas";
+
+const BASE_URL = "https://8f88-89-236-218-41.ngrok-free.app/api/formIdeas";
 
 export const submitMessage = async (messageData) => {
   try {
@@ -95,7 +95,7 @@ export const getMessages = async () => {
 };
 
 function FormComponent(props, ref) {
-  const [formData, setFormData] = React.useState({
+  const [formContact, setFormContact] = React.useState({
     name: "",
     email: "",
     phone: "",
@@ -110,17 +110,17 @@ function FormComponent(props, ref) {
     setLoading(true);
     setSuccess(null);
 
-    if (Object.values(formData).some((value) => !value.trim())) {
+    if (Object.values(formContact).some((value) => !value.trim())) {
       setSuccess("Fill the form");
       setLoading(false);
       return;
     }
 
-    const response = await submitMessage(formData);
+    const response = await submitMessage(formContact);
 
     if (response) {
       setSuccess("Message submitted successfully!");
-      setFormData({
+      setFormContact({
         name: "",
         email: "",
         phone: "",
@@ -131,17 +131,18 @@ function FormComponent(props, ref) {
 
     setLoading(false);
   };
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full  pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
+      className="w-full pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
     >
       <div className="sm:flex-row flex-col flex justify-between w-full">
         <div>
           <p className="text-[#647589] text-[14px] font-normal">
             Anything On your Mind
           </p>
-          <h1 className="text-[#223645] text-[60px]  font-semibold ">
+          <h1 className="text-[#223645] text-[60px] font-semibold">
             Estimate <br className="sm:hidden" />
             Your Idea
           </h1>
@@ -160,39 +161,46 @@ function FormComponent(props, ref) {
       </div>
       <div className="w-full">
         <div className="flex justify-between w-full">
-          <InputWithName className="w-full" value={name} onChange={setName} />
-          <InputWithEmail value={email} onChange={setEmail} />
+          <InputWithName
+            value={formContact.name}
+            onChange={(value) => setFormContact({ ...formContact, name: value })}
+          />
+          <InputWithEmail
+            value={formContact.email}
+            onChange={(value) => setFormContact({ ...formContact, email: value })}
+          />
         </div>
         <div className="flex justify-between">
-          <InputWithPhone value={phone} onChange={setPhone} />
-          <InputWithSubject value={subject} onChange={setSubject} />
+          <InputWithPhone
+            value={formContact.phone}
+            onChange={(value) => setFormContact({ ...formContact, phone: value })}
+          />
+          <InputWithSubject
+            value={formContact.subject}
+            onChange={(value) => setFormContact({ ...formContact, subject: value })}
+          />
         </div>
         <div className="bg-white">
-          <InputWithMessage value={message} onChange={setMessage} />
+          <InputWithMessage
+            value={formContact.message}
+            onChange={(value) => setFormContact({ ...formContact, message: value })}
+          />
         </div>
       </div>
       {success && (
-        <p
-          className={
-            success === "Fill the form" ? "text-red-500" : "text-green-500"
-          }
-        >
+        <p className={success === "Fill the form" ? "text-red-500" : "text-green-500"}>
           {success}
         </p>
       )}
       <button
         type="submit"
-        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition "
+        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition"
         disabled={loading}
       >
         <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
           <Plus size={16} />
         </span>
-        <span
-          className={`ml-4 text-sm tracking-wide ${
-            loading ? "opacity-50" : "opacity-100"
-          }`}
-        >
+        <span className={`ml-4 text-sm tracking-wide ${loading ? "opacity-50" : "opacity-100"}`}>
           {loading ? "Submitting..." : "GET ACTION"}
         </span>
       </button>

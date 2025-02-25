@@ -1,5 +1,4 @@
 import React, { forwardRef } from "react";
-
 import { useMutation } from "@tanstack/react-query"; // Import useMutation
 import Typography from "./Typography";
 import { Input } from "@/components/ui/inputFormAppointment";
@@ -44,7 +43,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
         placeholder={placeholder}
         className="w-full h-full p-4 border-none outline-none"
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e.target.value)}
         onFocus={(e) => (e.target.style.boxShadow = "none")}
         onBlur={(e) => (e.target.style.boxShadow = "none")}
         style={{
@@ -52,14 +51,12 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
           outline: "none",
         }}
       />
-
       {Icon && <Icon className="text-gray-400" />}
     </div>
   );
 }
 
-const BASE_URL =
-  "https://crudcrud.com/api/25d79de5389d4238851da19031bd0a1b/appointments";
+const BASE_URL = "https://9e25-89-236-218-41.ngrok-free.app/api";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
@@ -73,9 +70,8 @@ function FormAppointment(props, ref) {
   });
 
   const handleChange = (key) => (value) => {
-    setFormData((prev) => ({ ...prev, [key]: value }));
+    setFormData((prev) => ({ ...prev, [key]: value.toString() }));
   };
-
 
   const mutation = useMutation({
     mutationFn: async (data) => {
@@ -144,12 +140,12 @@ function FormAppointment(props, ref) {
 
         <div className="flex flex-col md:flex-row gap-4 mt-4">
           <SelectDemo
-            value={formData.name}
+            value={formData.department}
             onChange={handleChange("name")}
-            placeholder="Your Name"
+            placeholder="Name"
             items={[
-              { value: "Name1", label: "Name One" },
-              { value: "Name2", label: "Name Two" },
+              { value: "name1", label: "Name One" },
+              { value: "name2", label: "Name Two" },
             ]}
           />
           <TextInput

@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
-import { Index } from "./pages/Index";
+import { Index } from "./pages/Index/Index";
 import { About } from "./pages/About/About";
 import { Tasischilar } from "./pages/About/Tasischilar";
 import { Details } from "./pages/Surgery-types/Details";
@@ -31,6 +31,7 @@ function App() {
           <Route path="/ContactUs" element={<Contact />} />
         </Route>
         <Route path="*" element={<div>404 Not found</div>} />
+        {/* <Route path="/Test" element={<Test />} /> */}
       </Routes>
     </div>
   );
