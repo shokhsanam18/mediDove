@@ -253,7 +253,7 @@ export const News = () => {
             </button>
           </div>
         </div>
-        <div className="sm:w-1/3 w-full  pl-0 flex flex-col items-center gap-y-10">
+        <div className="sm:w-1/3 w-full p-24 pl-0 flex flex-col items-center gap-y-10">
           <NewsCardOne />
           <NewsCardTwo />
           <NewsCardThree />

@@ -35,6 +35,23 @@ export const NewsCardOne = () => {
         <SearchBar />
         <Outlet />
       </div>
+      {/* <div>
+        {" "}
+        <input
+          type="text"
+          placeholder="Search..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          className="p-2 border rounded-md w-full"
+        />
+        <ul className="mt-2">
+          {filteredItems.length > 0 ? (
+            filteredItems.map((item, index) => <li key={index}>{item}</li>)
+          ) : (
+            <li>No results found</li>
+          )}
+        </ul>
+      </div> */}
     </div>
   );
 };
