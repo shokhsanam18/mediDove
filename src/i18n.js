@@ -87,6 +87,11 @@ i18n
               appointment: "Make appointment",
             },
           },
+          app: {
+            appointment: "Appointment",
+            blog: "Blog",
+            call: "Make Call",
+          },
         },
       },
       ru: {
@@ -167,6 +172,11 @@ i18n
               care: "Носители заботы",
               appointment: "Запись на приём",
             },
+          },
+          app: {
+            appointment: "Приём",
+            blog: "Блог",
+            call: "Позвонить",
           },
         },
       },

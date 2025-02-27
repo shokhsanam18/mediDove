@@ -9,8 +9,10 @@ import {
   CardContent,
   CardDescription,
 } from "@/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const NewsAppointment = () => {
+  const { t } = useTranslation();
   return (
     <div className="md:px-40 md:py-20">
       <div className="flex items-center justify-between md:flex-row flex-col">
@@ -19,13 +21,13 @@ const NewsAppointment = () => {
           style={{ backgroundImage: "url('/img/bgnurse.png')" }}
         >
           <Typography variant="p" className="py-10">
-            News
+            {t("index.news.title")} {/* News */}
           </Typography>
           <Typography
             variant="h2"
             className="py-2 text-4xl sm:text-4xl md:text-6xl"
           >
-            Get Every Single Update Here.
+            {t("index.news.subtitle")} {/* Get Every Single Update Here. */}
           </Typography>
           <div className="w-32 my-5 h-1 bg-[linear-gradient(to_right,red_50%,transparent_50%)] bg-[length:15px_100%]"></div>
         </div>
@@ -34,7 +36,9 @@ const NewsAppointment = () => {
             <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
               <Plus size={16} />
             </span>
-            <span className="ml-4 text-sm tracking-wide">OUR BLOG</span>
+            <span className="ml-4 text-sm tracking-wide uppercase">
+              {t("app.blog")} {/* OUR BLOG */}
+            </span>
           </button>
         </div>
       </div>
@@ -90,6 +94,7 @@ const MedicalCardsAppointment = () => {
 };
 
 const BlogCards = () => {
+  const { t } = useTranslation();
   return (
     <div className="border rounded-lg p-9 md:w-1/3 w-full max-w-md mx-auto">
       {[...Array(3)].map((_, index) => (
@@ -104,11 +109,15 @@ const BlogCards = () => {
           <CardContent className="flex items-center text-sm text-gray-500 gap-4">
             <div className="flex items-center gap-1">
               <Calendar size={14} />
-              <span>23rd Jan 2022</span>
+              <span>
+                {t("index.news.calendar")} {/* 23rd Jan 2022  */}
+              </span>
             </div>
             <div className="flex items-center gap-1">
               <MessageCircle size={14} />
-              <span>33 Comments</span>
+              <span>
+                {t("index.news.comments")} {/* 33 Comments */}
+              </span>
             </div>
           </CardContent>
         </Card>
@@ -118,6 +127,7 @@ const BlogCards = () => {
 };
 
 const CombinedPage = () => {
+  const { t } = useTranslation();
   return (
     <>
       <NewsAppointment />
@@ -130,7 +140,9 @@ const CombinedPage = () => {
           <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
             <Phone size={16} />
           </span>
-          <span className="ml-4 text-sm tracking-wide">MAKE CALL</span>
+          <span className="ml-4 text-sm tracking-wide uppercase">
+            {t("app.call")} {/* MAKE CALL */}
+          </span>
         </button>
       </div>
     </>
