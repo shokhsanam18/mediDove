@@ -86,12 +86,85 @@ i18n
               care: "Care Provider",
               appointment: "Make appointment",
             },
+
           },
           app: {
             appointment: "Appointment",
             blog: "Blog",
             call: "Make Call",
           },
+
+
+
+          surgery:{
+            main: {
+              title: " We are here for your care.",
+              showcase: "Our Services",
+              button1: "Home",
+              button2: "Our Services",
+             
+            },
+            healthcare: {
+              title: "Health care facility",
+              question: "Would you rather stay at home than go into a health care facility?",
+            },
+            employers: {
+              title: "For Employers",
+            
+              contact_button: "CONTACT US",
+              apply_button: "APPLY TODAY",
+            },
+          },
+          details:{
+            main: {
+              title: " We are here for your care.",
+              showcase: "Details",
+              button1: "Home",
+              button2: "Details",
+             
+            },
+          },
+          news:{
+            main: {
+              title: " We are here for your care.",
+              showcase: "News",
+              button1: "Home",
+              button2: "News",
+             
+            },
+            card:{
+              description:
+              "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+              footer:"read more ->"
+           },
+
+           NPR:{
+             title:"This health blog from NPR takes a fairly broad look at the medical world,."
+           },
+          },
+          blog:{
+            main: {
+              title: " We are here for your care.",
+              showcase: "Blog 3 coloum",
+              button1: "Home",
+              button2: "Blog",
+             
+            },
+            card:{
+               description:
+               "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+            },
+          },
+          contactus:{
+            main: {
+              title: " We are here for your care.",
+              showcase: "Contact Us",
+              button1: "Home",
+              button2: "Contact",
+             
+            },
+          },
+
         },
       },
       ru: {
@@ -180,5 +253,86 @@ i18n
           },
         },
       },
+
+      uz: {
+        translation: {
+          greeting: "  React va react-i18next ga xush kelibsiz",
+          surgery:{
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Bizning xizmatlar",
+              button1: "Bosh sahifa",
+              button2: "Bizning xizmatlar",
+             
+            },
+            healthcare: {
+              title: "Sog'liqni saqlash muassasasi",
+              question: "Siz Shifoxonaga borishdan ko'ra uyda qolishni xohlaysizmi?",
+            },
+
+            employers: {
+              title: "Ish beruvchilar uchun",
+              description:
+                "Lorem ipsum o'zbekcha tarjima. Sizning bu yerdagi mazmuningiz o'zbek tiliga tarjima qilinadi.",
+              contact_button: "BIZGA BOG'LANING",
+              apply_button: "HOZIROQ ARIZA BERING",
+            },
+
+        },
+        details:{
+          main: {
+            title: " Biz sizga g'amxo'rmiz.",
+            showcase: "Tafsilotlar",
+            button1: "Bosh sahifa",
+            button2: "Tafsilotlar",
+           
+          },
+
+      },
+      news:{
+        main: {
+          title: " Biz sizga g'amxo'rmiz.",
+          showcase: "Yangiliklar",
+          button1: "Bosh sahifa",
+          button2: "Yangiliklar",
+         
+        },
+        card:{
+          description:
+          "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
+          footer: "Ko'proq o'qing ->"
+       },
+       NPR:{
+        title:"NPRning ushbu sog'liqni saqlash blogi tibbiyot olamiga juda keng nazar tashlaydi."
+      },
+      },
+      
+      blog:{
+        main: {
+          title: " Biz sizga g'amxo'rmiz.",
+          showcase: "Blog 3 ustun",
+          button1: "Bosh sahifa",
+          button2: "Blog",
+         
+        },
+        card:{
+          description:
+          "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir."
+       },
+      },
+      contactus:{
+        main: {
+          title: " Biz sizga g'amxo'rmiz.",
+          showcase: "Bog'lanish",
+          button1: "Bosh sahifa",
+          button2: "Bog'lanish",
+         
+        },
+      },
+
+
+
+      },
+      }
     },
   });
