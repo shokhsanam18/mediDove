@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Typography from "@/components/ui/Typography";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { useTranslation } from "react-i18next";
 
 export const Ustav = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <div
@@ -21,22 +23,22 @@ export const Ustav = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("about.main.title")} {/* We are here for your care. */}
             </Typography>
             <Typography variant="h1" className="text-black font-bold">
-              Ustav
+              {t("about.ustav.ustav")} {/* Ustav */}
             </Typography>
           </div>
           <div className="flex items-center">
             <Link to="/" className="no-underline">
               <Typography variant="p" className="text-gray-600">
-                Home
+                {t("about.main.button1")} {/* Home */}
               </Typography>
             </Link>
             <span className="mx-2">|</span>
             <Link to="/About" className="no-underline">
               <Typography variant="p" className="text-red-600 font-semibold">
-                About
+                {t("about.main.button2")} {/* About */}
               </Typography>
             </Link>
           </div>

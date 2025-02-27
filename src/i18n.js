@@ -69,6 +69,15 @@ i18n
               mission: "Our Mission",
               vision: "Our vision",
             },
+            tasischilar: {
+              title: "Constitutors",
+              approach: "Our Approach",
+              patient: "If you are a patient",
+              quality: "seeking quality",
+            },
+            ustav: {
+              ustav: "Ustav",
+            },
             shifokorlar: {
               title: " We are here for your care.",
               showcase: "Doctors",
@@ -140,6 +149,15 @@ i18n
               subtitle: "Краткая история о клинике MediDove.",
               mission: "Наша Миссия",
               vision: "Наш Взгляд",
+            },
+            tasischilar: {
+              title: "Учредители",
+              approach: "Наш Подход",
+              patient: "Если вы пациент,",
+              quality: "Который ищет качество",
+            },
+            ustav: {
+              ustav: "Устав",
             },
             shifokorlar: {
               title: "Мы здесь для вашей заботы",

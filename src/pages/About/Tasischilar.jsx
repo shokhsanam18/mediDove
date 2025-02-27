@@ -6,11 +6,12 @@ import { useNavigate } from "react-router-dom";
 import backgroundImage from "@/assets/appointment.ff3ad7059211248ce482.jpg";
 import Typography from "@/components/ui/Typography";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { useTranslation } from "react-i18next";
 
 export const Tasischilar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
-
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <div
@@ -28,22 +29,22 @@ export const Tasischilar = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("about.main.title")} {/* We are here for your care. */}
             </Typography>
             <Typography variant="h1" className="text-black font-bold">
-              Ta'sischilar
+              {t("about.tasischilar.title")} {/* Ta'sischilar */}
             </Typography>
           </div>
           <div className="flex items-center">
             <Link to="/" className="no-underline">
               <Typography variant="p" className="text-gray-600">
-                Home
+                {t("about.main.button1")} {/* Home */}
               </Typography>
             </Link>
             <span className="mx-2">|</span>
             <Link to="/About" className="no-underline">
               <Typography variant="p" className="text-red-600 font-semibold">
-                About
+                {t("about.main.button2")} {/* About */}
               </Typography>
             </Link>
           </div>
@@ -51,15 +52,17 @@ export const Tasischilar = () => {
       </div>
       <div className="h-20"></div>
       <div
-        className="relative h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative h-screen flex items-center justify-center bg-cover bg-center mb-10"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="relative z-10 bg-white p-10 max-w-3xl w-full lg:max-w-xl lg:p-14 rounded-none -ml-80 max-h-[550px]">
-          <h3 className="text-red-600 font-bold text-sm mb-2">Our Approach</h3>
+          <h3 className="text-red-600 font-bold text-sm mb-2">
+            {t("about.tasischilar.approach")} {/* Our Approach */}
+          </h3>
           <h1 className="text-4xl font-bold text-gray-900 leading-tight">
-            If you are a patient
+            {t("about.tasischilar.patient")} {/* If you are a patient */}
             <br />
-            seeking quality.
+            {t("about.tasischilar.quality")} {/*seeking quality */}
           </h1>
           <p className="text-gray-600 mt-3">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -85,7 +88,7 @@ export const Tasischilar = () => {
                 className="w-full hover:bg-green-500 hover:rounded-none"
                 onClick={() => navigate("/ContactUs")}
               >
-                Make Appointment
+                {t("about.shifokorlar.appointment")} {/* Make Appointment */}
               </Button>
             </Link>
           </div>
