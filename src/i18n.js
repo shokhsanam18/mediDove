@@ -1,5 +1,6 @@
 import i18n from "i18next";
 import I18nextBrowserLanguageDetector from "i18next-browser-languagedetector";
+
 import { initReactI18next } from "react-i18next";
 
 i18n
@@ -58,6 +59,25 @@ i18n
               awards: "world awards",
             },
           },
+          about: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "About Us",
+              button1: "Home",
+              button2: "About Us",
+              subtitle: "Short Story About MediDove Clinic.",
+              mission: "Our Mission",
+              vision: "Our vision",
+            },
+            shifokorlar: {
+              title: " We are here for your care.",
+              showcase: "Doctors",
+              team: "Our Team",
+              proffesional: " A Professional &",
+              care: "Care Provider",
+              appointment: "Make appointment",
+            },
+          },
         },
       },
       ru: {
@@ -109,6 +129,25 @@ i18n
               button: "Запись на прием",
               satisfied: "довольныx пациентов",
               awards: "мировыx наград",
+            },
+          },
+          about: {
+            main: {
+              title: "Мы здесь для вашей заботы.",
+              showcase: "O нас",
+              button1: "Домой",
+              button2: "O нас",
+              subtitle: "Краткая история о клинике MediDove.",
+              mission: "Наша Миссия",
+              vision: "Наш Взгляд",
+            },
+            shifokorlar: {
+              title: "Мы здесь для вашей заботы",
+              showcase: "Врачи",
+              team: "Наша Команда",
+              proffesional: " Профессионалы &",
+              care: "Носители заботы",
+              appointment: "Запись на приём",
             },
           },
         },

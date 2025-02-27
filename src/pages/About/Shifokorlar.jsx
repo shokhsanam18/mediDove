@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Typography from "@/components/ui/Typography";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { useTranslation } from "react-i18next";
 
 const doctors = [
   {
@@ -52,6 +53,7 @@ const doctors = [
 ];
 
 export const Shifokorlar = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <div
@@ -69,22 +71,22 @@ export const Shifokorlar = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("about.shifokorlar.title")} {/* We are here for your care. */}
             </Typography>
             <Typography variant="h1" className="text-black font-bold">
-              Shifokorlar
+              {t("about.shifokorlar.showcase")} {/* Shifokorlar */}
             </Typography>
           </div>
           <div className="flex items-center">
             <Link to="/" className="no-underline">
               <Typography variant="p" className="text-gray-600">
-                Home
+                {t("about.main.button1")} {/* Home */}
               </Typography>
             </Link>
             <span className="mx-2">|</span>
             <Link to="/About" className="no-underline">
               <Typography variant="p" className="text-red-600 font-semibold">
-                About
+                {t("about.main.button2")} {/* About */}
               </Typography>
             </Link>
           </div>
@@ -94,16 +96,22 @@ export const Shifokorlar = () => {
       <section className="py-12 px-4 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div className="flex flex-col gap-2 text-center md:text-left">
-            <span className="text-xs md:text-sm text-gray-400">Our Team</span>
+            <span className="text-xs md:text-sm text-gray-400">
+              {t("about.shifokorlar.team")} {/* Our Team */}
+            </span>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-gray-700">
-              A Professional &<br className="hidden md:block" /> Care Provider
+              {t("about.shifokorlar.proffesional")} {/* A Professional & */}
+              <br className="hidden md:block" />
+              {t("about.shifokorlar.care")} {/* Care Provider */}
             </h2>
             <div className="w-12 md:w-16 h-1 border-b-4 border-red-500 mt-2 mx-auto md:mx-0"></div>
           </div>
 
-          <Button className="mt-4 md:mt-0 bg-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full flex items-center gap-2 shadow-lg hover:bg-red-600">
-            <span className="text-lg md:text-xl font-bold">+</span> MAKE
-            APPOINTMENT
+          <Button className="mt-4 md:mt-0 bg-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full flex items-center gap-2 shadow-lg hover:bg-red-600 uppercase">
+            <span className="text-lg md:text-xl font-bold">+</span>
+            {t("about.shifokorlar.appointment")}{" "}
+            {/* MAKE
+            APPOINTMENT */}
           </Button>
         </div>
 
