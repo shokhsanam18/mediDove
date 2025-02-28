@@ -29,11 +29,11 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}> {t("blog.card.comment")}</span>
         </span>,
       ],
 
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b1.jpg",
     },
     {
@@ -54,10 +54,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b2.jpg",
     },
     {
@@ -78,10 +78,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b3.jpg",
     },
 
@@ -103,10 +103,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b4.jpg",
     },
     {
@@ -127,10 +127,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b5.jpg",
     },
     {
@@ -151,10 +151,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b6.jpg",
     },
   ];
