@@ -148,6 +148,8 @@ i18n
             card: {
               description:
                 "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+                footer: "read more ->",
+                comment:"comments",
             },
           },
           contactus: {
@@ -316,6 +318,86 @@ i18n
       uz: {
         translation: {
           greeting: " React va react-i18next ga xush kelibsiz",
+          index: {
+            aboutus: {
+              title: "MediDove klinikasi haqida qisqa hikoya.",
+              showcase: "Biz haqimizda",
+              author: "Rosalina D. Williamson",
+              founder: "Asoschi",
+            },
+            departments: {
+              title: "Bo‘limlar",
+              subtitle: "Sog‘liqni saqlash xizmatlari boshqariladi",
+            },
+            getConsultant: {
+              title: "Hayotdan zavqlanish uchun sog‘lom va kuchli bo‘ling",
+              subtitle:
+                "Barchasiga yordam berish va ishlarni yana yaxshilash uchun bizga ishoning.",
+              button: "Konsultatsiya olish",
+            },
+            news: {
+              title: "Yangiliklar",
+              subtitle: "Barcha yangiliklarni shu yerdan oling",
+              button: "Bizning  Blog",
+              calendar: "23 Feb 2024",
+              comments: "33 Fikrlar",
+            },
+            ourteam: {
+              title: "Bizning Jamoa",
+              subtitle: "Professional xizmat ko‘rsatuvchi",
+            },
+            pricing: {
+              title: "Bizning rejalar",
+              subtitle: "Narx va rejalar",
+              year: "Yillik",
+              month: "Oylik",
+            },
+            showcase: {
+              title: " Biz sizga g'amxo'rmiz.",
+              bigTitle: "Yaxshi g‘amxo‘rlik va yaxshiroq shifokor ",
+              button: "Yozilish",
+            },
+            statistics: {
+              title: "Biz 24/7 ishlaymiz.",
+              bigTitle: "Biz har doim qiyinchilikka tayyormiz.",
+              button: "Yozilish",
+              satisfied: "Mamnun mijozlar",
+              awards: "Jahon mukofotlari",
+            },
+          },
+          about: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Biz haqimizda",
+              button1: "Bosh sahida",
+              button2: "Biz haqimizda",
+              subtitle: "MediDove klinikasi haqida qisqa hikoya.",
+              mission: "Bizning Missiya",
+              vision: "Bizning qarashlarimiz",
+            },
+            tasischilar: {
+              title: "Tarkibiy qismlar",
+              approach: "Bizning yondashuv",
+              patient: "Agar siz bemor bo‘lsangiz",
+              quality: "sifat izlovchi",
+            },
+            ustav: {
+              ustav: "Ustav",
+            },
+            shifokorlar: {
+              title: "  Biz sizga g'amxo'rmiz.",
+              showcase: "Shifokorlar",
+              team: "Bizning jamoa",
+              proffesional: " Malakali va",
+              care: "g'amxo'rlik qiluvchi",
+              appointment: "Yozilish",
+            },
+          },
+          app: {
+            appointment: "Yozilish",
+            blog: "Blog",
+            call: "Qo'ng'iroq qilish",
+          },
           surgery: {
             main: {
               title: " Biz sizga g'amxo'rmiz.",
@@ -354,7 +436,7 @@ i18n
             },
             card: {
               description:
-                "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
+                "Ehtimol, 'Everyday Health' ushbu ro‘yxatdagi eng to‘g‘ri nomlangan blog bo‘lishi mumkin, chunki u keng doiradagi odamlarga doimiy ravishda ta’sir qiladigan sog‘liqni saqlash mavzulariga e’tibor qaratadi. Ular shuningdek, o‘z sohasida tan olingan va e’tiborga sazovor hisoblanadi.",
               footer: "Ko'proq o'qing ->",
             },
             NPR: {
@@ -372,7 +454,9 @@ i18n
             },
             card: {
               description:
-                "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
+                "Ehtimol, 'Everyday Health' ushbu ro‘yxatdagi eng to‘g‘ri nomlangan blog bo‘lishi mumkin, chunki u keng doiradagi odamlarga doimiy ravishda ta’sir qiladigan sog‘liqni saqlash mavzulariga e’tibor qaratadi. Ular shuningdek, o‘z sohasida tan olingan va e’tiborga sazovor hisoblanadi.",
+                footer: "Ko'proq o'qing ->",
+                comment:"Fikrlar"
             },
           },
           contactus: {
