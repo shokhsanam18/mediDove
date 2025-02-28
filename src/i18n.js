@@ -166,8 +166,8 @@ i18n
             card: {
               description:
                 "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
-                footer: "read more ->",
-                comment:"comments",
+              footer: "read more ->",
+              comment: "comments",
             },
           },
           contactus: {
@@ -183,6 +183,24 @@ i18n
       ru: {
         translation: {
           greeting: "Добро пожаловать в React и react-i18next",
+          navbar: {
+            home: "Главная",
+            about: "О нас",
+            aboutChildren: {
+              tasis: "Учредители",
+              ustav: "Устав",
+              doctors: "Врачи",
+            },
+            surgery: "Операции",
+            itemsChildren: {
+              surgery: " Виды Операций",
+              details: "Детали",
+            },
+            news: "Новости",
+            member: "Присоединиться",
+            blog: "Блог",
+            contact: "Связь с нами",
+          },
           index: {
             aboutus: {
               title: "Краткая история о клинике MediDove.",
@@ -473,8 +491,8 @@ i18n
             card: {
               description:
                 "Ehtimol, 'Everyday Health' ushbu ro‘yxatdagi eng to‘g‘ri nomlangan blog bo‘lishi mumkin, chunki u keng doiradagi odamlarga doimiy ravishda ta’sir qiladigan sog‘liqni saqlash mavzulariga e’tibor qaratadi. Ular shuningdek, o‘z sohasida tan olingan va e’tiborga sazovor hisoblanadi.",
-                footer: "Ko'proq o'qing ->",
-                comment:"Fikrlar"
+              footer: "Ko'proq o'qing ->",
+              comment: "Fikrlar",
             },
           },
           contactus: {
