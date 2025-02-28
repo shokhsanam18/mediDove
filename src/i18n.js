@@ -12,6 +12,24 @@ i18n
       en: {
         translation: {
           greeting: "Welcome to React and react-i18next",
+          navbar: {
+            home: "Home",
+            about: "About",
+            aboutChildren: {
+              tasis: "Constitutors",
+              ustav: "Ustav",
+              doctors: "Doctors",
+            },
+            surgery: "Surgery types",
+            itemsChildren: {
+              surgery: "Surgery",
+              details: "Details",
+            },
+            news: "News",
+            member: "Become a member",
+            blog: "Blog",
+            contact: "Contact Us",
+          },
           index: {
             aboutus: {
               title: "Short Story About MediDove Clinic.",

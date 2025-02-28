@@ -14,50 +14,87 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { useSidebarStore } from "@/Store";
-import { changeLanguage } from "i18next";
 import { useTranslation } from "react-i18next";
 
-const components = [
-  {
-    title: "Ta'sischilar",
-    href: "/Tasischilar",
-  },
-  {
-    title: "Ustav",
-    href: "/Ustav",
-  },
-  {
-    title: "Shifokorlar",
-    href: "/Shifokorlar",
-  },
-];
+// const components = [
+//   {
+//     title: t("navbar.aboutChildren.tasis"),
+//     href: "/Tasischilar",
+//   },
+//   {
+//     title: "Ustav",
+//     href: "/Ustav",
+//   },
+//   {
+//     title: "Shifokorlar",
+//     href: "/Shifokorlar",
+//   },
+// ];
 
-const items = [
-  {
-    title: "Surgery",
-    href: "/Surgery",
-  },
-  {
-    title: "Details",
-    href: "/Details",
-  },
-];
+// const items = [
+//   {
+//     title: "Surgery",
+//     href: "/Surgery",
+//   },
+//   {
+//     title: "Details",
+//     href: "/Details",
+//   },
+// ];
 
-const languages = [
-  {
-    code: "uz",
-    lang: "UZB",
-  },
-  { code: "ru", lang: "RU" },
-  { code: "en", lang: "ENG" },
-];
+// const languages = [
+//   {
+//     code: "uz",
+//     lang: "UZB",
+//   },
+//   { code: "ru", lang: "RU" },
+//   { code: "en", lang: "ENG" },
+// ];
 
 export function Navbar() {
   const toggleSidebar = useSidebarStore((state) => state.toggleSidebar);
   const { i18n } = useTranslation();
+
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
+  const { t } = useTranslation();
+
+  const components = [
+    {
+      title: t("navbar.aboutChildren.tasis"),
+      href: "/Tasischilar",
+    },
+    {
+      title: t("navbar.aboutChildren.ustav"),
+      href: "/Ustav",
+    },
+    {
+      title: t("navbar.aboutChildren.doctors"),
+      href: "/Shifokorlar",
+    },
+  ];
+
+  const items = [
+    {
+      title: t("navbar.itemsChildren.surgery"),
+      href: "/Surgery",
+    },
+    {
+      title: t("navbar.itemsChildren.details"),
+      href: "/Details",
+    },
+  ];
+
+  const languages = [
+    {
+      code: "uz",
+      lang: "UZB",
+    },
+    { code: "ru", lang: "RU" },
+    { code: "en", lang: "ENG" },
+  ];
+
   return (
     <div className="sticky top-0 left-0 w-full bg-white shadow-md z-30">
       <NavigationMenu className="lg:max-w-full flex h-28 w-full bg-white shadow-md">
@@ -75,7 +112,9 @@ export function Navbar() {
           <NavigationMenuList className="flex justify-between items-center">
             <NavigationMenuItem className="relative group">
               <NavigationMenuTrigger>
-                <Link to="/About">About</Link>
+                <Link to="/About">
+                  {t("navbar.about")} {/* About */}
+                </Link>
               </NavigationMenuTrigger>
               <div className="absolute top-full left-0 bg-white border-2 border-t-red-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
@@ -92,7 +131,9 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem className="relative group">
               <NavigationMenuTrigger>
-                <Link to="/Surgery">Surgery types</Link>
+                <Link to="/Surgery">
+                  {t("navbar.surgery")} {/* Surgery types */}
+                </Link>
               </NavigationMenuTrigger>
               <div className="absolute top-full left-0 bg-white border-2 border-t-red-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
@@ -109,22 +150,30 @@ export function Navbar() {
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <Link to="/News">News</Link>
+                <Link to="/News">
+                  {t("navbar.news")} {/* News */}
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <Link to="/BecomeMember">Become a member</Link>
+                <Link to="/BecomeMember">
+                  {t("navbar.member")} {/* Become a member */}
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <Link to="/Blog">Blog</Link>
+                <Link to="/Blog">
+                  {t("navbar.blog")} {/* Blog */}
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <Link to="/ContactUs">Contact us</Link>
+                <Link to="/ContactUs">
+                  {t("navbar.contact")} {/* Contact us */}
+                </Link>
               </NavigationMenuTrigger>
             </NavigationMenuItem>
             <NavigationMenuItem>
