@@ -2,65 +2,65 @@ import React from "react";
 import { X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSidebarStore } from "@/Store";
-
-const pages = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "About",
-    href: "/About",
-    subMenu: [
-      {
-        title: "Ta'sischilar",
-        href: "/Tasischilar",
-      },
-      {
-        title: "Ustav",
-        href: "/Ustav",
-      },
-      {
-        title: "Shifokorlar",
-        href: "/Shifokorlar",
-      },
-    ],
-  },
-  {
-    title: "Surgery types",
-    href: "/Surgery",
-    subMenu: [
-      {
-        title: "Surgery",
-        href: "/Surgery",
-      },
-      {
-        title: "Details",
-        href: "/Details",
-      },
-    ],
-  },
-  {
-    title: "Blog",
-    href: "/Blog",
-  },
-  {
-    title: "News",
-    href: "/News",
-  },
-  {
-    title: "Become a Member",
-    href: "/BecomeMember",
-  },
-  {
-    title: "Contact Us",
-    href: "/ContactUs",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export const Sidebar = () => {
   const { isOpen, toggleSidebar, closeSidebar } = useSidebarStore();
-
+  const { t } = useTranslation();
+  const pages = [
+    {
+      title: t("navbar.home"),
+      href: "/",
+    },
+    {
+      title: t("navbar.about"),
+      href: "/About",
+      subMenu: [
+        {
+          title: t("navbar.aboutChildren.tasis"),
+          href: "/Tasischilar",
+        },
+        {
+          title: t("navbar.aboutChildren.ustav"),
+          href: "/Ustav",
+        },
+        {
+          title: t("navbar.aboutChildren.doctors"),
+          href: "/Shifokorlar",
+        },
+      ],
+    },
+    {
+      title: t("navbar.surgery"),
+      href: "/Surgery",
+      subMenu: [
+        {
+          title: t("navbar.itemsChildren.surgery"),
+          href: "/Surgery",
+        },
+        {
+          title: t("navbar.itemsChildren.details"),
+          href: "/Details",
+        },
+      ],
+    },
+    {
+      title: t("navbar.blog"),
+      href: "/Blog",
+    },
+    {
+      title: t("navbar.news"),
+      href: "/News",
+    },
+    {
+      title: t("navbar.member"),
+      href: "/BecomeMember",
+    },
+    {
+      title: t("navbar.contact"),
+      href: "/ContactUs",
+    },
+  ];
   return (
     <>
       <div

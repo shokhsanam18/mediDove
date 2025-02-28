@@ -13,12 +13,14 @@ import { ContactCardTwo } from "../components/ui/ContactCards";
 import { MapPin } from "lucide-react";
 
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const items = [" "];
 
 export const Contact = () => {
   const location = useLocation();
   const formRef = useRef(null);
+    const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -87,19 +89,19 @@ export const Contact = () => {
         <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
           <div className="flex flex-col items-center sm:items-start w-full">
             <Typography variant="h4" className="mb-10  ">
-              We are here for your care.
+            {t("contactus.main.title")}
             </Typography>
-            <Typography variant="h2">Contact Us</Typography>
+            <Typography variant="h2">{t("contactus.main.showcase")}</Typography>
           </div>
 
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">Home</Link>
+              <Link to="/About">{t("contactus.main.button1")}</Link>
             </Typography>
 
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
-              Contact
+            <Link to="/ContactUs">{t("contactus.main.button2")}</Link>
             </Typography>
           </div>
         </div>
