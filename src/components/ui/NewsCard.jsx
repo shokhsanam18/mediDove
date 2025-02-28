@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import SearchBar from "../../components/ui/SearchBar";
 
 import img1 from "/img/image.png";
 import img2 from "/img/image.png";
@@ -25,8 +27,15 @@ export const NewsCardOne = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Search Objects
+      </h1>
       <div>
+        {" "}
+        <SearchBar />
+        <Outlet />
+      </div>
+      {/* <div>
         {" "}
         <input
           type="text"
@@ -42,7 +51,7 @@ export const NewsCardOne = () => {
             <li>No results found</li>
           )}
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -53,7 +62,9 @@ export const NewsCardTwo = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        About Me
+      </h1>
       <div></div>
     </div>
   );
@@ -65,7 +76,9 @@ export const NewsCardThree = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Popular Feeds
+      </h1>
       <div></div>
     </div>
   );
@@ -77,7 +90,9 @@ export const NewsCardFour = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Categories
+      </h1>
       <div></div>
     </div>
   );
@@ -89,7 +104,9 @@ export const NewsCardFive = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Social Profile
+      </h1>
       <div></div>
     </div>
   );
@@ -101,7 +118,9 @@ export const NewsCardSix = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Instagram Feeds
+      </h1>
       <div>
         <div className="grid grid-cols-3 gap-4 p-4">
           {images.map((src, index) => (
@@ -125,7 +144,9 @@ export const NewsCardSeven = () => {
       <h1
         className="text-[21px] font-semibold text-[#223645] tracking-[-0.3px] mb-[2rem]"
         style={{ fontFamily: "Poppins, sans-serif" }}
-      ></h1>
+      >
+        Instagram Feeds
+      </h1>
       <div></div>
     </div>
   );
