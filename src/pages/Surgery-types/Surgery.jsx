@@ -6,8 +6,10 @@ import Typography from "@/components/ui/Typography";
 import { Cards_Services } from "@/components/ui/Cards";
 import { Button } from "@/components/ui/button";
 import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Surgery = () => {
+  const { t } = useTranslation();
   const cardsInfoServices = [
     {
       id: 0,
@@ -113,17 +115,18 @@ export const Surgery = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("surgery.main.title")} {/* Translated text */}
             </Typography>
-            <Typography variant="h1">Our Services</Typography>
+            <Typography variant="h1">{t("surgery.main.showcase")}</Typography>
           </div>
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              Home <span className="mx-2">|</span>
+              {t("surgery.main.button1")}
+              <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              Services
+              {t("surgery.main.button2")}
             </Typography>
           </div>
         </div>
@@ -141,11 +144,10 @@ export const Surgery = () => {
           </div> */}
 
           <p className="text-lg sm:text-xl mt-4 sm:mt-6 font-bold text-[#e12454]">
-            Health care facility
+            {t("surgery.healthcare.title")}
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold mt-2 text-[#223545] leading-snug">
-            Would you rather stay <br /> at home than go into a health care
-            facility?
+            {t("surgery.healthcare.question")}
           </h2>
         </div>
 
@@ -218,7 +220,7 @@ export const Surgery = () => {
         </div>
         <div className="w-full px-4 sm:px-6 md:px-8 lg:w-[530px] my-auto flex flex-col lg:mr-10">
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#223545]">
-            For Employers
+            {t("surgery.employers.title")}
           </h2>
           <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-gray-500 my-7">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -230,11 +232,11 @@ export const Surgery = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <a href="/contact">
-            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[230px] hover:bg-[#e12454] shadow-md hover:shadow-lg transition-all duration-300 ease-in-out mb-10">
+            <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[230px] hover:bg-[#e12454] shadow-md hover:shadow-lg transition-all duration-300 ease-in-out mb-10 ">
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +
               </span>
-              CONTACT US
+              {t("surgery.employers.contact_button")}
             </button>
           </a>
         </div>
@@ -243,7 +245,7 @@ export const Surgery = () => {
       <div className="flex flex-col lg:flex-row justify-between bg-white w-[80%] mx-auto shadow-lg mb-[120px] p-6">
         <div className="w-full px-4 sm:px-6 md:px-8 lg:w-[530px] my-auto flex flex-col lg:ml-10">
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#223545] mt-10">
-            For Employers
+            {t("surgery.employers.title")}
           </h2>
           <p className="text-xs sm:text-sm lg:text-base leading-relaxed text-gray-500 my-7">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -259,7 +261,7 @@ export const Surgery = () => {
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +
               </span>
-              APPLY TODAY
+              {t("surgery.employers.apply_button")}
             </button>
           </a>
         </div>
