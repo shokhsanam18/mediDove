@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Cards_Team } from "../components/ui/Cards";
 import { Cards_News } from "../components/ui/Cards";
@@ -14,6 +13,7 @@ import { NewsCardThree } from "@/components/ui/NewsCard";
 import { NewsCardFour } from "@/components/ui/NewsCard";
 import { NewsCardFive } from "@/components/ui/NewsCard";
 import { NewsCardSeven } from "@/components/ui/NewsCard";
+import React, { forwardRef } from "react";
 
 export const News = () => {
   const cardsInfoNews = [
@@ -135,7 +135,7 @@ export const News = () => {
       justifyContent: "space-around",
       columnGap: "1.25rem",
       rowGap: "3rem",
-      padding: "100px 10%",
+
       wordSpacing: "0.75rem",
     },
     card_styles: {
@@ -209,8 +209,8 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row">
-        <div className="sm:w-2/3 w-full">
+      <div className="flex flex-col sm:flex-row gap-x-6 px-[9.35%] py-[100px]">
+        <div className="sm:w-2/3 w-full p-0">
           <Cards_News
             cards={cardsInfoNews}
             cards_styles={stylesNews.cards_styles}
@@ -261,6 +261,17 @@ export const News = () => {
           <NewsCardFive />
           <NewsCardSix />
           <NewsCardSeven />
+          <Link
+            className="w-full"
+            to="/ContactUs"
+            state={{ scrollTo: "FormComponent" }}
+          >
+            <img
+              src="/img/image copy 10.png"
+              alt="Contact Us Card"
+              className="w-full"
+            />
+          </Link>
         </div>
       </div>
     </>
