@@ -23,7 +23,7 @@ export const News = () => {
       id: 0,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-        description: t("news.card.description"),
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -48,7 +48,7 @@ export const News = () => {
       id: 1,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-        description: t("news.card.description"),
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -72,7 +72,7 @@ export const News = () => {
       id: 2,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-        description: t("news.card.description"),
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -97,7 +97,7 @@ export const News = () => {
       id: 3,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-        description: t("news.card.description"),
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -119,8 +119,7 @@ export const News = () => {
     },
     {
       id: 4,
-      title:
-      t("news.NPR.title"),
+      title: t("news.NPR.title"),
       description: "- Rosalina Pong",
       content: [],
     },
@@ -190,11 +189,10 @@ export const News = () => {
         <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
           <div className="flex flex-col items-center sm:items-start w-full">
             <Typography variant="h4" className="mb-10  ">
-            {t("news.main.title")}
+              {t("news.main.title")}
             </Typography>
             <Typography variant="h2">{t("news.main.showcase")}</Typography>
           </div>
-
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
               <Link to="/About">{t("news.main.button1")}</Link>
@@ -202,7 +200,7 @@ export const News = () => {
 
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
-            <Link to="/News">{t("news.main.button2")}</Link>
+              <Link to="/News">{t("news.main.button2")}</Link>
             </Typography>
           </div>
         </div>

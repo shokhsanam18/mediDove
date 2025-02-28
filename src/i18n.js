@@ -86,7 +86,6 @@ i18n
               care: "Care Provider",
               appointment: "Make appointment",
             },
-
           },
           app: {
             appointment: "Appointment",
@@ -94,77 +93,71 @@ i18n
             call: "Make Call",
           },
 
-
-
-          surgery:{
+          surgery: {
             main: {
               title: " We are here for your care.",
               showcase: "Our Services",
               button1: "Home",
               button2: "Our Services",
-             
             },
             healthcare: {
               title: "Health care facility",
-              question: "Would you rather stay at home than go into a health care facility?",
+              question:
+                "Would you rather stay at home than go into a health care facility?",
             },
             employers: {
               title: "For Employers",
-            
+
               contact_button: "CONTACT US",
               apply_button: "APPLY TODAY",
             },
           },
-          details:{
+          details: {
             main: {
               title: " We are here for your care.",
               showcase: "Details",
               button1: "Home",
               button2: "Details",
-             
             },
           },
-          news:{
+          news: {
             main: {
               title: " We are here for your care.",
               showcase: "News",
               button1: "Home",
               button2: "News",
-             
             },
-            card:{
+            card: {
               description:
-              "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
-              footer:"read more ->"
-           },
+                "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+              footer: "read more ->",
+            },
 
-           NPR:{
-             title:"This health blog from NPR takes a fairly broad look at the medical world,."
-           },
+            NPR: {
+              title:
+                "This health blog from NPR takes a fairly broad look at the medical world,.",
+            },
           },
-          blog:{
+          blog: {
             main: {
               title: " We are here for your care.",
               showcase: "Blog 3 coloum",
               button1: "Home",
               button2: "Blog",
-             
             },
-            card:{
-               description:
-               "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+            card: {
+              description:
+                "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
             },
           },
-          contactus:{
+          contactus: {
             main: {
               title: " We are here for your care.",
               showcase: "Contact Us",
               button1: "Home",
               button2: "Contact",
-             
             },
           },
-
         },
       },
       ru: {
@@ -222,7 +215,7 @@ i18n
             main: {
               title: "Мы здесь для вашей заботы.",
               showcase: "O нас",
-              button1: "Домой",
+              button1: "Главная",
               button2: "O нас",
               subtitle: "Краткая история о клинике MediDove.",
               mission: "Наша Миссия",
@@ -251,88 +244,146 @@ i18n
             blog: "Блог",
             call: "Позвонить",
           },
+          surgery: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Наши сервисы",
+              button1: "Главная",
+              button2: "Наши сервисы",
+            },
+            healthcare: {
+              title: "Медицинское учреждение",
+              question:
+                "Вы хотите остаться дома вмесо того, чтобы остаться дома?",
+            },
+
+            employers: {
+              title: "Для работодателей",
+              description:
+                "Lorem ipsum here is in russian. But firstly let us know more about you and we will translate it",
+              contact_button: "Связь с нами",
+              apply_button: "Оставь заявку",
+            },
+          },
+          details: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Подробнее",
+              button1: "Главная",
+              button2: "Подробнее",
+            },
+          },
+          news: {
+            main: {
+              title: " Мы заботимся о вас",
+              showcase: "Новости",
+              button1: "Главная",
+              button2: "Новости",
+            },
+            card: {
+              description:
+                "Есть большая вероятность, что мы — блог с наиболее подходящим названием в этом списке, поскольку он фокусируется на темах здравоохранения, которые постоянно затрагивают широкий круг людей. Они также получают похвалу.",
+              footer: "Читать больше ->",
+            },
+            NPR: {
+              title:
+                "Этот блог о здоровье от NPR дает довольно широкий взгляд на мир медицины.",
+            },
+          },
+          blog: {
+            main: {
+              title: " Мы заботимся о вас",
+              showcase: "Блог 3",
+              button1: "Главная",
+              button2: "Блог",
+            },
+            card: {
+              description:
+                "Есть большая вероятность, что мы — блог с наиболее подходящим названием в этом списке, поскольку он фокусируется на темах здравоохранения, которые постоянно затрагивают широкий круг людей. Они также получают похвалу.",
+            },
+          },
+          contactus: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Свяжитесь с нами",
+              button1: "Главная",
+              button2: "Связаться",
+            },
+          },
         },
       },
 
       uz: {
         translation: {
-          greeting: "  React va react-i18next ga xush kelibsiz",
-          surgery:{
+          greeting: " React va react-i18next ga xush kelibsiz",
+          surgery: {
             main: {
               title: " Biz sizga g'amxo'rmiz.",
               showcase: "Bizning xizmatlar",
               button1: "Bosh sahifa",
               button2: "Bizning xizmatlar",
-             
             },
             healthcare: {
               title: "Sog'liqni saqlash muassasasi",
-              question: "Siz Shifoxonaga borishdan ko'ra uyda qolishni xohlaysizmi?",
+              question:
+                "Siz Shifoxonaga borishdan ko'ra uyda qolishni xohlaysizmi?",
             },
 
             employers: {
               title: "Ish beruvchilar uchun",
               description:
                 "Lorem ipsum o'zbekcha tarjima. Sizning bu yerdagi mazmuningiz o'zbek tiliga tarjima qilinadi.",
-              contact_button: "BIZGA BOG'LANING",
-              apply_button: "HOZIROQ ARIZA BERING",
+              contact_button: "BOG'LANING",
+              apply_button: "ARIZA BERING",
             },
-
-        },
-        details:{
-          main: {
-            title: " Biz sizga g'amxo'rmiz.",
-            showcase: "Tafsilotlar",
-            button1: "Bosh sahifa",
-            button2: "Tafsilotlar",
-           
+          },
+          details: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Tafsilotlar",
+              button1: "Bosh sahifa",
+              button2: "Tafsilotlar",
+            },
+          },
+          news: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Yangiliklar",
+              button1: "Bosh sahifa",
+              button2: "Yangiliklar",
+            },
+            card: {
+              description:
+                "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
+              footer: "Ko'proq o'qing ->",
+            },
+            NPR: {
+              title:
+                "NPRning ushbu sog'liqni saqlash blogi tibbiyot olamiga juda keng nazar tashlaydi.",
+            },
           },
 
-      },
-      news:{
-        main: {
-          title: " Biz sizga g'amxo'rmiz.",
-          showcase: "Yangiliklar",
-          button1: "Bosh sahifa",
-          button2: "Yangiliklar",
-         
-        },
-        card:{
-          description:
-          "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
-          footer: "Ko'proq o'qing ->"
-       },
-       NPR:{
-        title:"NPRning ushbu sog'liqni saqlash blogi tibbiyot olamiga juda keng nazar tashlaydi."
-      },
-      },
-      
-      blog:{
-        main: {
-          title: " Biz sizga g'amxo'rmiz.",
-          showcase: "Blog 3 ustun",
-          button1: "Bosh sahifa",
-          button2: "Blog",
-         
-        },
-        card:{
-          description:
-          "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir."
-       },
-      },
-      contactus:{
-        main: {
-          title: " Biz sizga g'amxo'rmiz.",
-          showcase: "Bog'lanish",
-          button1: "Bosh sahifa",
-          button2: "Bog'lanish",
-         
+          blog: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Blog 3 ustun",
+              button1: "Bosh sahifa",
+              button2: "Blog",
+            },
+            card: {
+              description:
+                "Kundalik Salomatlik bu ro'yxatdagi eng munosib nomlangan blog, chunki u odamlarning keng doirasiga doimiy ravishda ta'sir qiladigan sog'liq mavzulariga qaratilgan. Ular, maqtovga sazovordir.",
+            },
+          },
+          contactus: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Bog'lanish",
+              button1: "Bosh sahifa",
+              button2: "Bog'lanish",
+            },
+          },
         },
       },
-
-
-
-      },
-      }
     },
   });
