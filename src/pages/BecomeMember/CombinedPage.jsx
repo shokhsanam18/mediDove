@@ -1,7 +1,8 @@
 import Typography from "@/components/ui/Typography";
-import { Button } from "@/components/ui/button";
 import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Contact } from "../ContantUs";
 import {
   Card,
   CardHeader,
@@ -32,7 +33,10 @@ const NewsAppointment = () => {
           <div className="w-32 my-5 h-1 bg-[linear-gradient(to_right,red_50%,transparent_50%)] bg-[length:15px_100%]"></div>
         </div>
         <div className="hidden md:block">
-          <button className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition">
+          <button
+            className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition"
+            onClick={() => navigate("/Blog")}
+          >
             <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
               <Plus size={16} />
             </span>
@@ -136,14 +140,16 @@ const CombinedPage = () => {
         <BlogCards />
       </div>
       <div className="md:flex md:justify-end p-28 hidden ">
-        <button className="flex items-center h-16 w-60 rounded-full bg-[#8CB369] text-white font-semibold shadow-lg hover:bg-[#C71744] transition">
-          <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
-            <Phone size={16} />
-          </span>
-          <span className="ml-4 text-sm tracking-wide uppercase">
-            {t("app.call")} {/* MAKE CALL */}
-          </span>
-        </button>
+        <Link to="/ContactUs">
+          <button className="flex items-center h-16 w-60 rounded-full bg-[#8CB369] text-white font-semibold shadow-lg hover:bg-[#C71744] transition">
+            <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+              <Phone size={16} />
+            </span>
+            <span className="ml-4 text-sm tracking-wide uppercase">
+              {t("app.call")} {/* MAKE CALL */}
+            </span>
+          </button>
+        </Link>
       </div>
     </>
   );
