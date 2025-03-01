@@ -6,6 +6,7 @@ import aboutImg from "@/assets/about-img.jpg";
 import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export const About = () => {
@@ -37,11 +38,13 @@ export const About = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              {t("about.main.button1")} {/* Home  */}
+              <Link to="/"> {t("about.main.button1")}</Link> {/* Home  */}
               <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              {t("about.main.button2")} {/* About */}
+              {" "}
+              <Link to="/About"> {t("about.main.button2")}</Link>
+              {/* About */}
             </Typography>
           </div>
         </div>

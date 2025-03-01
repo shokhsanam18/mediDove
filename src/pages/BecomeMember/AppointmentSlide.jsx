@@ -25,14 +25,14 @@ const AppointmentPage = () => {
 
         <div className="flex flex-row justify-end sm:justify-start mt-4">
           <Typography variant="p" className="cursor-pointer">
-            <Link to="/About">
+            <Link to="/">
               {t("about.main.button1")} {/* Home */}
             </Link>
           </Typography>
 
           <span className="mx-1">|</span>
           <Typography variant="p" className="text-red-500">
-            {t("app.appointment")} {/* Appointment */}
+          <Link to="/BecomeMember"> {t("app.appointment")} {/* Appointment */}</Link>
           </Typography>
         </div>
       </div>
