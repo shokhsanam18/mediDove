@@ -43,7 +43,7 @@ export const Surgery = () => {
     {
       id: 3,
       title: "Card Title",
-      description: "Card Description",
+      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       content: "Card Content",
       footer: "Card Footer",
       src: "./img/service4.png",
@@ -194,16 +194,14 @@ export const Surgery = () => {
               {t("surgery.main.calculator")} {/* Quote Calculator */}
             </p>
             <p className="text-base sm:text-2xl lg:text-3xl mt-4 text-[#b4c7d6] mb-10">
-              If you require services on a public holiday, <br /> overnight
-              services or live-in services, please <br /> call (+00)888.666.88
-              so we can discuss <br /> prices with you.
+            {t("surgery.main.text1")} <br />  {t("surgery.main.text2")} <br />  {t("surgery.main.text3")} <br />  {t("surgery.main.text4")}
             </p>
-            <a href="/appointment" data-discover="true">
+            <a href="/ContactUs" data-discover="true">
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[285px] hover:bg-[#e12454] shadow-[0px_2px_8px_#8fb569] hover:shadow-[0px_2px_8px_#e12454] transition-all duration-300 ease-in-out">
                 <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                   +
                 </span>
-                {t("about.shifokorlar.appointment")} {/* MAKE APPOINTMENT */}
+                {t("surgery.main.button")} {/* MAKE APPOINTMENT */}
               </button>
             </a>
           </div>
@@ -235,7 +233,7 @@ export const Surgery = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="/contact">
+          <a href="/ContactUs">
             <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[230px] hover:bg-[#e12454] shadow-md hover:shadow-lg transition-all duration-300 ease-in-out mb-10 ">
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +
@@ -260,7 +258,7 @@ export const Surgery = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="/contact">
+          <a href="/ContactUs">
             <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white shadow-md hover:shadow-lg transition-all duration-300 ease-in-out bg-[#e12454] hover:bg-[#8fb569] h-[62px] w-[230px] mb-10">
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +
