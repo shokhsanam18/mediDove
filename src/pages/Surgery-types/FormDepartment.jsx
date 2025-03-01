@@ -12,8 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/selectformAppointment";
+import { useTranslation } from "react-i18next";
+
 
 function SelectDemo({ value, onChange, placeholder, items }) {
+  const { t } = useTranslation();
   return (
     <Select onValueChange={onChange} value={value}>
       <SelectTrigger className="w-full h-14 p-4 mb-4 sm:mb-5 border-blue-100 rounded-md text-gray-400 focus:ring-0 focus:border-blue-200">
