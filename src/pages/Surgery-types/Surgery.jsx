@@ -122,11 +122,11 @@ export const Surgery = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              {t("surgery.main.button1")}
+            {t("surgery.main.button1")} 
               <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              {t("surgery.main.button2")}
+           {t("surgery.main.button2")}
             </Typography>
           </div>
         </div>

@@ -37,7 +37,7 @@ export const About = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              {t("about.main.button1")} {/* Home  */}
+           {t("about.main.button1")} {/* Home  */} 
               <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
