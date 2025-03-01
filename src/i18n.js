@@ -354,6 +354,24 @@ i18n
       uz: {
         translation: {
           greeting: " React va react-i18next ga xush kelibsiz",
+          navbar: {
+            home: "Bosh sahifa",
+            about: "Biz haqimizda",
+            aboutChildren: {
+              tasis: "Tarkibiy qismlar",
+              ustav: "Ustav",
+              doctors: "Shifokorlar",
+            },
+            surgery: "Jarrohlik turlari",
+            itemsChildren: {
+              surgery: "Jarrohlik",
+              details: "Tafsilotlar",
+            },
+            news: "Yangiliklar",
+            member: "A’zo bo‘lish",
+            blog: "Blog",
+            contact: "Biz bilan bog'laning",
+          },
           index: {
             aboutus: {
               title: "MediDove klinikasi haqida qisqa hikoya.",
