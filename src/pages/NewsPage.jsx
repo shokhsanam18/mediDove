@@ -195,7 +195,7 @@ export const News = () => {
           </div>
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">{t("news.main.button1")}</Link>
+              <Link to="/">{t("news.main.button1")}</Link>
             </Typography>
 
             <span className="mx-1">|</span>
