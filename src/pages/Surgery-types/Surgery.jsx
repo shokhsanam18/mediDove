@@ -7,6 +7,7 @@ import { Cards_Services } from "@/components/ui/Cards";
 import { Button } from "@/components/ui/button";
 import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Surgery = () => {
   const { t } = useTranslation();
@@ -122,11 +123,12 @@ export const Surgery = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              {t("surgery.main.button1")}
+              <Link to="/"> {t("surgery.main.button1")}</Link>
+
               <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              {t("surgery.main.button2")}
+              <Link to="/Surgery">{t("surgery.main.button2")}</Link>
             </Typography>
           </div>
         </div>
