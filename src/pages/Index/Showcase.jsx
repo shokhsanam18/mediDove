@@ -76,14 +76,15 @@ const Showcase = () => {
         >
           <div className="flex flex-col w-full gap-6 md:w-2/3 lg:w-1/2">
             <Typography variant="h4" className="text-[#6A7B8F] font-semibold">
-              We are here for your care.
+              {t("index.showcase.title")} {/* We are here for your care. */}
             </Typography>
             <h1
               className={
                 "text-6xl font-bold tracking-tight text-[#223645] sm:text-7xl/none"
               }
             >
-              Best Care &amp; Better Doctor.
+              {t("index.showcase.bigTitle")}{" "}
+              {/* Best Care &amp; Better Doctor. */}
             </h1>
             <Typography
               variant="p"
@@ -99,7 +100,7 @@ const Showcase = () => {
                     <Plus size={20} />
                   </span>
                   <span className="ml-5 text-base uppercase font-semibold tracking-wide">
-                    make APPOINTMENT
+                    {t("index.showcase.button")} {/* make APPOINTMENT */}
                   </span>
                 </button>
               </Link>

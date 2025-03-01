@@ -228,7 +228,7 @@ export const Blog = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-             <Link to="/About">{t("blog.main.button1")} </Link><span className="mx-2">|</span>
+             <Link to="/">{t("blog.main.button1")} </Link><span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
             <Link to="/Blog">{t("blog.main.button2")} </Link>

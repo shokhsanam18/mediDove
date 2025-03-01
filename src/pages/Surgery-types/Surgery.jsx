@@ -4,9 +4,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();
 import Typography from "@/components/ui/Typography";
 import { Cards_Services } from "@/components/ui/Cards";
-import { Button } from "@/components/ui/button";
-import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
+
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export const Surgery = () => {
   const { t } = useTranslation();
@@ -42,7 +42,7 @@ export const Surgery = () => {
     {
       id: 3,
       title: "Card Title",
-      description: "Card Description",
+      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
       content: "Card Content",
       footer: "Card Footer",
       src: "./img/service4.png",
@@ -122,11 +122,12 @@ export const Surgery = () => {
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              {t("surgery.main.button1")}
+              <Link to="/"> {t("surgery.main.button1")}</Link>
+
               <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              {t("surgery.main.button2")}
+              <Link to="/Surgery">{t("surgery.main.button2")}</Link>
             </Typography>
           </div>
         </div>
@@ -185,21 +186,21 @@ export const Surgery = () => {
         <div className="absolute inset-0 bg-[#344755] opacity-90"></div>
         <div className="relative inset-0 flex flex-col lg:flex-row justify-center text-start text-white md:justify-evenly sm:justify-center mx-auto gap-[150px]">
           <div className="flex justify-center flex-col">
-            <p className="text-lg font-semibold text-[#b4c7d6]">MAKE A CALL</p>
+            <p className="text-lg font-semibold text-[#b4c7d6] uppercase">
+              {t("app.call")} {/* MAKE A CALL */}
+            </p>
             <p className="text-4xl sm:text-5xl lg:text-7xl font-semibold mt-2">
-              Quote Calculator
+              {t("surgery.main.calculator")} {/* Quote Calculator */}
             </p>
             <p className="text-base sm:text-2xl lg:text-3xl mt-4 text-[#b4c7d6] mb-10">
-              If you require services on a public holiday, <br /> overnight
-              services or live-in services, please <br /> call (+00)888.666.88
-              so we can discuss <br /> prices with you.
+            {t("surgery.main.text1")} <br />  {t("surgery.main.text2")} <br />  {t("surgery.main.text3")} <br />  {t("surgery.main.text4")}
             </p>
-            <a href="/appointment" data-discover="true">
+            <a href="/ContactUs" data-discover="true">
               <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[285px] hover:bg-[#e12454] shadow-[0px_2px_8px_#8fb569] hover:shadow-[0px_2px_8px_#e12454] transition-all duration-300 ease-in-out">
                 <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                   +
                 </span>
-                MAKE APPOINTMENT
+                {t("surgery.main.button")} {/* MAKE APPOINTMENT */}
               </button>
             </a>
           </div>
@@ -231,7 +232,7 @@ export const Surgery = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="/contact">
+          <a href="/ContactUs">
             <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#8fb569] text-white h-[62px] w-[230px] hover:bg-[#e12454] shadow-md hover:shadow-lg transition-all duration-300 ease-in-out mb-10 ">
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +
@@ -256,7 +257,7 @@ export const Surgery = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <a href="/contact">
+          <a href="/ContactUs">
             <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-white shadow-md hover:shadow-lg transition-all duration-300 ease-in-out bg-[#e12454] hover:bg-[#8fb569] h-[62px] w-[230px] mb-10">
               <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                 +

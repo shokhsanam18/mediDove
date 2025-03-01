@@ -96,7 +96,7 @@ export const Contact = () => {
 
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">{t("contactus.main.button1")}</Link>
+              <Link to="/">{t("contactus.main.button1")}</Link>
             </Typography>
 
             <span className="mx-1">|</span>
