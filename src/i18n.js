@@ -362,7 +362,7 @@ i18n
               ustav: "Ustav",
               doctors: "Shifokorlar",
             },
-            surgery: "Jarrohlik turlari",
+            surgery: "Jarrohlik ",
             itemsChildren: {
               surgery: "Jarrohlik",
               details: "Tafsilotlar",
@@ -370,7 +370,7 @@ i18n
             news: "Yangiliklar",
             member: "A’zo bo‘lish",
             blog: "Blog",
-            contact: "Biz bilan bog'laning",
+            contact: " Bog'lanish",
           },
           index: {
             aboutus: {
