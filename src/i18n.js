@@ -117,6 +117,7 @@ i18n
               showcase: "Our Services",
               button1: "Home",
               button2: "Our Services",
+              calculator: "Quote Calculator",
             },
             healthcare: {
               title: "Health care facility",
@@ -288,6 +289,7 @@ i18n
               showcase: "Наши сервисы",
               button1: "Главная",
               button2: "Наши сервисы",
+              calculator: "Калькулятор",
             },
             healthcare: {
               title: "Медицинское учреждение",

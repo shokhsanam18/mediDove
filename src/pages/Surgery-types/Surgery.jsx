@@ -185,9 +185,11 @@ export const Surgery = () => {
         <div className="absolute inset-0 bg-[#344755] opacity-90"></div>
         <div className="relative inset-0 flex flex-col lg:flex-row justify-center text-start text-white md:justify-evenly sm:justify-center mx-auto gap-[150px]">
           <div className="flex justify-center flex-col">
-            <p className="text-lg font-semibold text-[#b4c7d6]">MAKE A CALL</p>
+            <p className="text-lg font-semibold text-[#b4c7d6] uppercase">
+              {t("app.call")} {/* MAKE A CALL */}
+            </p>
             <p className="text-4xl sm:text-5xl lg:text-7xl font-semibold mt-2">
-              Quote Calculator
+              {t("surgery.main.calculator")} {/* Quote Calculator */}
             </p>
             <p className="text-base sm:text-2xl lg:text-3xl mt-4 text-[#b4c7d6] mb-10">
               If you require services on a public holiday, <br /> overnight
@@ -199,7 +201,7 @@ export const Surgery = () => {
                 <span className="flex items-center justify-center pb-1 w-14 h-14 rounded-full bg-white text-[#0a0a0a] text-2xl ml-[-48px] mr-5">
                   +
                 </span>
-                MAKE APPOINTMENT
+                {t("about.shifokorlar.appointment")} {/* MAKE APPOINTMENT */}
               </button>
             </a>
           </div>
