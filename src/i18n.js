@@ -117,18 +117,17 @@ i18n
               showcase: "Our Services",
               button1: "Home",
               button2: "Our Services",
-              call:"MAKE CALL",
+              call: "MAKE CALL",
               calculator: "Quote Calculator",
-             text1: "If you require services on a public holiday,",
-             text2:`overnight
+              text1: "If you require services on a public holiday,",
+              text2: `overnight
               services or live-in services, please`,
-              
-              text3:`call (+00)888.666.88
-              so we can discuss` ,
-           
-              text4:"prices with you.",
-             button:"Make Appointment",
 
+              text3: `call (+00)888.666.88
+              so we can discuss`,
+
+              text4: "prices with you.",
+              button: "Make Appointment",
             },
             healthcare: {
               title: "Health care facility",
@@ -301,6 +300,13 @@ i18n
               button1: "Главная",
               button2: "Наши сервисы",
               calculator: "Калькулятор",
+              text1: "Если вам нужны услуги в праздничные дни,",
+              text2: `для ночных и очных услуг`,
+
+              text3: ` звоните на (+00) 888.666.88 `,
+
+              text4: "прямо сейчас",
+              button: "Позвонить",
             },
             healthcare: {
               title: "Медицинское учреждение",
@@ -471,16 +477,15 @@ i18n
               showcase: "Bizning xizmatlar",
               button1: "Bosh sahifa",
               button2: "Bizning xizmatlar",
-              call:"Qo'ng'iroq qilish",
+              call: "Qo'ng'iroq qilish",
               calculator: " Calculator",
               text1: "Agar sizga bayram kunida xizmatlar kerak bo‘lsa,,",
-              text2:`tungi xizmatlar yoki jonli xizmatlar uchun,`,
-               
-               text3:`iltimos,(+00) 888.666.88 raqamiga` ,
-            
-               text4:"qo‘ng‘iroq qiling.",
-             button:"Qo'ngi'roq qilish",
+              text2: `tungi xizmatlar yoki jonli xizmatlar uchun,`,
 
+              text3: `iltimos,(+00) 888.666.88 raqamiga`,
+
+              text4: "qo‘ng‘iroq qiling.",
+              button: "Qo'ngi'roq qilish",
             },
             healthcare: {
               title: "Sog'liqni saqlash muassasasi",
