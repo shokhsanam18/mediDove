@@ -4,8 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 const queryClient = new QueryClient();
 import Typography from "@/components/ui/Typography";
 import { Cards_Services } from "@/components/ui/Cards";
-import { Button } from "@/components/ui/button";
-import { Plus, Calendar, MessageCircle, Phone } from "lucide-react";
+
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
