@@ -189,6 +189,25 @@ i18n
               button2: "Contact",
             },
           },
+
+          footer: {
+            departments: {
+              title: "Departments",
+              topic1: "About",
+              topic2: "Constitutions",
+              topic3: "Ustav",
+              topic4: "Doctors",
+              topic5: "Surgery types",
+              topic6: "Details",
+              topic7: "Blog",
+              topic8: "News",
+              topic9: " Become a member",
+              topic10: "Contact us",
+            },
+            NewsFeeds: {
+              title: "News Feeds",
+            },
+          },
         },
       },
       ru: {
@@ -365,6 +384,24 @@ i18n
               showcase: "Свяжитесь с нами",
               button1: "Главная",
               button2: "Связаться",
+            },
+          },
+          footer: {
+            departments: {
+              title: "Отделения",
+              topic1: "О нас",
+              topic2: "Коституция",
+              topic3: "Устав",
+              topic4: "Врачи",
+              topic5: "Операции",
+              topic6: "Ощущения",
+              topic7: "Блог",
+              topic8: "Новости",
+              topic9: "Присоединиться",
+              topic10: "Связаться",
+            },
+            NewsFeeds: {
+              title: "Новости ",
             },
           },
         },
@@ -547,6 +584,25 @@ i18n
               showcase: "Bog'lanish",
               button1: "Bosh sahifa",
               button2: "Bog'lanish",
+            },
+          },
+
+          footer: {
+            departments: {
+              title: "Bo‘limlar",
+              topic1: "Biz haqimizda",
+              topic2: "Konstitutsiya",
+              topic3: "Ustav",
+              topic4: "Shifokorlar",
+              topic5: "Jarrohlik",
+              topic6: "Tafsilotlar",
+              topic7: "Blog",
+              topic8: "Yangiliklar",
+              topic9: " A'zo bo'lish",
+              topic10: "Bog'lanish",
+            },
+            NewsFeeds: {
+              title: "Yangiliklar ",
             },
           },
         },

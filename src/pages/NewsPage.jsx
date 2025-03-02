@@ -205,7 +205,7 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-x-6 px-[9.35%] py-[100px]">
+      <div className="flex flex-col sm:flex-row gap-x-10 px-[10%] py-[100px]">
         <div className="sm:w-2/3 w-full p-0">
           <Cards_News
             cards={cardsInfoNews}
@@ -249,7 +249,7 @@ export const News = () => {
             </button>
           </div>
         </div>
-        <div className="sm:w-1/3 w-full p-24 pl-0 flex flex-col items-center gap-y-10">
+        <div className="sm:w-1/3 w-full pl-0 flex flex-col items-center gap-y-10">
           <NewsCardOne />
           <NewsCardTwo />
           <NewsCardThree />
