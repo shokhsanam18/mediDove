@@ -31,13 +31,13 @@ export const AboutAppointment = () => {
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
             <Typography variant="h4" className="text-[#6A7B8F]">
-              {t("about.main.showcase")} {/* About Us */}
+          { t("about.main.showcase")} {/* About Us */} 
             </Typography>
 
             <div>
               {/* <Typography variant="h2">Short Story About</Typography> */}
               <Typography variant="h2" className="text-[#223645]">
-                {t("about.main.subtitle")} {/* MediDove Clinic. */}
+           {t("about.main.subtitle")} {/* MediDove Clinic. */}
               </Typography>
             </div>
 

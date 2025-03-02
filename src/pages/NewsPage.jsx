@@ -14,15 +14,16 @@ import { NewsCardFour } from "@/components/ui/NewsCard";
 import { NewsCardFive } from "@/components/ui/NewsCard";
 import { NewsCardSeven } from "@/components/ui/NewsCard";
 import React, { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 
 export const News = () => {
+  const { t } = useTranslation();
   const cardsInfoNews = [
     {
       id: 0,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -40,15 +41,14 @@ export const News = () => {
         </span>,
       ],
 
-      footer: "read more ->",
+      footer: t("news.card.footer"),
       src: "./img/b1.jpg",
     },
     {
       id: 1,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -65,15 +65,14 @@ export const News = () => {
           <span style={{ color: "#808e96" }}>23 comments</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("news.card.footer"),
       src: "./img/b2.jpg",
     },
     {
       id: 2,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -90,7 +89,7 @@ export const News = () => {
           <span style={{ color: "#808e96" }}>23 comments</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("news.card.footer"),
       src: "./img/b3.jpg",
     },
 
@@ -98,8 +97,7 @@ export const News = () => {
       id: 3,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+      description: t("news.card.description"),
       content: [
         <span
           key="user"
@@ -116,13 +114,12 @@ export const News = () => {
           <span style={{ color: "#808e96" }}>23 comments</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("news.card.footer"),
       // src: "./img/b4.jpg",
     },
     {
       id: 4,
-      title:
-        "This health blog from NPR takes a fairly broad look at the medical world,.",
+      title: t("news.NPR.title"),
       description: "- Rosalina Pong",
       content: [],
     },
@@ -192,24 +189,23 @@ export const News = () => {
         <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
           <div className="flex flex-col items-center sm:items-start w-full">
             <Typography variant="h4" className="mb-10  ">
-              We are here for your care.
+              {t("news.main.title")}
             </Typography>
-            <Typography variant="h2">News</Typography>
+            <Typography variant="h2">{t("news.main.showcase")}</Typography>
           </div>
-
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">Home</Link>
+              <Link to="/">{t("news.main.button1")}</Link>
             </Typography>
 
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
-              News
+              <Link to="/News">{t("news.main.button2")}</Link>
             </Typography>
           </div>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-x-6 px-[9.35%] py-[100px]">
+      <div className="flex flex-col sm:flex-row gap-x-10 px-[10%] py-[100px]">
         <div className="sm:w-2/3 w-full p-0">
           <Cards_News
             cards={cardsInfoNews}
@@ -253,7 +249,7 @@ export const News = () => {
             </button>
           </div>
         </div>
-        <div className="sm:w-1/3 w-full p-24 pl-0 flex flex-col items-center gap-y-10">
+        <div className="sm:w-1/3 w-full pl-0 flex flex-col items-center gap-y-10">
           <NewsCardOne />
           <NewsCardTwo />
           <NewsCardThree />

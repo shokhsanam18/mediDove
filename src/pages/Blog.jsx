@@ -5,15 +5,17 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faComment } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { useTranslation } from "react-i18next";
+
 
 export const Blog = () => {
+  const { t } = useTranslation();
   const cardsInfoNews = [
     {
       id: 0,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -27,19 +29,18 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}> {t("blog.card.comment")}</span>
         </span>,
       ],
 
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b1.jpg",
     },
     {
       id: 1,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -53,18 +54,17 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b2.jpg",
     },
     {
       id: 2,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -78,10 +78,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b3.jpg",
     },
 
@@ -89,8 +89,7 @@ export const Blog = () => {
       id: 3,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -104,18 +103,17 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b4.jpg",
     },
     {
       id: 4,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -129,18 +127,17 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b5.jpg",
     },
     {
       id: 5,
       title:
         "Lorem ipsum dolor sit amet, consectetur adipisic elit, sed do eiusmod tempor incididunt .",
-      description:
-        "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+        description: t("blog.card.description"),
       content: [
         <span
           key="user"
@@ -154,10 +151,10 @@ export const Blog = () => {
           style={{ display: "flex", alignItems: "center", gap: "5px" }}
         >
           <FontAwesomeIcon icon={faComment} style={{ color: "#e1236b" }} />
-          <span style={{ color: "#808e96" }}>23 comments</span>
+          <span style={{ color: "#808e96" }}>{t("blog.card.comment")}</span>
         </span>,
       ],
-      footer: "read more ->",
+      footer: t("blog.card.footer"),
       src: "./img/b6.jpg",
     },
   ];
@@ -222,19 +219,19 @@ export const Blog = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("blog.main.title")}
             </Typography>
             <Typography variant="h1" >
-            Blog 3 coloum
+            {t("blog.main.showcase")}
             </Typography>
           </div>
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              Home <span className="mx-2">|</span>
+             <Link to="/">{t("blog.main.button1")} </Link><span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              Blog
+            <Link to="/Blog">{t("blog.main.button2")} </Link>
             </Typography>
           </div>
         </div>

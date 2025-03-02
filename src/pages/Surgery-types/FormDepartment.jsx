@@ -2,6 +2,7 @@ import React from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Input } from "@/components/ui/inputFormAppointment";
 import { Phone } from "lucide-react";
+import axios from "axios";
 import {
   Select,
   SelectContent,
@@ -11,8 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/selectformAppointment";
+import { useTranslation } from "react-i18next";
+
 
 function SelectDemo({ value, onChange, placeholder, items }) {
+  const { t } = useTranslation();
   return (
     <Select onValueChange={onChange} value={value}>
       <SelectTrigger className="w-full h-14 p-4 mb-4 sm:mb-5 border-blue-100 rounded-md text-gray-400 focus:ring-0 focus:border-blue-200">
@@ -47,8 +51,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon }) {
   );
 }
 
-const BASE_URL =
-  "https://a359-89-236-218-41.ngrok-free.app/api/formDepartments";
+const BASE_URL = "http://18.195.85.76/api/formDepartments";
 
 function FormDepartment() {
   const [formDepartment, setFormDepartment] = React.useState({
@@ -66,24 +69,18 @@ function FormDepartment() {
 
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(BASE_URL, {
-        method: "POST",
+      const response = await axios.post(BASE_URL, data, {
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
       });
-      if (!response.ok) {
-        throw new Error("Failed to get support");
-      }
-      return response.json();
+      return response.data;
     },
     onSuccess: () => {
       alert("Sent successfully to get support");
     },
     onError: (error) => {
-      alert("Error: " + error.message);
+      alert("Error: " + (error.response?.data?.message || error.message));
     },
   });
-
   const handleSubmit = (e) => {
     e.preventDefault();
     mutation.mutate(formDepartment);

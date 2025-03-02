@@ -1,8 +1,10 @@
 import React, { forwardRef } from "react";
-import { useMutation } from "@tanstack/react-query"; // Import useMutation
+import { useMutation } from "@tanstack/react-query";
 import Typography from "./Typography";
 import { Input } from "@/components/ui/inputFormAppointment";
 import { Phone, Calendar, Timer, NotebookPen } from "lucide-react";
+import axios from "axios";
+
 import {
   Select,
   SelectContent,
@@ -56,7 +58,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   );
 }
 
-const BASE_URL = "844fbe19dac2418ea1963e74396ad21d/formData";
+const BASE_URL = "http://18.195.85.76/api/formData";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
@@ -75,21 +77,17 @@ function FormAppointment(props, ref) {
 
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(BASE_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to book appointment.");
-      }
-      return response.json();
+      const response = await axios.post(BASE_URL, data);
+      return response.data;
     },
     onSuccess: () => {
       alert("Appointment booked successfully!");
     },
     onError: (error) => {
-      alert("Error: " + error.message);
+      alert(
+        "Error: " +
+          (error.response?.data?.message || "Failed to book appointment.")
+      );
     },
   });
 
@@ -139,15 +137,12 @@ function FormAppointment(props, ref) {
         </div>
 
         <div className="flex flex-col md:flex-row gap-4 mt-4">
-          <SelectDemo
-            value={formData.department}
+          <TextInput
+            value={formData.name}
             onChange={handleChange("name")}
-            placeholder="Name"
-            items={[
-              { value: "name1", label: "Name One" },
-              { value: "name2", label: "Name Two" },
-            ]}
+            placeholder="Your Name"
           />
+
           <TextInput
             value={formData.phone}
             onChange={handleChange("phone")}

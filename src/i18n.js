@@ -12,6 +12,24 @@ i18n
       en: {
         translation: {
           greeting: "Welcome to React and react-i18next",
+          navbar: {
+            home: "Home",
+            about: "About",
+            aboutChildren: {
+              tasis: "Constitutors",
+              ustav: "Ustav",
+              doctors: "Doctors",
+            },
+            surgery: "Surgery types",
+            itemsChildren: {
+              surgery: "Surgery",
+              details: "Details",
+            },
+            news: "News",
+            member: "Become a member",
+            blog: "Blog",
+            contact: "Contact Us",
+          },
           index: {
             aboutus: {
               title: "Short Story About MediDove Clinic.",
@@ -92,11 +110,127 @@ i18n
             blog: "Blog",
             call: "Make Call",
           },
+
+          surgery: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "Our Services",
+              button1: "Home",
+              button2: "Our Services",
+              call: "MAKE CALL",
+              calculator: "Quote Calculator",
+              text1: "If you require services on a public holiday,",
+              text2: `overnight
+              services or live-in services, please`,
+
+              text3: `call (+00)888.666.88
+              so we can discuss`,
+
+              text4: "prices with you.",
+              button: "Make Appointment",
+            },
+            healthcare: {
+              title: "Health care facility",
+              question:
+                "Would you rather stay at home than go into a health care facility?",
+            },
+            employers: {
+              title: "For Employers",
+
+              contact_button: "CONTACT US",
+              apply_button: "APPLY TODAY",
+            },
+          },
+          details: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "Details",
+              button1: "Home",
+              button2: "Details",
+            },
+          },
+          news: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "News",
+              button1: "Home",
+              button2: "News",
+            },
+            card: {
+              description:
+                "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+              footer: "read more ->",
+            },
+
+            NPR: {
+              title:
+                "This health blog from NPR takes a fairly broad look at the medical world,.",
+            },
+          },
+          blog: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "Blog 3 coloum",
+              button1: "Home",
+              button2: "Blog",
+            },
+            card: {
+              description:
+                "There’s a good chance Everyday Health is the most appropriately named blog on this list because it focuses on the health topics that consistently affect a wide range of people. They also get kudos.",
+              footer: "read more ->",
+              comment: "comments",
+            },
+          },
+          contactus: {
+            main: {
+              title: " We are here for your care.",
+              showcase: "Contact Us",
+              button1: "Home",
+              button2: "Contact",
+            },
+          },
+
+          footer: {
+            departments: {
+              title: "Departments",
+              topic1: "About",
+              topic2: "Constitutions",
+              topic3: "Ustav",
+              topic4: "Doctors",
+              topic5: "Surgery types",
+              topic6: "Details",
+              topic7: "Blog",
+              topic8: "News",
+              topic9: " Become a member",
+              topic10: "Contact us",
+            },
+            NewsFeeds: {
+              title: "News Feeds",
+            },
+          },
         },
       },
       ru: {
         translation: {
           greeting: "Добро пожаловать в React и react-i18next",
+          navbar: {
+            home: "Главная",
+            about: "О нас",
+            aboutChildren: {
+              tasis: "Учредители",
+              ustav: "Устав",
+              doctors: "Врачи",
+            },
+            surgery: "Операции",
+            itemsChildren: {
+              surgery: " Виды Операций",
+              details: "Детали",
+            },
+            news: "Новости",
+            member: "Присоединиться",
+            blog: "Блог",
+            contact: "Связь с нами",
+          },
           index: {
             aboutus: {
               title: "Краткая история о клинике MediDove.",
@@ -149,7 +283,7 @@ i18n
             main: {
               title: "Мы здесь для вашей заботы.",
               showcase: "O нас",
-              button1: "Домой",
+              button1: "Главная",
               button2: "O нас",
               subtitle: "Краткая история о клинике MediDove.",
               mission: "Наша Миссия",
@@ -177,6 +311,299 @@ i18n
             appointment: "Приём",
             blog: "Блог",
             call: "Позвонить",
+          },
+          surgery: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Наши сервисы",
+              button1: "Главная",
+              button2: "Наши сервисы",
+              calculator: "Калькулятор",
+              text1: "Если вам нужны услуги в праздничные дни,",
+              text2: `для ночных и очных услуг`,
+
+              text3: ` звоните на (+00) 888.666.88 `,
+
+              text4: "прямо сейчас",
+              button: "Записаться на прием",
+            },
+            healthcare: {
+              title: "Медицинское учреждение",
+              question:
+                "Вы хотите остаться дома вмесо того, чтобы остаться дома?",
+            },
+
+            employers: {
+              title: "Для работодателей",
+              description:
+                "Lorem ipsum here is in russian. But firstly let us know more about you and we will translate it",
+              contact_button: "Связь с нами",
+              apply_button: "Оставь заявку",
+            },
+          },
+          details: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Подробнее",
+              button1: "Главная",
+              button2: "Подробнее",
+            },
+          },
+          news: {
+            main: {
+              title: " Мы заботимся о вас",
+              showcase: "Новости",
+              button1: "Главная",
+              button2: "Новости",
+            },
+            card: {
+              description:
+                "Есть большая вероятность, что мы — блог с наиболее подходящим названием в этом списке, поскольку он фокусируется на темах здравоохранения, которые постоянно затрагивают широкий круг людей. Они также получают похвалу.",
+              footer: "Читать больше ->",
+            },
+            NPR: {
+              title:
+                "Этот блог о здоровье от NPR дает довольно широкий взгляд на мир медицины.",
+            },
+          },
+          blog: {
+            main: {
+              title: " Мы заботимся о вас",
+              showcase: "Блог 3",
+              button1: "Главная",
+              button2: "Блог",
+            },
+            card: {
+              description:
+                "Есть большая вероятность, что мы — блог с наиболее подходящим названием в этом списке, поскольку он фокусируется на темах здравоохранения, которые постоянно затрагивают широкий круг людей. Они также получают похвалу.",
+            },
+          },
+          contactus: {
+            main: {
+              title: "Мы заботимся о вас",
+              showcase: "Свяжитесь с нами",
+              button1: "Главная",
+              button2: "Связаться",
+            },
+          },
+          footer: {
+            departments: {
+              title: "Отделения",
+              topic1: "О нас",
+              topic2: "Коституция",
+              topic3: "Устав",
+              topic4: "Врачи",
+              topic5: "Операции",
+              topic6: "Ощущения",
+              topic7: "Блог",
+              topic8: "Новости",
+              topic9: "Присоединиться",
+              topic10: "Связаться",
+            },
+            NewsFeeds: {
+              title: "Новости ",
+            },
+          },
+        },
+      },
+
+      uz: {
+        translation: {
+          greeting: " React va react-i18next ga xush kelibsiz",
+          navbar: {
+            home: "Bosh sahifa",
+            about: "Biz haqimizda",
+            aboutChildren: {
+              tasis: "Tarkibiy qismlar",
+              ustav: "Ustav",
+              doctors: "Shifokorlar",
+            },
+            surgery: "Jarrohlik ",
+            itemsChildren: {
+              surgery: "Jarrohlik",
+              details: "Tafsilotlar",
+            },
+            news: "Yangiliklar",
+            member: "A’zo bo‘lish",
+            blog: "Blog",
+            contact: " Bog'lanish",
+          },
+          index: {
+            aboutus: {
+              title: "MediDove klinikasi haqida qisqa hikoya.",
+              showcase: "Biz haqimizda",
+              author: "Rosalina D. Williamson",
+              founder: "Asoschi",
+            },
+            departments: {
+              title: "Bo‘limlar",
+              subtitle: "Sog‘liqni saqlash xizmatlari boshqariladi",
+            },
+            getConsultant: {
+              title: "Hayotdan zavqlanish uchun sog‘lom va kuchli bo‘ling",
+              subtitle:
+                "Barchasiga yordam berish va ishlarni yana yaxshilash uchun bizga ishoning.",
+              button: "Konsultatsiya olish",
+            },
+            news: {
+              title: "Yangiliklar",
+              subtitle: "Barcha yangiliklarni shu yerdan oling",
+              button: "Bizning  Blog",
+              calendar: "23 Feb 2024",
+              comments: "33 Fikrlar",
+            },
+            ourteam: {
+              title: "Bizning Jamoa",
+              subtitle: "Professional xizmat ko‘rsatuvchi",
+            },
+            pricing: {
+              title: "Bizning rejalar",
+              subtitle: "Narx va rejalar",
+              year: "Yillik",
+              month: "Oylik",
+            },
+            showcase: {
+              title: " Biz sizga g'amxo'rmiz.",
+              bigTitle: "Yaxshi g‘amxo‘rlik va yaxshiroq shifokor ",
+              button: "Yozilish",
+            },
+            statistics: {
+              title: "Biz 24/7 ishlaymiz.",
+              bigTitle: "Biz har doim qiyinchilikka tayyormiz.",
+              button: "Yozilish",
+              satisfied: "Mamnun mijozlar",
+              awards: "Jahon mukofotlari",
+            },
+          },
+          about: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Biz haqimizda",
+              button1: "Bosh sahida",
+              button2: "Biz haqimizda",
+              subtitle: "MediDove klinikasi haqida qisqa hikoya.",
+              mission: "Bizning Missiya",
+              vision: "Bizning qarashlarimiz",
+            },
+            tasischilar: {
+              title: "Tarkibiy qismlar",
+              approach: "Bizning yondashuv",
+              patient: "Agar siz bemor bo‘lsangiz",
+              quality: "sifat izlovchi",
+            },
+            ustav: {
+              ustav: "Ustav",
+            },
+            shifokorlar: {
+              title: "  Biz sizga g'amxo'rmiz.",
+              showcase: "Shifokorlar",
+              team: "Bizning jamoa",
+              proffesional: " Malakali va",
+              care: "g'amxo'rlik qiluvchi",
+              appointment: "Yozilish",
+            },
+          },
+          app: {
+            appointment: "Yozilish",
+            blog: "Blog",
+            call: "Qo'ng'iroq qilish",
+          },
+          surgery: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Bizning xizmatlar",
+              button1: "Bosh sahifa",
+              button2: "Bizning xizmatlar",
+              call: "Qo'ng'iroq qilish",
+              calculator: " Calculator",
+              text1: "Agar sizga bayram kunida xizmatlar kerak bo‘lsa,,",
+              text2: `tungi xizmatlar yoki jonli xizmatlar uchun,`,
+
+              text3: `iltimos,(+00) 888.666.88 raqamiga`,
+
+              text4: "qo‘ng‘iroq qiling.",
+              button: "Qo'ngi'roq qilish",
+            },
+            healthcare: {
+              title: "Sog'liqni saqlash muassasasi",
+              question:
+                "Siz Shifoxonaga borishdan ko'ra uyda qolishni xohlaysizmi?",
+            },
+
+            employers: {
+              title: "Ish beruvchilar uchun",
+              description:
+                "Lorem ipsum o'zbekcha tarjima. Sizning bu yerdagi mazmuningiz o'zbek tiliga tarjima qilinadi.",
+              contact_button: "BOG'LANING",
+              apply_button: "ARIZA BERING",
+            },
+          },
+          details: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Tafsilotlar",
+              button1: "Bosh sahifa",
+              button2: "Tafsilotlar",
+            },
+          },
+          news: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Yangiliklar",
+              button1: "Bosh sahifa",
+              button2: "Yangiliklar",
+            },
+            card: {
+              description:
+                "Ehtimol, 'Everyday Health' ushbu ro‘yxatdagi eng to‘g‘ri nomlangan blog bo‘lishi mumkin, chunki u keng doiradagi odamlarga doimiy ravishda ta’sir qiladigan sog‘liqni saqlash mavzulariga e’tibor qaratadi. Ular shuningdek, o‘z sohasida tan olingan va e’tiborga sazovor hisoblanadi.",
+              footer: "Ko'proq o'qing ->",
+            },
+            NPR: {
+              title:
+                "NPRning ushbu sog'liqni saqlash blogi tibbiyot olamiga juda keng nazar tashlaydi.",
+            },
+          },
+
+          blog: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Blog 3 ustun",
+              button1: "Bosh sahifa",
+              button2: "Blog",
+            },
+            card: {
+              description:
+                "Ehtimol, 'Everyday Health' ushbu ro‘yxatdagi eng to‘g‘ri nomlangan blog bo‘lishi mumkin, chunki u keng doiradagi odamlarga doimiy ravishda ta’sir qiladigan sog‘liqni saqlash mavzulariga e’tibor qaratadi. Ular shuningdek, o‘z sohasida tan olingan va e’tiborga sazovor hisoblanadi.",
+              footer: "Ko'proq o'qing ->",
+              comment: "Fikrlar",
+            },
+          },
+          contactus: {
+            main: {
+              title: " Biz sizga g'amxo'rmiz.",
+              showcase: "Bog'lanish",
+              button1: "Bosh sahifa",
+              button2: "Bog'lanish",
+            },
+          },
+
+          footer: {
+            departments: {
+              title: "Bo‘limlar",
+              topic1: "Biz haqimizda",
+              topic2: "Konstitutsiya",
+              topic3: "Ustav",
+              topic4: "Shifokorlar",
+              topic5: "Jarrohlik",
+              topic6: "Tafsilotlar",
+              topic7: "Blog",
+              topic8: "Yangiliklar",
+              topic9: " A'zo bo'lish",
+              topic10: "Bog'lanish",
+            },
+            NewsFeeds: {
+              title: "Yangiliklar ",
+            },
           },
         },
       },

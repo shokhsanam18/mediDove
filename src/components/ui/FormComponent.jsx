@@ -37,7 +37,7 @@ function InputWithEmail({ value, onChange }) {
 
 function InputWithPhone({ value, onChange }) {
   return (
-    <div className="grid w-full items-center gap-1.5">
+    <div className="grid w-full items-center ">
       <Label htmlFor="phone"></Label>
       <Input
         type="tel"
@@ -74,7 +74,7 @@ function InputWithMessage({ value, onChange }) {
   );
 }
 
-const BASE_URL = "https://8f88-89-236-218-41.ngrok-free.app/api/formIdeas";
+const BASE_URL = "http://18.195.85.76/api/formIdeas";
 
 export const submitMessage = async (messageData) => {
   try {
@@ -160,35 +160,51 @@ function FormComponent(props, ref) {
         </Link>
       </div>
       <div className="w-full">
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between w-full items-center">
           <InputWithName
             value={formContact.name}
-            onChange={(value) => setFormContact({ ...formContact, name: value })}
+            onChange={(value) =>
+              setFormContact({ ...formContact, name: value })
+            }
           />
           <InputWithEmail
+            className="h-5"
             value={formContact.email}
-            onChange={(value) => setFormContact({ ...formContact, email: value })}
+            onChange={(value) =>
+              setFormContact({ ...formContact, email: value })
+            }
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between w-full items-center">
           <InputWithPhone
+            className="h-5"
             value={formContact.phone}
-            onChange={(value) => setFormContact({ ...formContact, phone: value })}
+            onChange={(value) =>
+              setFormContact({ ...formContact, phone: value })
+            }
           />
           <InputWithSubject
             value={formContact.subject}
-            onChange={(value) => setFormContact({ ...formContact, subject: value })}
+            onChange={(value) =>
+              setFormContact({ ...formContact, subject: value })
+            }
           />
         </div>
         <div className="bg-white">
           <InputWithMessage
             value={formContact.message}
-            onChange={(value) => setFormContact({ ...formContact, message: value })}
+            onChange={(value) =>
+              setFormContact({ ...formContact, message: value })
+            }
           />
         </div>
       </div>
       {success && (
-        <p className={success === "Fill the form" ? "text-red-500" : "text-green-500"}>
+        <p
+          className={
+            success === "Fill the form" ? "text-red-500" : "text-green-500"
+          }
+        >
           {success}
         </p>
       )}
@@ -200,7 +216,11 @@ function FormComponent(props, ref) {
         <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
           <Plus size={16} />
         </span>
-        <span className={`ml-4 text-sm tracking-wide ${loading ? "opacity-50" : "opacity-100"}`}>
+        <span
+          className={`ml-4 text-sm tracking-wide ${
+            loading ? "opacity-50" : "opacity-100"
+          }`}
+        >
           {loading ? "Submitting..." : "GET ACTION"}
         </span>
       </button>
