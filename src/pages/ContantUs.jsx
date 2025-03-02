@@ -20,7 +20,7 @@ const items = [" "];
 export const Contact = () => {
   const location = useLocation();
   const formRef = useRef(null);
-    const { t } = useTranslation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -89,7 +89,7 @@ export const Contact = () => {
         <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
           <div className="flex flex-col items-center sm:items-start w-full">
             <Typography variant="h4" className="mb-10  ">
-            {t("contactus.main.title")}
+              {t("contactus.main.title")}
             </Typography>
             <Typography variant="h2">{t("contactus.main.showcase")}</Typography>
           </div>
@@ -101,7 +101,7 @@ export const Contact = () => {
 
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
-            <Link to="/ContactUs">{t("contactus.main.button2")}</Link>
+              <Link to="/ContactUs">{t("contactus.main.button2")}</Link>
             </Typography>
           </div>
         </div>
