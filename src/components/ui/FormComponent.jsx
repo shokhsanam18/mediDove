@@ -37,7 +37,7 @@ function InputWithEmail({ value, onChange }) {
 
 function InputWithPhone({ value, onChange }) {
   return (
-    <div className="grid w-full items-center gap-1.5">
+    <div className="grid w-full items-center ">
       <Label htmlFor="phone"></Label>
       <Input
         type="tel"
@@ -160,7 +160,7 @@ function FormComponent(props, ref) {
         </Link>
       </div>
       <div className="w-full">
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between w-full items-center">
           <InputWithName
             value={formContact.name}
             onChange={(value) =>
@@ -168,14 +168,16 @@ function FormComponent(props, ref) {
             }
           />
           <InputWithEmail
+            className="h-5"
             value={formContact.email}
             onChange={(value) =>
               setFormContact({ ...formContact, email: value })
             }
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between w-full items-center">
           <InputWithPhone
+            className="h-5"
             value={formContact.phone}
             onChange={(value) =>
               setFormContact({ ...formContact, phone: value })

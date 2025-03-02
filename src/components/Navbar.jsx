@@ -16,41 +16,6 @@ import {
 import { useSidebarStore } from "@/Store";
 import { useTranslation } from "react-i18next";
 
-// const components = [
-//   {
-//     title: t("navbar.aboutChildren.tasis"),
-//     href: "/Tasischilar",
-//   },
-//   {
-//     title: "Ustav",
-//     href: "/Ustav",
-//   },
-//   {
-//     title: "Shifokorlar",
-//     href: "/Shifokorlar",
-//   },
-// ];
-
-// const items = [
-//   {
-//     title: "Surgery",
-//     href: "/Surgery",
-//   },
-//   {
-//     title: "Details",
-//     href: "/Details",
-//   },
-// ];
-
-// const languages = [
-//   {
-//     code: "uz",
-//     lang: "UZB",
-//   },
-//   { code: "ru", lang: "RU" },
-//   { code: "en", lang: "ENG" },
-// ];
-
 export function Navbar() {
   const toggleSidebar = useSidebarStore((state) => state.toggleSidebar);
   const { i18n } = useTranslation();
