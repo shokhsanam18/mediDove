@@ -1,6 +1,6 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom'; // Assuming you are using React Router
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom"; // Assuming you are using React Router
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -42,7 +42,7 @@ export const Footer = () => {
 
           <div className="w-1/3">
             <h2 className="text-[24px] text-white block font-poppins font-semibold leading-[1.1] tracking-[-0.3px] mt-0 mb-[46px]">
-            <Link to="/">{t("footer.departments.title")} </Link>
+              <Link to="/">{t("footer.departments.title")} </Link>
             </h2>
             <ul className="flex flex-col gap-6 flex-wrap h-[16.5em]">
               <li>
@@ -50,7 +50,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./About"
                 >
-               {t("footer.departments.topic1")} 
+                  {t("footer.departments.topic1")}
                 </a>
               </li>
               <li>
@@ -58,7 +58,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Blog"
                 >
-             {t("footer.departments.topic2")} 
+                  {t("footer.departments.topic2")}
                 </a>
               </li>
               <li>
@@ -66,7 +66,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Ustav"
                 >
-                 {t("footer.departments.topic3")} 
+                  {t("footer.departments.topic3")}
                 </a>
               </li>
               <li>
@@ -74,7 +74,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Shifokorlar"
                 >
-               {t("footer.departments.topic4")} 
+                  {t("footer.departments.topic4")}
                 </a>
               </li>
               <li>
@@ -82,7 +82,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Surgery"
                 >
-            {t("footer.departments.topic5")} 
+                  {t("footer.departments.topic5")}
                 </a>
               </li>
               <li>
@@ -90,7 +90,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Details"
                 >
-               {t("footer.departments.topic6")} 
+                  {t("footer.departments.topic6")}
                 </a>
               </li>
               <li>
@@ -98,7 +98,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./Blog"
                 >
-                 {t("footer.departments.topic7")} 
+                  {t("footer.departments.topic7")}
                 </a>
               </li>
               <li>
@@ -106,7 +106,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./News"
                 >
-                {t("footer.departments.topic8")} 
+                  {t("footer.departments.topic8")}
                 </a>
               </li>
               <li>
@@ -114,7 +114,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./BecomeMember"
                 >
-               {t("footer.departments.topic9")} 
+                  {t("footer.departments.topic9")}
                 </a>
               </li>
               <li>
@@ -122,7 +122,7 @@ export const Footer = () => {
                   className="text-[#899dab] hover:text-[#8FB569] font-rubik font-medium text-[14px] outline-none no-underline transition-all duration-300 ease-out cursor-pointer"
                   href="./ContactUS"
                 >
-               {t("footer.departments.topic10")} 
+                  {t("footer.departments.topic10")}
                 </a>
               </li>
             </ul>
@@ -130,7 +130,7 @@ export const Footer = () => {
 
           <div className="w-1/3">
             <h2 className="text-[24px] text-white block font-poppins font-semibold leading-[1.1] tracking-[-0.3px] mt-0 mb-[46px]">
-            {t("footer.NewsFeeds.title")} 
+              {t("footer.NewsFeeds.title")}
             </h2>
             <div>
               <div className="flex items-center text-[14px] text-[#647589] font-rubik font-normal mb-[20px]">
@@ -202,9 +202,9 @@ export const Footer = () => {
           className="text-[#9aacbb]  p-[25px] text-[14px]"
           style={{ fontFamily: "Rubik, sans-serif" }}
         >
-          Copyright by@ BasicTheme - 2022
+          Copyright by MediDovies - 2025
         </p>
       </div>
     </div>
   );
-}
+};
