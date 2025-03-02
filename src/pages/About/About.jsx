@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import Typography from "@/components/ui/Typography";
 import { Card, CardImg } from "@/components/ui/Card";
 import { Button } from "@/components/ui/button";
@@ -6,10 +6,12 @@ import aboutImg from "@/assets/about-img.jpg";
 import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export const About = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <div
@@ -27,19 +29,22 @@ export const About = () => {
               variant="p"
               className="text-[#6A7B8F] text-sm sm:text-base mb-2"
             >
-              We are here for your care.
+              {t("about.main.title")} {/* We are here for your care. */}
             </Typography>
             <Typography variant="h1" className="text-black font-bold">
-              About Us
+              {t("about.main.showcase")} {/* About Us */}
             </Typography>
           </div>
 
           <div className="flex items-center">
             <Typography variant="p" className="text-gray-600">
-              Home <span className="mx-2">|</span>
+              <Link to="/"> {t("about.main.button1")}</Link> {/* Home  */}
+              <span className="mx-2">|</span>
             </Typography>
             <Typography variant="p" className="text-red-600 font-semibold">
-              About
+              {" "}
+              <Link to="/About"> {t("about.main.button2")}</Link>
+              {/* About */}
             </Typography>
           </div>
         </div>
@@ -78,13 +83,13 @@ export const About = () => {
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
             <Typography variant="h4" className="text-[#6A7B8F]">
-              About Us
+              {t("about.main.showcase")} {/* About Us */}
             </Typography>
 
             <div>
-              <Typography variant="h2">Short Story About</Typography>
+              {/* <Typography variant="h2">Short Story About</Typography> */}
               <Typography variant="h2" className="text-[#223645]">
-                MediDove Clinic.
+                {t("about.main.subtitle")} {/* MediDove Clinic. */}
               </Typography>
             </div>
 
@@ -108,7 +113,7 @@ export const About = () => {
                 />
                 <div className="flex-1">
                   <Typography variant="h4" className="text-[#223645]">
-                    Our Mission
+                    {t("about.main.mission")} {/* Our Mission */}
                   </Typography>
                   <Typography variant="p">
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -126,7 +131,7 @@ export const About = () => {
                 />
                 <div className="flex-1">
                   <Typography variant="h4" className="text-[#223645]">
-                    Our Vision
+                    {t("about.main.vision")} {/* Our Vision */}
                   </Typography>
                   <Typography variant="p">
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco

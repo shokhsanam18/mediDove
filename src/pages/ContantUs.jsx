@@ -4,16 +4,42 @@ import { Cards_Team } from "../components/ui/Cards";
 import { Cards_News } from "../components/ui/Cards";
 import Typography from "../components/ui/Typography";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faComment } from "@fortawesome/free-regular-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faUser, faComment } from "@fortawesome/free-regular-svg-icons";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import FormComponent from "../components/ui/FormComponent";
 import { ContactCardOne } from "../components/ui/ContactCards";
 import { ContactCardTwo } from "../components/ui/ContactCards";
 import { MapPin } from "lucide-react";
+
+import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 const items = [" "];
 
 export const Contact = () => {
+  const location = useLocation();
+  const formRef = useRef(null);
+    const { t } = useTranslation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    if (location.state?.scrollTo === "FormComponent") {
+      setTimeout(() => {
+        if (formRef.current) {
+          const yOffset = -30;
+          const y =
+            formRef.current.getBoundingClientRect().top +
+            window.scrollY +
+            yOffset;
+
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 300);
+    }
+  }, [location]);
+
   const [isMounted, setIsMounted] = useState(false);
   const mapContainerRef = useRef(null);
   const mapInstanceRef = useRef(null);
@@ -63,19 +89,19 @@ export const Contact = () => {
         <div className=" flex flex-col md:flex-row items-center text-center  w-full p-40">
           <div className="flex flex-col items-center sm:items-start w-full">
             <Typography variant="h4" className="mb-10  ">
-              We are here for your care.
+            {t("contactus.main.title")}
             </Typography>
-            <Typography variant="h2">Contact Us</Typography>
+            <Typography variant="h2">{t("contactus.main.showcase")}</Typography>
           </div>
 
           <div className="flex flex-row justify-end sm:justify-start mt-1">
             <Typography variant="p" className="cursor-pointer">
-              <Link to="/About">Home</Link>
+              <Link to="/">{t("contactus.main.button1")}</Link>
             </Typography>
 
             <span className="mx-1">|</span>
             <Typography variant="p" className="text-red-500">
-              Contact
+            <Link to="/ContactUs">{t("contactus.main.button2")}</Link>
             </Typography>
           </div>
         </div>
@@ -118,7 +144,7 @@ export const Contact = () => {
         </button>
         <ContactCardTwo />
       </div>
-      <div className="flex">
+      <div ref={formRef}>
         <FormComponent />
       </div>
       <div

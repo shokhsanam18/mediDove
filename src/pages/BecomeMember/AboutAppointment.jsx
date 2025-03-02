@@ -6,10 +6,11 @@ import appoinmentpagephoto from "@/assets/appoinmentpagephoto.png";
 import missionIcon from "@/assets/destination-icon-1.png";
 import visionIcon from "@/assets/destination-icon-2.png";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
+import { useTranslation } from "react-i18next";
 
 export const AboutAppointment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { t } = useTranslation();
   return (
     <div className="w-full">
       <div className="w-full py-16 bg-white">
@@ -30,13 +31,13 @@ export const AboutAppointment = () => {
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center space-y-6">
             <Typography variant="h4" className="text-[#6A7B8F]">
-              About Us
+          { t("about.main.showcase")} {/* About Us */} 
             </Typography>
 
             <div>
-              <Typography variant="h2">Short Story About</Typography>
+              {/* <Typography variant="h2">Short Story About</Typography> */}
               <Typography variant="h2" className="text-[#223645]">
-                MediDove Clinic.
+           {t("about.main.subtitle")} {/* MediDove Clinic. */}
               </Typography>
             </div>
 
@@ -60,7 +61,7 @@ export const AboutAppointment = () => {
                 />
                 <div className="flex-1">
                   <Typography variant="h4" className="text-[#223645]">
-                    Our Mission
+                    {t("about.main.mission")} {/* Our Mission */}
                   </Typography>
                   <Typography variant="p">
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -78,7 +79,7 @@ export const AboutAppointment = () => {
                 />
                 <div className="flex-1">
                   <Typography variant="h4" className="text-[#223645]">
-                    Our Vision
+                    {t("about.main.vision")} {/* Our Vision */}
                   </Typography>
                   <Typography variant="p">
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco

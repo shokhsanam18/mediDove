@@ -1,11 +1,10 @@
-import React from "react";
 import axios from "axios";
 import { Input } from "./input";
 import { Label } from "./label";
 import { Textarea } from "./textarea";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import React, { forwardRef } from "react";
 
 function InputWithName({ value, onChange }) {
   return (
@@ -23,7 +22,7 @@ function InputWithName({ value, onChange }) {
 
 function InputWithEmail({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5">
+    <div className="grid w-full items-center gap-1.5">
       <Label htmlFor="email"></Label>
       <Input
         type="email"
@@ -38,7 +37,7 @@ function InputWithEmail({ value, onChange }) {
 
 function InputWithPhone({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5 ">
+    <div className="grid w-full items-center gap-1.5">
       <Label htmlFor="phone"></Label>
       <Input
         type="tel"
@@ -53,7 +52,7 @@ function InputWithPhone({ value, onChange }) {
 
 function InputWithSubject({ value, onChange }) {
   return (
-    <div className="grid w-full  items-center gap-1.5">
+    <div className="grid w-full items-center gap-1.5">
       <Input
         type="text"
         id="subject"
@@ -74,8 +73,8 @@ function InputWithMessage({ value, onChange }) {
     />
   );
 }
-const BASE_URL =
-  "https://crudcrud.com/api/08f751552a294a91b3c2daca67ddeac4/ideas";
+
+const BASE_URL = "http://18.195.85.76/api/formIdeas";
 
 export const submitMessage = async (messageData) => {
   try {
@@ -95,12 +94,14 @@ export const getMessages = async () => {
   }
 };
 
-function FormComponent() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [subject, setSubject] = React.useState("");
-  const [message, setMessage] = React.useState("");
+function FormComponent(props, ref) {
+  const [formContact, setFormContact] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
   const [loading, setLoading] = React.useState(false);
   const [success, setSuccess] = React.useState(null);
 
@@ -109,43 +110,39 @@ function FormComponent() {
     setLoading(true);
     setSuccess(null);
 
-    if (!name || !email || !phone || !subject || !message) {
+    if (Object.values(formContact).some((value) => !value.trim())) {
       setSuccess("Fill the form");
       setLoading(false);
       return;
     }
 
-    const formContact = {
-      name,
-      email,
-      subject,
-      message,
-      phone,
-    };
     const response = await submitMessage(formContact);
 
     if (response) {
       setSuccess("Message submitted successfully!");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setMessage("");
-      setSubject("");
+      setFormContact({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
     }
 
     setLoading(false);
   };
+
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full  pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
+      className="w-full pt-24 pb-24 pl-[10%] pr-[10%] bg-[#F4F9FC] flex flex-col items-center gap-8"
     >
       <div className="sm:flex-row flex-col flex justify-between w-full">
         <div>
           <p className="text-[#647589] text-[14px] font-normal">
             Anything On your Mind
           </p>
-          <h1 className="text-[#223645] text-[60px]  font-semibold ">
+          <h1 className="text-[#223645] text-[60px] font-semibold">
             Estimate <br className="sm:hidden" />
             Your Idea
           </h1>
@@ -164,15 +161,40 @@ function FormComponent() {
       </div>
       <div className="w-full">
         <div className="flex justify-between w-full">
-          <InputWithName className="w-full" value={name} onChange={setName} />
-          <InputWithEmail value={email} onChange={setEmail} />
+          <InputWithName
+            value={formContact.name}
+            onChange={(value) =>
+              setFormContact({ ...formContact, name: value })
+            }
+          />
+          <InputWithEmail
+            value={formContact.email}
+            onChange={(value) =>
+              setFormContact({ ...formContact, email: value })
+            }
+          />
         </div>
         <div className="flex justify-between">
-          <InputWithPhone value={phone} onChange={setPhone} />
-          <InputWithSubject value={subject} onChange={setSubject} />
+          <InputWithPhone
+            value={formContact.phone}
+            onChange={(value) =>
+              setFormContact({ ...formContact, phone: value })
+            }
+          />
+          <InputWithSubject
+            value={formContact.subject}
+            onChange={(value) =>
+              setFormContact({ ...formContact, subject: value })
+            }
+          />
         </div>
         <div className="bg-white">
-          <InputWithMessage value={message} onChange={setMessage} />
+          <InputWithMessage
+            value={formContact.message}
+            onChange={(value) =>
+              setFormContact({ ...formContact, message: value })
+            }
+          />
         </div>
       </div>
       {success && (
@@ -186,7 +208,7 @@ function FormComponent() {
       )}
       <button
         type="submit"
-        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition "
+        className="flex items-center h-16 w-60 rounded-full bg-[#E51E50] text-white font-semibold shadow-lg hover:bg-[#8CB369] transition"
         disabled={loading}
       >
         <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
@@ -204,4 +226,4 @@ function FormComponent() {
   );
 }
 
-export default FormComponent;
+export default forwardRef(FormComponent);

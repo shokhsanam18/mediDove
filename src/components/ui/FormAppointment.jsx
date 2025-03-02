@@ -1,8 +1,10 @@
 import React, { forwardRef } from "react";
-import { useMutation } from "@tanstack/react-query"; // Import useMutation
+import { useMutation } from "@tanstack/react-query";
 import Typography from "./Typography";
 import { Input } from "@/components/ui/inputFormAppointment";
 import { Phone, Calendar, Timer, NotebookPen } from "lucide-react";
+import axios from "axios";
+
 import {
   Select,
   SelectContent,
@@ -56,7 +58,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   );
 }
 
-const BASE_URL = "https://9e25-89-236-218-41.ngrok-free.app/api/formData";
+const BASE_URL = "http://18.195.85.76/api/formData";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({
@@ -75,21 +77,17 @@ function FormAppointment(props, ref) {
 
   const mutation = useMutation({
     mutationFn: async (data) => {
-      const response = await fetch(BASE_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to book appointment.");
-      }
-      return response.json();
+      const response = await axios.post(BASE_URL, data);
+      return response.data;
     },
     onSuccess: () => {
       alert("Appointment booked successfully!");
     },
     onError: (error) => {
-      alert("Error: " + error.message);
+      alert(
+        "Error: " +
+          (error.response?.data?.message || "Failed to book appointment.")
+      );
     },
   });
 
@@ -145,23 +143,6 @@ function FormAppointment(props, ref) {
             placeholder="Your Name"
           />
 
-          {/* <div className="flex flex-col md:flex-row gap-4 mt-4">
-            <SelectDemo
-              value={formData.doctor}
-              onChange={handleChange("Your Name")}
-              placeholder="Your Name"
-              items={[
-                { value: "Name1", label: "Name One" },
-                { value: "Name2", label: "Name Two" },
-              ]}
-            />
-            <TextInput
-              value={formData.phone}
-              onChange={handleChange("phone")}
-              placeholder="Your Phone Number"
-              icon={Phone}
-            />
-          </div> */}
           <TextInput
             value={formData.phone}
             onChange={handleChange("phone")}
