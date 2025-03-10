@@ -7,14 +7,14 @@ const SearchBar = () => {
   const [data, setData] = useState([]); // Store API content
 
   // Fetch all searchable content from API
-  useEffect(() => {
-    fetch("https://your-api.com/content") // 🔹 Replace with your actual API URL
-      .then((response) => response.json())
-      .then((fetchedData) => {
-        setData(fetchedData); // Store data from API
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://your-api.com/content") // 🔹 Replace with your actual API URL
+  //     .then((response) => response.json())
+  //     .then((fetchedData) => {
+  //       setData(fetchedData); // Store data from API
+  //     })
+  //     .catch((error) => console.error("Error fetching data:", error));
+  // }, []);
 
   // Search through fetched API data
   const handleSearch = (input) => {
