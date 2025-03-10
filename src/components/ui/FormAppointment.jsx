@@ -58,7 +58,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon, className }) {
   );
 }
 
-const BASE_URL = "http://18.195.85.76/api/formData";
+// const BASE_URL = "http://18.195.85.76/api/formData";
 
 function FormAppointment(props, ref) {
   const [formData, setFormData] = React.useState({

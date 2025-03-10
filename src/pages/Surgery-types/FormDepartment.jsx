@@ -51,7 +51,7 @@ function TextInput({ value, onChange, placeholder, icon: Icon }) {
   );
 }
 
-const BASE_URL = "http://18.195.85.76/api/formDepartments";
+// const BASE_URL = "http://18.195.85.76/api/formDepartments";
 
 function FormDepartment() {
   const [formDepartment, setFormDepartment] = React.useState({

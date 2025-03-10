@@ -74,7 +74,7 @@ function InputWithMessage({ value, onChange }) {
   );
 }
 
-const BASE_URL = "http://18.195.85.76/api/formIdeas";
+// const BASE_URL = "http://18.195.85.76/api/formIdeas";
 
 export const submitMessage = async (messageData) => {
   try {
