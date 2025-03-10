@@ -16,7 +16,7 @@ export const Index = () => {
   <Departments/>
   <OurTeam/>
   <Statistics/>
-  <Pricing/>
+  {/* <Pricing/> */}
   <GetConsultant/>
   <CombinedPage/>
   </>;
