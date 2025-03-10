@@ -84,12 +84,14 @@ export function Navbar() {
               <div className="absolute top-full left-0 bg-white border-2 border-t-red-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
                   {components.map((component) => (
-                    <ListItem
-                      className="hover:text-red-500 font-semibold hover:bg-white"
-                      key={component.title}
-                      title={component.title}
-                      href={component.href}
-                    ></ListItem>
+                    <ListItem key={component.title}>
+                      <Link
+                        to={component.href}
+                        className="hover:text-red-500 font-semibold hover:bg-white text-gray-600"
+                      >
+                        {component.title}
+                      </Link>
+                    </ListItem>
                   ))}
                 </ul>
               </div>
@@ -103,12 +105,14 @@ export function Navbar() {
               <div className="absolute top-full left-0 bg-white border-2 border-t-red-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <ul className="flex flex-col w-[100px] gap-1 p-4 lg:w-[200px] shadow-lg">
                   {items.map((item) => (
-                    <ListItem
-                      className="hover:text-red-500 font-semibold hover:bg-white"
-                      key={item.title}
-                      title={item.title}
-                      href={item.href}
-                    ></ListItem>
+                    <ListItem key={item.title}>
+                      <Link
+                        to={item.href}
+                        className="hover:text-red-500 font-semibold hover:bg-white"
+                      >
+                        {item.title}
+                      </Link>
+                    </ListItem>
                   ))}
                 </ul>
               </div>
