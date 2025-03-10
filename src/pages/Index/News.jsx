@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardContent,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Сard";
 import { useTranslation } from "react-i18next";
 
 const NewsAppointment = () => {

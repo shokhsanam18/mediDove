@@ -1,6 +1,6 @@
 import React, { useState, useTransition } from "react";
 import Typography from "@/components/ui/Typography";
-import { Card, CardImg } from "@/components/ui/Card";
+import { Card, CardImg } from "@/components/ui/Сard";
 import { Button } from "@/components/ui/button";
 import aboutImg from "@/assets/about-img.jpg";
 import missionIcon from "@/assets/destination-icon-1.png";

@@ -10,7 +10,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/Сard";
 
 import { cn } from "@/lib/utils";
 import { Plus } from "lucide-react";
@@ -70,7 +70,9 @@ export const Cards_Services = React.forwardRef(
                 {card.title}
               </CardTitle>
             </Link>
-            <CardDescription style={description_styles}>{card.description}</CardDescription>
+            <CardDescription style={description_styles}>
+              {card.description}
+            </CardDescription>
             {/* </CardHeader> */}
             <CardContent
               style={content_styles}
@@ -81,7 +83,7 @@ export const Cards_Services = React.forwardRef(
                 e.currentTarget.style.color = content_styles.color;
               }}
             >
-              <Link to={'/Surgery'}>{card.content}</Link>
+              <Link to={"/Surgery"}>{card.content}</Link>
             </CardContent>
             {/* <CardFooter>
               <p>{card.footer}</p>
@@ -124,7 +126,7 @@ export const Cards_Plans = React.forwardRef(
             style={card_styles}
             {...props}
           >
-            <CardImage className='text-left'>
+            <CardImage className="text-left">
               <CardImg src={card.src} style={img_styles}></CardImg>
             </CardImage>
             {/* <CardHeader> */}
@@ -141,7 +143,9 @@ export const Cards_Plans = React.forwardRef(
                 {card.title}
               </CardTitle>
             </Link>
-            <CardDescription style={description_styles}>{card.description}</CardDescription>
+            <CardDescription style={description_styles}>
+              {card.description}
+            </CardDescription>
             {/* </CardHeader> */}
             <CardContent
               style={content_styles}
@@ -152,14 +156,16 @@ export const Cards_Plans = React.forwardRef(
                 e.currentTarget.style.color = content_styles.color;
               }}
             >
-              <Link to='/ContactUs'>
+              <Link to="/ContactUs">
                 <button className="flex items-center h-16 uppercase w-60 rounded-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-[#8fb569] text-white bg-[#e12454] shadow-[2px_2px_3px_#e1245397] hover:shadow-[0px_0px_3px_#8fb569] transition-all duration-300 ease-in-out font-semibold">
-                    <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
-                    <Plus size={20}/>
-                    </span>
-                    <span className="ml-5 text-base font-semibold tracking-wide">{card.content}</span>
+                  <span className="w-14 h-14 flex items-center justify-center bg-white text-black rounded-full border-2 border-white shadow-md ml-2">
+                    <Plus size={20} />
+                  </span>
+                  <span className="ml-5 text-base font-semibold tracking-wide">
+                    {card.content}
+                  </span>
                 </button>
-            </Link>
+              </Link>
             </CardContent>
             {/* <CardFooter>
               <p>{card.footer}</p>
@@ -208,7 +214,8 @@ export const Cards_Team = React.forwardRef(
           >
             <CardImage className={"relative"}>
               <CardImg src={card.src} style={img_styles}></CardImg>
-              <Link to='/Shifokorlar'
+              <Link
+                to="/Shifokorlar"
                 style={absolute_styles}
                 className="transition-all duration-300"
                 onMouseEnter={(e) => {

@@ -6,7 +6,7 @@ import {
   CardImg,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Сard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Typography from "@/components/ui/Typography";
