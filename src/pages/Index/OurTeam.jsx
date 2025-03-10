@@ -84,7 +84,7 @@ const OurTeam = () => {
     },
     content_styles: {
       textTransform: "uppercase",
-      fontWeight: "500",
+      // fontWeight: "500",
       color: "#e1236b",
       colorHoverFooter: "#73bb1d",
       fontWeight: "bold",
