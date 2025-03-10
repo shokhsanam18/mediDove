@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import Typography from "@/components/ui/Typography";
 import bgImage from "@/assets/photo_2025-02-08_12-54-53.jpg";
 import { useTranslation } from "react-i18next";
+import { Cards_Team } from "@/components/ui/Cards";
 
 const doctors = [
   {
@@ -54,6 +55,110 @@ const doctors = [
 
 export const Shifokorlar = () => {
   const { t } = useTranslation();
+
+  const cardsInfoTeam = [
+    {
+      id: 0,
+      title: "Rosalina D. Williamson",
+      description: "Card Description",
+      content: "Founder",
+      footer: "Card Footer",
+      src: "./img/member1.png",
+    },
+    {
+      id: 1,
+      title: "Diconda PIran Will",
+      description: "Card Description",
+      content: "dentist",
+      footer: "Card Footer",
+      src: "./img/member2.png",
+    },
+    {
+      id: 2,
+      title: "Hulk M. Kenbon",
+      description: "Card Description",
+      content: "neurologist",
+      footer: "Card Footer",
+      src: "./img/member3.png",
+    },
+    {
+      id: 3,
+      title: "Haliam Z. Dicolaz",
+      description: "Card Description",
+      content: "Consultant",
+      footer: "Card Footer",
+      src: "./img/member4.png",
+    },
+    {
+      id: 4,
+      title: "Nicolas D. Case",
+      description: "Card Description",
+      content: "dentist",
+      footer: "Card Footer",
+      src: "./img/member5.png",
+    },
+    {
+      id: 5,
+      title: "Phumdon H. Norman",
+      description: "Card Description",
+      content: "Neurologist",
+      footer: "Card Footer",
+      src: "./img/member6.png",
+    },
+  ];
+  const stylesTeam = {
+    cards_styles: {
+      backgroundColor: "white",
+      // justifyContent: 'space-around',
+      columnGap: "1.25rem",
+      rowGap: "2rem",
+      //  padding: '10px 15%',
+    },
+    card_styles: {
+      backgroundColor: "white",
+      color: "#223645",
+      padding: "0",
+      gap: "1.75rem",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      //  shadowColor: '#AAC',
+    },
+    img_styles: {
+      width: "70%",
+    },
+    title_styles: {
+      fontSize: "1.75rem",
+      color: "#223645",
+      marginBottom: "0.75rem",
+      // colorHoverTitle: '#e1236b',
+    },
+    content_styles: {
+      textTransform: "uppercase",
+      // fontWeight: "500",
+      color: "#e1236b",
+      colorHoverFooter: "#73bb1d",
+      fontWeight: "bold",
+    },
+    absolute_styles: {
+      position: "absolute",
+      right: "10%",
+      bottom: "10%",
+      fontWeight: "900",
+      fontSize: "30px",
+      color: "white",
+      backgroundColor: "#8FB569",
+      backgroundcolorHoverabsolute: "#e1236b",
+      width: "65px",
+      height: "65px",
+      display: "flex",
+      textAlign: "center",
+      alignItems: "center",
+      justifyContent: "center",
+      borderRadius: "50%",
+      boxShadow: "0 5px 10px #a9cba8",
+    },
+  };
   return (
     <div className="w-full">
       <div
@@ -97,12 +202,12 @@ export const Shifokorlar = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-10">
           <div className="flex flex-col gap-2 text-center md:text-left">
             <span className="text-xs md:text-sm text-gray-400">
-              {t("about.shifokorlar.team")} {/* Our Team */}
+              {t("about.shifokorlar.team")} 
             </span>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight text-gray-700">
-              {t("about.shifokorlar.proffesional")} {/* A Professional & */}
+              {t("about.shifokorlar.proffesional")} 
               <br className="hidden md:block" />
-              {t("about.shifokorlar.care")} {/* Care Provider */}
+              {t("about.shifokorlar.care")} 
             </h2>
             <div className="w-12 md:w-16 h-1 border-b-4 border-red-500 mt-2 mx-auto md:mx-0"></div>
           </div>
@@ -110,42 +215,25 @@ export const Shifokorlar = () => {
           <Button className="mt-4 md:mt-0 bg-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full flex items-center gap-2 shadow-lg hover:bg-red-600 uppercase">
             <span className="text-lg md:text-xl font-bold">+</span>
             {t("about.shifokorlar.appointment")}{" "}
-            {/* MAKE
-            APPOINTMENT */}
+            
           </Button>
         </div>
 
-        <Cards className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-          {doctors.map((doctor, index) => (
-            <Card
-              key={index}
-              className="flex flex-col items-center text-center p-3"
-            >
-              <div
-                className={`relative ${doctor.bg} w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full flex items-center justify-center`}
-              >
-                <CardImage className="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full overflow-hidden shadow-lg">
-                  <CardImg
-                    src={doctor.img}
-                    className="w-full h-full object-cover"
-                  />
-                </CardImage>
-
-                <span className="absolute bottom-0 right-1 translate-x-2 translate-y-2 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 flex items-center justify-center bg-green-500 text-white rounded-full text-lg md:text-xl border-4 border-white shadow-md cursor-pointer">
-                  +
-                </span>
-              </div>
-
-              <CardTitle className="text-base md:text-lg lg:text-xl font-semibold mt-3 text-gray-800">
-                {doctor.name}
-              </CardTitle>
-
-              <CardDescription className="text-xs md:text-sm text-red-500 uppercase mt-1">
-                {doctor.role}
-              </CardDescription>
-            </Card>
-          ))}
-        </Cards>
+        <Cards_Team
+                cards={cardsInfoTeam}
+                cards_styles={stylesTeam.cards_styles}
+                card_styles={stylesTeam.card_styles}
+                img_styles={stylesTeam.img_styles}
+                shadowColor={stylesTeam.card_styles.shadowColor}
+                title_styles={stylesTeam.title_styles}
+                colorHoverTitle={stylesTeam.title_styles.colorHoverTitle}
+                content_styles={stylesTeam.content_styles}
+                colorHoverContent={stylesTeam.content_styles.colorHoverContent}
+                absolute_styles={stylesTeam.absolute_styles}
+                backgroundcolorHoverabsolute={
+                  stylesTeam.absolute_styles.backgroundcolorHoverabsolute
+                }
+        ></Cards_Team>
       </section>
     </div>
   );
