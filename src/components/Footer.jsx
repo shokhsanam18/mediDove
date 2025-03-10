@@ -7,11 +7,11 @@ export const Footer = () => {
   return (
     <div className="w-full ">
       <div
-        className="sm:h-[40em] h-full w-full p-[10%] flex bg-[#13232f] bg-cover bg-center footer-top primary-bg footer-map pos-rel pt-120 pb-80 text-white"
+        className="w-full p-[10%] flex bg-[#13232f] bg-cover  bg-center footer-top primary-bg  footer-map pos-rel text-white"
         style={{ backgroundImage: "url('/img/image copy 11.png')" }}
       >
-        <div className="flex justify-between gap-6 flex-col sm:flex-row">
-          <div className="w-1/3">
+        <div className="flex justify-between gap-6 flex-col flex-shrink md:flex-row">
+          <div className="md:w-1/3 w-full">
             <div className="mb-[35px]">
               <img src="/img/image copy 12.png" alt="" />
             </div>
@@ -40,7 +40,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="w-1/3">
+          <div className="md:w-1/3 w-full">
             <h2 className="text-[24px] text-white block font-poppins font-semibold leading-[1.1] tracking-[-0.3px] mt-0 mb-[46px]">
               <Link to="/">{t("footer.departments.title")} </Link>
             </h2>
@@ -128,7 +128,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-1/3">
+          <div className="md:w-1/3 w-full">
             <h2 className="text-[24px] text-white block font-poppins font-semibold leading-[1.1] tracking-[-0.3px] mt-0 mb-[46px]">
               {t("footer.NewsFeeds.title")}
             </h2>
